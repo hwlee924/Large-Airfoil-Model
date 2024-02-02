@@ -1,0 +1,14 @@
+- changed implementation of the MLP using purely numpyro 
+- implemented CST fit using Bernstein polynomial on airfoil profile
+- added XFOIL validation data for other types of airfoils: Onera D and Clark Y
+- added smooth penalty and weight penalty fx - not used as of now
+
+To do: 
+- need to figure out how to parametrize Cp distribution curve for flexibility
+- determining Gaussianity of the prediction
+- need to make the prediction smooth with an appropriate covariance matrix using multivariate sampling of the final result instead of 1D normal dist
+- find and digitize more exp data
+- with improved BNN, apply it to the new Shreyas data 
+
+- clean up and organize other codes to git repo
+- determine lift distribution (vs. span) conditioning 
