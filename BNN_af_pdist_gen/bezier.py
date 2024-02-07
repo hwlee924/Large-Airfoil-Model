@@ -39,8 +39,8 @@ def control_points(X, Y, y, BCtype = 'airfoil'):
             Point 2: [0.0, y1 ] d
             Point N: [1.0, 0.0] at TE 
             """
-            ctrl_x = np.linspace(0.0, X[-1], num_ctrl_pts-1)[:-1] # Control points to be optimized 
-            ctrl_x = np.hstack((0.0, ctrl_x, X[-1]))
+            ctrl_x = np.linspace(0.0, 1.0, num_ctrl_pts-1)[:-1] # Control points to be optimized 
+            ctrl_x = np.hstack((0.0, ctrl_x, 1.0))
             ctrl_y = np.hstack((0.0, y, Y[-1])) # 0.0, 
             ctrl_pts = np.hstack((ctrl_x[:,None], ctrl_y[:,None]))    
     elif BCtype == 'pressure':  
@@ -50,8 +50,8 @@ def control_points(X, Y, y, BCtype = 'airfoil'):
             Point 2: [0.0, y1 ] d
             Point N: [1.0, last element of Cp] at TE 
             """
-            ctrl_x = np.linspace(0.0, X[-1], y.shape[0]+1)[:-1] * np.pi/2 # Control points to be optimized 
-            ctrl_x = np.hstack((X[0], 1-np.cos(ctrl_x), X[-1]))
+            ctrl_x = np.linspace(0.0, 1.0, y.shape[0]+1)[:-1] * np.pi/2 # Control points to be optimized 
+            ctrl_x = np.hstack((0.0, 1-np.cos(ctrl_x), 1.0))
             ctrl_y = np.hstack((Y[0], y, Y[-1])) # 0.0, 
             ctrl_pts = np.hstack((ctrl_x[:,None], ctrl_y[:,None]))    
     else: 
