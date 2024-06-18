@@ -1,0 +1,26 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "",
+    "mach" : "0.40 - 0.80",
+    "freestream": "",
+    "alpha": "-3.0 - 15.0"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "0.01",
+    "alpha": "0.1"
+  }, 
+  "airfoil": {
+    "name": "SSC-A09",
+    "camber": "cambered",
+    "supercritical": "",
+    "application": "rotor"
+  },
+  "source": {
+    "name": "NASA Contractor Report 166587",
+    "year": "1984",
+    "page": "82-84", 
+    "type": "graph"
+  }
+
+}
