@@ -21,6 +21,8 @@ noiseTypeList = {'constant', 'constant', 'constant', 'constant', 'relative'   , 
              'unknown' , 'unknown' , 'constant', 'relative', 'unknown'    , 'unknown', ...
              'unknown' , 'relative', 'unknown' , 'unknown' , 'unknown'    , 'relative', ...
              'constant', 'unknown' , 'unknown' , 'unknown' , 'unknown'    , 'unknown' , ...
+             'unknown' , 'unknown',  'unknown' , 'unknown' , 'unknown'    , 'unknown' , ...
+             'unknown' , 'unknown',  'unknown' , 'unknown' , 'unknown'    , 'unknown' , ...
              'unknown'};
 
 noiseList = [0.01, 0.01,   0.01, 0.01, 2/100, 0.0, ...
@@ -29,16 +31,18 @@ noiseList = [0.01, 0.01,   0.01, 0.01, 2/100, 0.0, ...
              0.0, 0.0, 0.03, 0.25/100, 0.0, 0.0, ...
              0.0, 1/100, 0.0, 0.0, 0.0, 1/100, ...
              0.08, 0.0, 0.0, 0.0, 0.0, 0.0, ...
+             0.0, 0.0, 0.0, 0.0, 0.0, 0.0, ...
+             0.0, 0.0, 0.0, 0.0, 0.0, 0.0, ...
              0.0];
 
 %% 
 num_cases = 0;
 counter = 1; 
 num_case = 1;
-for i = 1:numel(data_table.Airfoil)
+for i = 45:numel(data_table.Airfoil)
     if data_table.Use{i} == 'Y'
         disp(data_table.Airfoil{i})
-        [temp_x, temp_y, nc] = process_(i, data_table, noiseTypeList{counter}, noiseList(counter), [ref_x_U, ref_x_L]);
+        [temp_x, temp_y, nc] = process_(i, data_table, noiseTypeList{counter}, noiseList(counter), [ref_x_U, ref_x_L], num_cases);
         finalData_X = [finalData_X; temp_x];
         finalData_Y = [finalData_Y; temp_y];
         num_cases = num_cases + nc;
@@ -64,11 +68,13 @@ finalData.noise(finalData.noise<1e-3) = 1e-3;
 
 saveVar = true;
 if saveVar 
-    writetable(finalData, '20240618_more_added.csv')
+    writetable(finalData, '20240624-_more_added.csv')
 end
 %% Conversion Code
-function [data_X, data_Y, num_cases] = process_(idx, reference_table, noise_type, noise, ref_x) %process_(af_string, noise_type, symmetryList, supercriticalList, noise, ref_x)
-num_cases = 0;
+function [data_X, data_Y, num_cases] = process_(idx, reference_table, noise_type, noise, ref_x, start_num) %process_(af_string, noise_type, symmetryList, supercriticalList, noise, ref_x)
+num_cases = 0; % Total number of unique cases within this particular airfoil
+case_num = start_num; % number of case for the entire data set
+
 data_X = table;
 data_Y = table;
 
@@ -89,6 +95,7 @@ for i = 1:numel(fileList)-1 % Run thru files except coordinates
     %     [~, ind] = min(abs(data(1,:)-targetM)); % index of given Mach number
     for ind = 2:numel(data(1,:))
         num_cases = num_cases + 1;
+        case_num = case_num + 1;
         % Pressure data and its locations
         data_xU = -data(2:ind_hh, 1);
         data_xL = data(ind_hh+1:end, 1);
