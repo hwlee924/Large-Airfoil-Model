@@ -34,7 +34,15 @@ noiseList = [0.01, 0.01,   0.01, 0.01, 2/100, 0.0, ...
              0.0, 0.0, 0.0, 0.0, 0.0, 0.0, ...
              0.0, 0.0, 0.0, 0.0, 0.0, 0.0, ...
              0.0];
-
+%% Verify airfoil geoms
+for i = 1:numel(data_table.Airfoil)
+    if data_table.Use{i} == 'Y'
+        disp(data_table.Airfoil{i})
+        check_airfoil_geom(i, data_table, [ref_x_U, ref_x_L]);
+    else
+    end
+    
+end
 %% 
 num_cases = 0;
 counter = 1; 
@@ -61,6 +69,9 @@ disp(num_cases)
 bools2 = ~isnan(finalData_Y.Cp);
 finalData_X = finalData_X(bools2, :);
 finalData_Y = finalData_Y(bools2, :);
+bools3 = ~isnan(finalData_X.xc);
+finalData_X = finalData_X(bools3, :);
+finalData_Y = finalData_Y(bools3, :);
 
 finalData = [finalData_X, finalData_Y];
 finalData.yc = real(finalData.yc);
@@ -68,7 +79,7 @@ finalData.noise(finalData.noise<1e-3) = 1e-3;
 
 saveVar = true;
 if saveVar 
-    writetable(finalData, '20240624-_more_added.csv')
+    writetable(finalData, '20240625_more_added.csv')
 end
 %% Conversion Code
 function [data_X, data_Y, num_cases] = process_(idx, reference_table, noise_type, noise, ref_x, start_num) %process_(af_string, noise_type, symmetryList, supercriticalList, noise, ref_x)
@@ -163,6 +174,35 @@ data_X.Properties.VariableNames = {'x_u','x_l','z_u','z_l','alpha','xc','yc','M'
 % ylabel('z/c')
 % title(af_string)
 % drawnow
+end
+
+function out = check_airfoil_geom(idx, reference_table, ref_x)
+af_string = reference_table.Airfoil{idx};
+coords = readmatrix(['.\Digitized data\' af_string '\' af_string '_coordinates.csv']);
+fileList = dir(['.\Digitized data\' af_string '\' af_string '*.csv']);
+
+ind_h = find(diff(sign(diff(coords(1:end,1))))); % Detect change in direction - i.e. intersection b/n upper and lower surf in coordinates
+ind_h = ind_h(1)+1;
+
+for i = 1:numel(fileList)-1 % Run thru files except coordinates
+    data = readmatrix([fileList(i).folder '\' fileList(i).name]);
+    ind_hh = find(diff(sign(diff(data(2:end,1))))); % intersection b/n upper and lower surf in pressure file
+    ind_hh = ind_hh(1)+2; % correction
+
+
+
+    ref_x_U = ref_x(:,1);
+    ref_x_L = ref_x(:,2);
+
+    temp_x_u = interp1(coords(1:ind_h, 1), coords(1:ind_h,2), ref_x_U, 'linear','extrap');
+    temp_x_l = interp1(coords(ind_h+1:end,1), coords(ind_h+1:end,2), ref_x_L, 'linear','extrap');
+end
+figure
+plot(ref_x_U, temp_x_u, 'o-')
+hold on
+plot(ref_x_L, temp_x_l, 'o-')
+title(af_string)
+out = 0;
 end
 
 function out = getAoA(str)
