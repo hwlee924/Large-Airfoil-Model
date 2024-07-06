@@ -1,0 +1,31 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "3.6e6, 4.9e6, 5.7e6",
+    "mach" : "0.40, 0.60, 0.80",
+    "freestream": "",
+    "alpha": "-3.5 - 15.0"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "0.01",
+    "alpha": "0.1"
+  }, 
+  "airfoil": {
+    "name": "SC 1094 R8",
+    "camber": "Y",
+    "supercritical": "N",
+    "application": "rotor"
+  },
+  "source": {
+    "name": "NASA Contractor Report 166587",
+    "year": "1984",
+    "page": "91-93", 
+    "type": "graph",
+    "url": "https://ntrs.nasa.gov/api/citations/19880002258/downloads/19880002258.pdf"
+  },
+  "meta" : {
+    "num_cases": "18",
+    "num_remaining": "6", 
+    "notes": "Reynolds number digitized from Fig. 5, Figure 32 not yet digitized" 
+  }
+}
