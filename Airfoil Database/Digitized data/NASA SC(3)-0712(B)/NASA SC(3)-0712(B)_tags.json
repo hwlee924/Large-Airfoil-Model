@@ -1,0 +1,31 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "4.4e6 ,7.0e6",
+    "mach" : "0.5, 0.6 , 0.65, 0.70, 0.72, 0.74, 0.76, 0.78, 0.80",
+    "freestream": "",
+    "alpha": "-4.1, -4.0, -3.0, -2.0, -1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.1, 1.5, 2.0, 2.3, 2.5, 3.0 , 3.5"
+  },
+  "uncertainty" : {
+    "x" : "0.0000853",
+    "cp" : "0.0025",
+    "alpha": ""
+  }, 
+  "airfoil": {
+    "name" : "NASA SC(3)-0712(B)",
+    "camber": "Y",
+    "supercritical": "Y",
+    "application": "general"
+  },
+  "source": {
+    "name": "NASA Technical Memorandum M-86370",
+    "year": "1985",
+    "page": "10-21, 23-28, 49-53, 61-72, 91-96, 104-114, 156-174, 227-236, 267-274", 
+    "type": "table, graph",
+    "url": "https://ntrs.nasa.gov/api/citations/19850021615/downloads/19850021615.pdf"
+  },
+  "meta" : {
+    "num_cases": "203",
+    "num_remaining": "564", 
+    "notes": "run 55 (second instance) mach .760 Re4.4e6 A m4.0 has ommitted outlier" 
+  }
+}
