@@ -1,18 +1,18 @@
 {
   "flow_conditions" : {
-    "reynolds" : "2.31e6 - 3.61e6",
-    "mach" : "0.76",
+    "reynolds" : "6.6e6 - 7.9e6",
+    "mach" : "0.60 - 0.80",
     "freestream": "",
-    "alpha": "2.50, 5.00"
+    "alpha": "0.5, 1.0, 2.5, 2.5"
   },
   "uncertainty" : {
     "x" : "",
-    "cp" : "1%",
-    "alpha": "0.02",
-    "mach": "0.002"
+    "cp" : "<2% of max",
+    "alpha": "0.05",
+    "mach": "0.003"
   }, 
   "airfoil": {
-    "name": "SFK 1.1",
+    "name": "Supercritical 9a",
     "camber": "Y",
     "supercritical": "Y",
     "application": "General"
@@ -20,13 +20,13 @@
   "source": {
     "name": "AGARD-AR-138",
     "year": "1979",
-    "page": "A5-1", 
+    "page": "A9-1 - A9-16", 
     "type": "tabulated",
     "url": "https://www.sto.nato.int/publications/AGARD/AGARD-AR-138/AGARD-AR-138.pdf"
   },
   "meta" : {
-    "num_cases": "18",
+    "num_cases": "13",
     "num_remaining": "", 
-    "notes": "Only the basic airfoil data is digitized; extended maneuver flap not considered" 
+    "notes": "This is a Supercritical Airfoil 9 (10% thick nasa supercritical af) w/ blunt TE w/ cavity" 
   }
 }

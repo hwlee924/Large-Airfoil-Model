@@ -1,18 +1,18 @@
 {
   "flow_conditions" : {
-    "reynolds" : "2.31e6 - 3.61e6",
-    "mach" : "0.76",
+    "reynolds" : "6.0e6",
+    "mach" : "0.70 - 0.85",
     "freestream": "",
-    "alpha": "2.50, 5.00"
+    "alpha": "1.0 - 5.5"
   },
   "uncertainty" : {
     "x" : "",
-    "cp" : "1%",
-    "alpha": "0.02",
-    "mach": "0.002"
+    "cp" : "<1% of max",
+    "alpha": "0.003",
+    "mach": "0.001"
   }, 
   "airfoil": {
-    "name": "SFK 1.1",
+    "name": "MBB-A3",
     "camber": "Y",
     "supercritical": "Y",
     "application": "General"
@@ -20,13 +20,13 @@
   "source": {
     "name": "AGARD-AR-138",
     "year": "1979",
-    "page": "A5-1", 
+    "page": "A8-1 - A8-25", 
     "type": "tabulated",
     "url": "https://www.sto.nato.int/publications/AGARD/AGARD-AR-138/AGARD-AR-138.pdf"
   },
   "meta" : {
-    "num_cases": "18",
-    "num_remaining": "", 
-    "notes": "Only the basic airfoil data is digitized; extended maneuver flap not considered" 
+    "num_cases": "20",
+    "num_remaining": "17", 
+    "notes": "ARA expt only, PT results not digitized" 
   }
 }

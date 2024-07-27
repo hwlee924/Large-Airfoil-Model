@@ -1,0 +1,32 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "",
+    "mach" : "0.0",
+    "freestream": "",
+    "alpha": "4.0, 12.0"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "S809",
+    "camber": "Y",
+    "supercritical": "N",
+    "application": "Wind Turbine"
+  },
+  "source": {
+    "name": "Computational analysis of shrouded wind turbine configurations using a 3-dimensional RANS solver",
+    "year": "2015",
+    "page": "821", 
+    "type": "graph",
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0960148114006764"
+  },
+  "meta" : {
+    "num_cases": "2",
+    "num_remaining": "", 
+    "notes": "" 
+  }
+}

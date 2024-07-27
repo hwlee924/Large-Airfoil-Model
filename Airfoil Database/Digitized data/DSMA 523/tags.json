@@ -1,0 +1,32 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "2.0e6",
+    "mach" : "0.6 - 0.83",
+    "freestream": "",
+    "alpha": "0.78 - 1.6"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "0.03",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "DSMA 523",
+    "camber": "Y",
+    "supercritical": "Y",
+    "application": "General"
+  },
+  "source": {
+    "name": "NASA TM-81336",
+    "year": "1983",
+    "page": "28 - 31", 
+    "type": "tabulated",
+    "url": "https://ntrs.nasa.gov/citations/19830025574"
+  },
+  "meta" : {
+    "num_cases": "7",
+    "num_remaining": "7", 
+    "notes": "Fixed transition, only 2e6 cases digitized" 
+  }
+}
