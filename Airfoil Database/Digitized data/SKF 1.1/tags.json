@@ -1,0 +1,32 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "2.31e6 - 3.61e6",
+    "mach" : "0.76",
+    "freestream": "",
+    "alpha": "-3.5 - 15.0"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "1%",
+    "alpha": "0.02",
+    "mach": "0.002"
+  }, 
+  "airfoil": {
+    "name": "SFK 1.1",
+    "camber": "Y",
+    "supercritical": "Y",
+    "application": "General"
+  },
+  "source": {
+    "name": "AGARD-AR-138",
+    "year": "1979",
+    "page": "A5-1", 
+    "type": "tabulated",
+    "url": "https://www.sto.nato.int/publications/AGARD/AGARD-AR-138/AGARD-AR-138.pdf"
+  },
+  "meta" : {
+    "num_cases": "18",
+    "num_remaining": "", 
+    "notes": "Only the basic airfoil data is digitized; extended maneuver flap not considered" 
+  }
+}
