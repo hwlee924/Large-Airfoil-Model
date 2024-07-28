@@ -1,0 +1,32 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "1.6e6",
+    "mach" : "0.122",
+    "freestream": "",
+    "alpha": "5.97, 8.81, 10.37, 13.45, 15.39, 19.34"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "RISO-A1-24",
+    "camber": "Y",
+    "supercritical": "N",
+    "application": "Wind Turbine"
+  },
+  "source": {
+    "name": "Risoe-R 1280",
+    "year": "2001",
+    "page": "74", 
+    "type": "graph",
+    "url": "https://backend.orbit.dtu.dk/ws/portalfiles/portal/7728949/ris_r_1280.pdf"
+  },
+  "meta" : {
+    "num_cases": "6",
+    "num_remaining": "", 
+    "notes": "" 
+  }
+}

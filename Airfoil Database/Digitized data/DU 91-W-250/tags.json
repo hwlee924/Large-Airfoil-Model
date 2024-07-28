@@ -1,0 +1,32 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "3.0e6",
+    "mach" : "0.22",
+    "freestream": "",
+    "alpha": "6.7, 9.2, 15.2"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "DU 91-W-250",
+    "camber": "Y",
+    "supercritical": "N",
+    "application": "Wind Turbine"
+  },
+  "source": {
+    "name": "Summary of the Delft University Wind Turbine Dedicated Airfoils",
+    "year": "2003",
+    "page": "491-492", 
+    "type": "graph",
+    "url": "https://asmedigitalcollection.asme.org/solarenergyengineering/article-abstract/125/4/488/464752/Summary-of-the-Delft-University-Wind-Turbine?redirectedFrom=fulltext"
+  },
+  "meta" : {
+    "num_cases": "3",
+    "num_remaining": "", 
+    "notes": "smooth msmts" 
+  }
+}

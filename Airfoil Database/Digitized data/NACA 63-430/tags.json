@@ -1,0 +1,32 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "1.5e6",
+    "mach" : "0.106",
+    "freestream": "",
+    "alpha": "5.741, 10.238, 12.112, 15.578, 17.347, 19.393"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "NACA 63-430",
+    "camber": "Y",
+    "supercritical": "N",
+    "application": "Wind Turbine"
+  },
+  "source": {
+    "name": "Risoe-R 1280",
+    "year": "2001",
+    "page": "61", 
+    "type": "graph",
+    "url": "https://backend.orbit.dtu.dk/ws/portalfiles/portal/7728949/ris_r_1280.pdf"
+  },
+  "meta" : {
+    "num_cases": "6",
+    "num_remaining": "", 
+    "notes": "" 
+  }
+}
