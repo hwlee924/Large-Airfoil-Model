@@ -1,0 +1,33 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "3.1e6",
+    "mach" : "0.05",
+    "freestream": "",
+    "alpha": "-20 - 30"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "3%",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "NACA 4412",
+    "camber": "Y",
+    "supercritical": "N",
+    "application": "General"
+  },
+  "source": {
+    "name": "NACA Report 563",
+    "author": "Pinkerton, R.",
+    "year": "1936",
+    "page": "5-7", 
+    "type": "graph",
+    "url": "https://ntrs.nasa.gov/citations/19930091638"
+  },
+  "meta" : {
+    "num_cases": "15",
+    "num_remaining": "", 
+    "notes": "M obtained from Re" 
+  }
+}

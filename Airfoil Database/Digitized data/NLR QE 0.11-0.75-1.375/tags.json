@@ -1,0 +1,32 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "1e6 - 2e6",
+    "mach" : "0.3 - 0.85",
+    "freestream": "",
+    "alpha": "0.0"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "0.002 - 0.02",
+    "alpha": "0.02",
+    "mach": "0.002"
+  }, 
+  "airfoil": {
+    "name": "NLR QE 0.11-0.75-1.375",
+    "camber": "N",
+    "supercritical": "Y",
+    "application": "General"
+  },
+  "source": {
+    "name": "AGARD-AR-138",
+    "year": "1979",
+    "page": "A2-1 - A2-10", 
+    "type": "tabulated",
+    "url": "https://www.sto.nato.int/publications/AGARD/AGARD-AR-138/AGARD-AR-138.pdf"
+  },
+  "meta" : {
+    "num_cases": "10",
+    "num_remaining": "", 
+    "notes": "" 
+  }
+}

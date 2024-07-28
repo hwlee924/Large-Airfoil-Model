@@ -1,0 +1,33 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "4.2e5",
+    "mach" : "0.06",
+    "freestream": "",
+    "alpha": "7, 10, 13"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "NACA 65-410",
+    "camber": "Y",
+    "supercritical": "N",
+    "application": "General"
+  },
+  "source": {
+    "name": "Experimental Investigation of Near-Field Aeroacoustic Characteristics of a Pre- and Post-Stall NACA 65-410 Airfoil",
+    "author": "Zang et al.",
+    "year": "2024",
+    "page": "04021080-3", 
+    "type": "graph",
+    "url": "https://doi.org/10.1061/(ASCE)AS.1943-5525.0001318"
+  },
+  "meta" : {
+    "num_cases": "4",
+    "num_remaining": "", 
+    "notes": "M obtained from Re" 
+  }
+}

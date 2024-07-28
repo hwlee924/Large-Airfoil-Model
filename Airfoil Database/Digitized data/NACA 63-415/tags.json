@@ -1,0 +1,33 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "1.6e6",
+    "mach" : "0.14",
+    "freestream": "",
+    "alpha": "-4 - 28"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "NACA 63-415",
+    "camber": "Y",
+    "supercritical": "N",
+    "application": "General"
+  },
+  "source": {
+    "name": "Riso-R-1193",
+    "author": "Bak et al.",
+    "year": "2000",
+    "page": "", 
+    "type": "graph",
+    "url": "https://www.abbottaerospace.com/downloads/riso-r-1193-wind-tunnel-tests-of-the-naca-63-415-and-a-modified-naca-63-415-airfoil/"
+  },
+  "meta" : {
+    "num_cases": "9",
+    "num_remaining": "", 
+    "notes": "M obtained from Re, only smooth results" 
+  }
+}

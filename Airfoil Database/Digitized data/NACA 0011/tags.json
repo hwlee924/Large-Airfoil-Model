@@ -1,0 +1,33 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "2.2e6",
+    "mach" : "0.14",
+    "freestream": "",
+    "alpha": "0, 5, 10"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "0.1%",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "NACA 0011",
+    "camber": "N",
+    "supercritical": "N",
+    "application": "General"
+  },
+  "source": {
+    "name": "Effect of Gurney flaps on a NACA 0011 airfoil",
+    "author": "Myose, R., Heron, I., and Papadakis, M.",
+    "year": "1996",
+    "page": "6", 
+    "type": "graph",
+    "url": "https://doi.org/10.1002/we.1780"
+  },
+  "meta" : {
+    "num_cases": "3",
+    "num_remaining": "", 
+    "notes": "only basic airfoil case digitized, M obtained from Re" 
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "3e6",
+    "mach" : "0.16",
+    "freestream": "",
+    "alpha": "-2.04, 6.09, 12.19"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "",
+    "alpha": ""
+  }, 
+  "airfoil": {
+    "name": "WT 180",
+    "camber": "Y",
+    "supercritical": "N",
+    "application": "Wind Turbine"
+  },
+  "source": {
+    "name": "A new direct design method of wind turbine airfoils and wind tunnel experiment",
+    "author": "Chen et al.",
+    "year": "2015",
+    "page": "2011", 
+    "type": "graph",
+    "url": "https://linkinghub.elsevier.com/retrieve/pii/S0307904X15005855"
+  },
+  "meta" : {
+    "num_cases": "3",
+    "num_remaining": "", 
+    "notes": "M obtained from Re" 
+  }
+
+}
+  

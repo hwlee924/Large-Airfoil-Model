@@ -1,0 +1,33 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "1.46e6",
+    "mach" : "0.12",
+    "freestream": "",
+    "alpha": "-14 - 12"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "2%",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "NACA 23012",
+    "camber": "Y",
+    "supercritical": "N",
+    "application": "General"
+  },
+  "source": {
+    "name": "NACA Report 614",
+    "author": "Wenzinger, C.",
+    "year": "1938",
+    "page": "3", 
+    "type": "graph",
+    "url": "https://ntrs.nasa.gov/citations/19930091690"
+  },
+  "meta" : {
+    "num_cases": "8",
+    "num_remaining": "", 
+    "notes": "M obtained from Re, flap results not digitized" 
+  }
+}
