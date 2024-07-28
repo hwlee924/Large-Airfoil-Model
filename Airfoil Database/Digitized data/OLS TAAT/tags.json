@@ -1,0 +1,33 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "3e6 - 7e6",
+    "mach" : "0.34 - 0.88",
+    "freestream": "",
+    "alpha": "-12 - 11"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "OLS/TAAT",
+    "camber": "Y",
+    "supercritical": "N",
+    "application": "Rotor"
+  },
+  "source": {
+    "name": "NASA TM-89435",
+    "author": "Watts, M., Cross, J., and Noonan, K.",
+    "year": "1988",
+    "page": "20-76", 
+    "type": "graph",
+    "url": "https://ntrs.nasa.gov/citations/19890004845"
+  },
+  "meta" : {
+    "num_cases": "108",
+    "num_remaining": "", 
+    "notes": "" 
+  }
+}

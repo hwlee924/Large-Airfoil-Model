@@ -1,0 +1,33 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "1e6, 0.7e6",
+    "mach" : "0.12, 0.17",
+    "freestream": "",
+    "alpha": "-5, 0, 5"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "0.08",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "DU 12-W-262",
+    "camber": "Y",
+    "supercritical": "N",
+    "application": "Wind Turbine"
+  },
+  "source": {
+    "name": "Experimental investigation of an optimized airfoil for vertical-axis wind turbines",
+    "author": "Ragni, D., Ferreira, C., and Correale, G.",
+    "year": "2014",
+    "page": "", 
+    "type": "graph",
+    "url": "https://doi.org/10.1002/we.1780"
+  },
+  "meta" : {
+    "num_cases": "6",
+    "num_remaining": "", 
+    "notes": "" 
+  }
+}

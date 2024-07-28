@@ -1,0 +1,33 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "2.2e6",
+    "mach" : "0.15",
+    "freestream": "",
+    "alpha": "-4.0 - 18.7"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "NASA LS(1)-0013",
+    "camber": "N",
+    "supercritical": "N",
+    "application": "General"
+  },
+  "source": {
+    "name": "NASA TM 4003",
+    "author": "Ferris J., McGhee R., and Barnwell, R.",
+    "year": "1987",
+    "page": "19-24", 
+    "type": "graph",
+    "url": "https://www.abbottaerospace.com/downloads/nasa-tm-4003-low-speed-wind-tunnel-results-for-symmetrical-nasa-ls1-0013-airfoil/"
+  },
+  "meta" : {
+    "num_cases": "8",
+    "num_remaining": "", 
+    "notes": "" 
+  }
+}

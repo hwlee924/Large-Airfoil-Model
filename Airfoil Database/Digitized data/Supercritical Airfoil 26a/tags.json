@@ -1,0 +1,33 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "6e6 - 8e6",
+    "mach" : "0.5 - 0.83",
+    "freestream": "",
+    "alpha": "0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.5"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "Supercritical Airfoil 26a",
+    "camber": "Y",
+    "supercritical": "Y",
+    "application": "General"
+  },
+  "source": {
+    "name": "NASA TM X-2978",
+    "author": "Harris, C.",
+    "year": "1974",
+    "page": "21-28", 
+    "type": "table",
+    "url": "https://www.researchgate.net/publication/323347223_The_flow_separation_development_analysis_in_subsonic_and_transonic_flow_regime_of_the_laminar_airfoil"
+  },
+  "meta" : {
+    "num_cases": "58",
+    "num_remaining": "", 
+    "notes": "" 
+  }
+}

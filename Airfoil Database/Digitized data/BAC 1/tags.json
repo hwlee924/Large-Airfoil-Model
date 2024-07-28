@@ -1,0 +1,33 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "4.4e6",
+    "mach" : "0.4 - 0.8",
+    "freestream": "",
+    "alpha": "-2 - 8"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "0.25%",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "BAC 1",
+    "camber": "Y",
+    "supercritical": "Y",
+    "application": "General"
+  },
+  "source": {
+    "name": "NASA TM-87600",
+    "author": "Johnson, Jr., W. and Hill, A.",
+    "year": "1985",
+    "page": "Appendix A", 
+    "type": "",
+    "url": "https://ntrs.nasa.gov/citations/19860006729"
+  },
+  "meta" : {
+    "num_cases": "86",
+    "num_remaining": "", 
+    "notes": "only 4.4e6, free-transition case digitized" 
+  }
+}

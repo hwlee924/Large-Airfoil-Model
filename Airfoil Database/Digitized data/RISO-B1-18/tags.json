@@ -1,0 +1,32 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "1.6e6",
+    "mach" : "0.12",
+    "freestream": "",
+    "alpha": "-4.0 - 20.0"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "RISO-B1-18",
+    "camber": "Y",
+    "supercritical": "N",
+    "application": "Wind Turbine"
+  },
+  "source": {
+    "name": "Risoe-R 1375",
+    "year": "2003",
+    "page": "28", 
+    "type": "graph",
+    "url": "https://backend.orbit.dtu.dk/ws/portalfiles/portal/7712053/ris_r_1375.pdf"
+  },
+  "meta" : {
+    "num_cases": "8",
+    "num_remaining": "", 
+    "notes": "smooth msmts only" 
+  }
+}

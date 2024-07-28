@@ -1,0 +1,32 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "1.1e6 - 1.8e6",
+    "mach" : "0.4 - 0.775",
+    "freestream": "",
+    "alpha": "-1.0, 1.0"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "NACA 45-100",
+    "camber": "Y",
+    "supercritical": "N",
+    "application": "General"
+  },
+  "source": {
+    "name": "R & M No. 2251",
+    "year": "1944",
+    "page": "20-24", 
+    "type": "graph",
+    "url": "https://www.emerald.com/insight/content/doi/10.1108/eb031707/full/html?skipTracking=true"
+  },
+  "meta" : {
+    "num_cases": "8",
+    "num_remaining": "9 figures", 
+    "notes": "Only NPL cases digitized, points interpolated from graphs" 
+  }
+}

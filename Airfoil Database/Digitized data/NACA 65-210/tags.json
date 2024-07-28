@@ -1,0 +1,32 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "6.0e6",
+    "mach" : "0.15",
+    "freestream": "",
+    "alpha": "-8 - 12"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "NACA 65-210",
+    "camber": "Y",
+    "supercritical": "N",
+    "application": "General"
+  },
+  "source": {
+    "name": "NACA TN-1167",
+    "year": "1947",
+    "page": "13-26", 
+    "type": "graph",
+    "url": "https://ntrs.nasa.gov/citations/19930081915"
+  },
+  "meta" : {
+    "num_cases": "14",
+    "num_remaining": "", 
+    "notes": "M deduced from Re, flap cases not included" 
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "3.6e6 - 7.74e6",
+    "mach" : "0.35 - 0.80",
+    "freestream": "",
+    "alpha": "-0.5 - 10.5"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "1%",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "11 Percent Thickness Supercritical Airfoil",
+    "camber": "Y",
+    "supercritical": "Y",
+    "application": "Rotor"
+  },
+  "source": {
+    "name": "NASA TM X-1831",
+    "author": "Blackwell, Jr., James",
+    "year": "1969",
+    "page": "31-40", 
+    "type": "graph",
+    "url": "https://ntrs.nasa.gov/citations/19890004845"
+  },
+  "meta" : {
+    "num_cases": "18",
+    "num_remaining": "", 
+    "notes": "" 
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "2e6",
+    "mach" : "0.19",
+    "freestream": "",
+    "alpha": "0 - 20"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "S825",
+    "camber": "Y",
+    "supercritical": "N",
+    "application": "Wind Turbine"
+  },
+  "source": {
+    "name": "NREL/SR-500-36346",
+    "author": "Somers D. M.",
+    "year": "2005",
+    "page": "26-59", 
+    "type": "table",
+    "url": "https://www.nrel.gov/docs/fy05osti/36346.pdf"
+  },
+  "meta" : {
+    "num_cases": "20",
+    "num_remaining": "", 
+    "notes": "" 
+  }
+}

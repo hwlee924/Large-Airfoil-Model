@@ -1,0 +1,33 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "",
+    "mach" : "0.70 - 0.85",
+    "freestream": "",
+    "alpha": "-4.2, 1.7, 2.7, 4.9"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "SC 0410",
+    "camber": "Y",
+    "supercritical": "Y",
+    "application": "General"
+  },
+  "source": {
+    "name": "EXPERIMENTAL INVESTIGATION OF SHOCK WAVE OSCILLATION ON A THIN AIRFOIL",
+    "author": "Masdari et al.",
+    "year": "2018",
+    "page": "800", 
+    "type": "graph",
+    "url": "https://doi.org/10.1007/s00348-016-2215-8"
+  },
+  "meta" : {
+    "num_cases": "16",
+    "num_remaining": "", 
+    "notes": "" 
+  }
+}

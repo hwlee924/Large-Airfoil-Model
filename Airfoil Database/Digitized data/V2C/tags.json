@@ -1,0 +1,32 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "1.22e6, 2.85e6",
+    "mach" : "0.3, 0.7",
+    "freestream": "",
+    "alpha": "0"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "RISO-B1-18",
+    "camber": "Y",
+    "supercritical": "Y",
+    "application": "General"
+  },
+  "source": {
+    "name": "The flow separation development analysis in subsonic and transonic flow regime of the laminar airfoil",
+    "year": "2017",
+    "page": "326", 
+    "type": "graph",
+    "url": "https://www.researchgate.net/publication/323347223_The_flow_separation_development_analysis_in_subsonic_and_transonic_flow_regime_of_the_laminar_airfoil"
+  },
+  "meta" : {
+    "num_cases": "2",
+    "num_remaining": "", 
+    "notes": "I wonder if the Cp distribution in Fig.4 can be reliable extracted?" 
+  }
+}

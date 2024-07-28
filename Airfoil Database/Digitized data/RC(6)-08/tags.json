@@ -1,0 +1,33 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "5e6 - 9e6",
+    "mach" : "0.3 - 0.9",
+    "freestream": "",
+    "alpha": "0 - 10"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "RC(6)-08",
+    "camber": "Y",
+    "supercritical": "N",
+    "application": "Rotor"
+  },
+  "source": {
+    "name": "NASA TM 4264",
+    "author": "Noonan, K.",
+    "year": "1991",
+    "page": "51-76", 
+    "type": "table",
+    "url": "https://ntrs.nasa.gov/citations/19930020261"
+  },
+  "meta" : {
+    "num_cases": "58",
+    "num_remaining": "83", 
+    "notes": "Need to do M>0.86" 
+  }
+}
