@@ -1,0 +1,32 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "3e6",
+    "mach" : "0.3 - 0.7",
+    "freestream": "",
+    "alpha": "-4.0 - 15.0"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "NACA 0012",
+    "camber": "N",
+    "supercritical": "N",
+    "application": "General"
+  },
+  "source": {
+    "name": "NASA TM 100526",
+    "year": "1987",
+    "page": "", 
+    "type": "tabulated",
+    "url": "https://ntrs.nasa.gov/citations/19880009181"
+  },
+  "meta" : {
+    "num_cases": "66",
+    "num_remaining": "All other Res", 
+    "notes": "Only Re 3e6 digitized" 
+  }
+}

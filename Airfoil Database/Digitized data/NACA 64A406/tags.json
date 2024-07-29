@@ -1,0 +1,33 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "0.9e6 - 1.9e6",
+    "mach" : "0.3 - 0.93",
+    "freestream": "",
+    "alpha": "-5 - 28"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "0.01",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "NACA 64A406",
+    "camber": "Y",
+    "supercritical": "N",
+    "application": "General"
+  },
+  "source": {
+    "name": "NACA TN 3162",
+    "author": "Stivers Jr., L." ,
+    "year": "1953",
+    "page": "67-82", 
+    "type": "tabulated",
+    "url": "https://ntrs.nasa.gov/citations/19930083884"
+  },
+  "meta" : {
+    "num_cases": "230",
+    "num_remaining": "", 
+    "notes": "" 
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "1.85e6 - 4.0e6",
+    "mach" : "0.3, 0.83",
+    "freestream": "",
+    "alpha": "0, 2, 3, 4, 6, 8"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "0.005 + 0.01|Cp|",
+    "alpha": "0.04",
+    "mach": "0.003"
+  }, 
+  "airfoil": {
+    "name": "NACA 0012",
+    "camber": "N",
+    "supercritical": "N",
+    "application": "General"
+  },
+  "source": {
+    "name": "AGARD-AR-138",
+    "year": "1979",
+    "page": "A1-A13", 
+    "type": "tabulated",
+    "url": "https://www.sto.nato.int/publications/AGARD/AGARD-AR-138/AGARD-AR-138.pdf"
+  },
+  "meta" : {
+    "num_cases": "19",
+    "num_remaining": "", 
+    "notes": "" 
+  }
+}
