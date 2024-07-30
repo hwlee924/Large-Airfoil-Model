@@ -3,3 +3,9 @@ ASPIRE is an open-source database accessible to the wider aerospace community ut
 
 Airfoil Database Link: <br>
 https://docs.google.com/spreadsheets/d/1lj5McgJFJEJ30k7VjSC_P2WIVK0ZOVxvso0a-UtzDUc/edit?usp=sharing
+
+READ ME TO DO:
+- "Getting Started"
+- "Digitization Instructions"
+- "Data Distribution
+- "Need to digitize"
