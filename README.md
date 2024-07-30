@@ -1,5 +1,4 @@
-ASPIRE - Airfoil Surface Pressure Information Repository of Experiments 
-=========================
+## ASPIRE - Airfoil Surface Pressure Information Repository of Experiments 
 ASPIRE is an open-source database accessible to the wider aerospace community utilizing the vast, nearly century-old historical repository of experimental airfoil data 
 
 Airfoil Database Link: <br>
