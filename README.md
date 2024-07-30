@@ -19,8 +19,26 @@ The available data ranges from $-30^{\circ}$ to $30^{\circ}$ in angles of attack
 - will consider Re later
   
 ## Getting Started
-
+- include points about how to download
+- include description of how to contribute
+  
 ## Experimental Data Digitization
+
+### Data Format
+
+### Tabulated Data
+If the source material presents the experimental data in a tabulated format, I recommend that you use Optical Character Recognition (OCR) tools available online. Personally, I got best results from ExtractTables (https://extracttable.com).
+
+The workflow of using an OCR is as follows:
+\begin{enumerate}
+  \item Take a screenshot of the table that you want to digitize. 
+  \item In your choice of online OCR tool, upload the screenshot. 
+  \item When the conversion is complete, copy the data to clipboard and paste it into the csv file in Excel.
+  \item Make sure the digitization was done accurately. Fix erroneous results as necessary.
+  \item Rearrange the data into the data format described earlier.
+\end{enumerate}
+
+### Graphical Data
 
 ## Need to Digitize
 
