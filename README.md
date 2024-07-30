@@ -29,16 +29,25 @@ The available data ranges from $-30^{\circ}$ to $30^{\circ}$ in angles of attack
 ### Tabulated Data
 If the source material presents the experimental data in a tabulated format, I recommend that you use Optical Character Recognition (OCR) tools available online. Personally, I got best results from ExtractTables (https://extracttable.com).
 
-The workflow of using an OCR is as follows:
-\begin{enumerate}
-  \item Take a screenshot of the table that you want to digitize. 
-  \item In your choice of online OCR tool, upload the screenshot. 
-  \item When the conversion is complete, copy the data to clipboard and paste it into the csv file in Excel.
-  \item Make sure the digitization was done accurately. Fix erroneous results as necessary.
-  \item Rearrange the data into the data format described earlier.
-\end{enumerate}
+The workflow of using an OCR tool of your choice is as follows:
+- Take a screenshot of the table that you want to digitize. 
+- In your choice of online OCR tool, upload the screenshot. 
+- When the conversion is complete, copy the data to clipboard and paste it into the csv file in Excel.
+- Make sure the digitization was done accurately. Fix erroneous results as necessary.
+- Rearrange the data into the previously described data format.
 
 ### Graphical Data
+If the source material presents the experimental data in a graphical format (plot), I recommend that you use the online tool WebPlotDigitizer (https://automeris.io/WebPlotDigitizer.html).
+
+The workflow of using WebPlotDigitizer is as follows:
+- Click \textit{Launch Online}
+- Take a screenshot of the graph that you want to digitize. 
+- In WebPlotDigitizer, upload the screenshot ($\textit{Files } \rightarrow \textit{ Load Image(s)}$). 
+- Calibrate the X- and Y-axes. Click on the minimum and maximum values of each axes and click \textit{Complete!}. Then, enter their numerical values. Tick the box for \textit{Assume axes are perfectly aligned with image coordinates (skip rotation correction)}.
+- Click on the plot points to digitize the data. Make sure you click the points in the order of: Trailing edge, upper surface $\rightarrow$ Leading edge $\rightarrow$ Trailing edge, lower surface.
+- When finished, click \textit{View Data} on the left and \textit{Copy to clipboard}. Paste the result into the csv file in Excel.
+- Make sure the digitization was done accurately. Fix erroneous results as necessary.
+- Rearrange the data into the data format described earlier.
 
 ## Need to Digitize
 
