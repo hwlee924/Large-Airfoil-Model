@@ -15,10 +15,8 @@ ASPIRE consists of 2141 unique pressure distributions from 61 airfoils from vari
   <img src="Figures/2_all_af-1.png" width=50% height=50%>
 </div>
 <figure class="image">
-  <div align="center">
-    <img src="Figures/2_all_af-1.png" width=50% height=50%>
-  </div>
-  <figcaption>test caption</figcaption>
+  <center><img src="Figures/2_all_af-1.png" width=50% height=50%></center>
+  <center><figcaption>test caption</figcaption></center>
 </figure>
 
 The available data ranges from $-30^{\circ}$ to $30^{\circ}$ in angles of attack ($\alpha$). The Mach number ($M$) of the data spans $0.0$ to $1.0$, from the incompressible regime to transonic and sonic regimes. The number of available pressure data in terms of unique airfoils at a given $M$ and $\alpha$ is shown in Fig. \ref{fig:avail_data}. The color and the number in the center plot denotes the number of unique airfoils available for a given $M$ - $\alpha$ combination. Marginal histograms are plotted to provide a clear visualization of the available data at specific $\alpha$ or $M$. These are split in terms of airfoil families, design usage, and supercriticality.
