@@ -1,5 +1,5 @@
 ## ASPIRE - Airfoil Surface Pressure Information Repository of Experiments 
-ASPIRE is an open-source database accessible to the wider aerospace community utilizing the vast, nearly century-old historical repository of experimental airfoil data 
+**ASPIRE** is an open-source database accessible to the wider aerospace community utilizing the vast, nearly century-old historical repository of experimental airfoil data 
 
 The database was established through an extensive data mining operation for \emph{strictly experimental} pressure distributions for a variety of airfoils. Each entry of ASPIRE consist of experimental $C_p$ measurements for various airfoil geometries, angles of attack ($\alpha$), chord-based Reynolds numbers ($Re$), and Mach numbers ($M$).
 
@@ -9,7 +9,7 @@ Airfoil Database Link: <br>
 https://docs.google.com/spreadsheets/d/1lj5McgJFJEJ30k7VjSC_P2WIVK0ZOVxvso0a-UtzDUc/edit?usp=sharing
 
 ## Available Data
-ASPIRE consists of 2141 unique pressure distributions from 61 airfoils from various airfoil families and applications. All profiles of the airfoils included in the database, compared against the commonly studied NACA 0012, is shown below. Airfoil profiles thicker than a NACA 0012 at the given chordwise location are colored in varying shades of red. Profiles thinner than the NACA 0012 are colored in shades of blue.
+ASPIRE consists of **2141 unique pressure distributions** from **61 airfoils** from various airfoil families and applications. All profiles of the airfoils included in the database, compared against the commonly studied NACA 0012, is shown below. Airfoil profiles thicker than a NACA 0012 at the given chordwise location are colored in varying shades of red. Profiles thinner than the NACA 0012 are colored in shades of blue.
 
 <div align="center">
   <img src="Figures/2_all_af-1.png" width=50% height=50%>
