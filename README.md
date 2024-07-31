@@ -13,7 +13,7 @@ ASPIRE consists of 2141 unique pressure distributions from 61 airfoils from vari
 
 <div align="center">
   <img src="Figures/2_all_af-1.png" width=50% height=50%>
-  test caption
+  <p style="text-align: center;">Your caption here</p>
 </div>
 
 
