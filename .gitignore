@@ -1,3 +1,5 @@
 # ignore ALL files in ANY directory named temp
 old_codes/
 Supplementary/
+ignore/
+ASPIRE_subsample_data.csv
