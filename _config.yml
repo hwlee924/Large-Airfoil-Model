@@ -1,4 +1,4 @@
-site_url: https://username.github.io/repo-name/
+site_url: https://hwlee924.github.io/Large-Airfoil-Model/
 plugins:
   - jekyll-relative-links
 relative_links:
