@@ -1,3 +1,4 @@
+site_url: https://username.github.io/repo-name/
 plugins:
   - jekyll-relative-links
 relative_links:
