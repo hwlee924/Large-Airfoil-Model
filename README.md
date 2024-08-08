@@ -57,10 +57,9 @@ In many sources, the experimental accuracy are reported by the authors within an
 ### Download
 To access all airfoil experimental data in ASPIRE, run the following:
 ```
-git clone https://github.com/hwlee924/GP-Aero.git
-cd GP-Aero
+git clone [https://github.com/hwlee924/GP-Aero.git](https://github.com/hwlee924/Large-Airfoil-Model.git)
+cd Large-Airfoil-Model
 ```
-(__replace above when repository is renamed__)
 
 ### How to contribute
 Refer to the <a href="https://docs.google.com/spreadsheets/d/1lj5McgJFJEJ30k7VjSC_P2WIVK0ZOVxvso0a-UtzDUc/edit?usp=sharing">here</a> to identify a data source that needs to be digitized and request edit access. If you have a specific document that you would like to work on that is not on the file, add an entry to the spreadsheet.
