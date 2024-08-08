@@ -57,7 +57,7 @@ In many sources, the experimental accuracy are reported by the authors within an
 ### Download
 To access all airfoil experimental data in ASPIRE, run the following:
 ```
-git clone [https://github.com/hwlee924/Large-Airfoil_Model.git]
+git clone https://github.com/hwlee924/Large-Airfoil_Model.git
 cd Large-Airfoil-Model
 ```
 
