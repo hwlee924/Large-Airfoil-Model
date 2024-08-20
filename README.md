@@ -1,3 +1,6 @@
+## Large Airfoil Model
+You can access the **Large Airfoil Model** as well as the details about **ASPIRE** and **ADAPT** on our <a href="https://large-airfoil-model.azurewebsites.net/">Large Airfoil Model website</a>. The following readme only contains information on the ASPIRE database.
+
 ## ASPIRE - Airfoil Surface Pressure Information Repository of Experiments 
 **ASPIRE** is an open-source database accessible to the wider aerospace community utilizing the vast, nearly century-old historical repository of experimental airfoil data. It was first released on XX/XX/2024 (__insert date here__) in a paper by Lee et al. (__hyperlink the paper when arXiv link is available__)
 
