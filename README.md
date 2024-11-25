@@ -2,7 +2,7 @@
 You can access the **Large Airfoil Model** as well as the details about **ASPIRE** and **ADAPT** on our <a href="https://large-airfoil-model.azurewebsites.net/">Large Airfoil Model website</a>. The following readme only contains information on the ASPIRE database.
 
 ## ASPIRE - Airfoil Surface Pressure Information Repository of Experiments 
-**ASPIRE** is an open-source database accessible to the wider aerospace community utilizing the vast, nearly century-old historical repository of experimental airfoil data. It was first released on XX/XX/2024 (__insert date here__) in a paper by Lee et al. (__hyperlink the paper when arXiv link is available__)
+**ASPIRE** is an open-source database accessible to the wider aerospace community utilizing the vast, nearly century-old historical repository of experimental airfoil data. It was first released on Nov. 11, 2024 in a paper titled <a href="https://arxiv.org/pdf/2410.08392">Large Airfoil Models</a>.
 
 The database was established through an extensive data mining operation for _strictly experimental_ pressure distributions for a variety of airfoils. Each entry of ASPIRE consist of experimental $C_p$ measurements for various airfoil geometries, angles of attack ($\alpha$), chord-based Reynolds numbers ($Re$), and Mach numbers ($M$). The complete list of fully digitized  as well as those in progress can be found <a href="https://docs.google.com/spreadsheets/d/1lj5McgJFJEJ30k7VjSC_P2WIVK0ZOVxvso0a-UtzDUc/edit?usp=sharing">here</a>.
 
