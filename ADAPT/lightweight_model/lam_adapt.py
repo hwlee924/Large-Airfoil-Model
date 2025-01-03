@@ -105,6 +105,7 @@ class lam_adapt(gpytorch.models.ExactGP):
             test_x = test_x.cuda()
         # begin prediction
         with torch.no_grad():
+            jitter = torch.eye(test_x.shape[0])*1e-4
             Kxs = gpytorch.lazy.ZeroLazyTensor((train_y.shape[0], test_x.shape[0]))
             Kss = gpytorch.lazy.ZeroLazyTensor((test_x.shape[0], test_x.shape[0]))
             # for loop thru each weights and calculate posterior
@@ -129,6 +130,7 @@ class lam_adapt(gpytorch.models.ExactGP):
                 v = torch.linalg.solve_triangular(L.cuda(), train_y.reshape((-1,1)), upper=False)
                 mu = A.T @ v
                 cov = Kss.cuda() - A.T @ A
+                jitter = jitter.cuda()
             else: 
                 Kxs = Kxs.to_dense()
                 A = torch.linalg.solve_triangular(L, Kxs, upper=False)
@@ -139,7 +141,9 @@ class lam_adapt(gpytorch.models.ExactGP):
             
             posterior_cp = (mu.flatten() + y_mean)/self.scale
             posterior_cov = cov/(self.scale**2)
-            posterior_dist = gpytorch.distributions.MultivariateNormal(posterior_cp, posterior_cov + torch.eye(posterior_cov.shape[0])*1e-4)
+            
+            
+            posterior_dist = gpytorch.distributions.MultivariateNormal(posterior_cp, posterior_cov + jitter)
             xc_loc = (test_x[:, -2] + 1)/2
             if get_coeff==False:
                 model_output = { 
@@ -152,8 +156,8 @@ class lam_adapt(gpytorch.models.ExactGP):
 
                 def get_coeff_samples(coefficient_str, test_data, cp_samples):
                     """ get coefficients from samples via MC """
-                    xc_u, xc_l = xc_loc[:test_data.num_pts[0]], xc_loc[test_data.num_pts[0]:]
-                    samples_u, samples_l = cp_samples[:, :test_data.num_pts[0]], cp_samples[:, test_data.num_pts[0]:]
+                    xc_u, xc_l = xc_loc[:test_data.num_pts[0]].cpu(), xc_loc[test_data.num_pts[0]:].cpu()
+                    samples_u, samples_l = cp_samples[:, :test_data.num_pts[0]].cpu(), cp_samples[:, test_data.num_pts[0]:].cpu()
                     dzdx_u, dzdx_l = torch.from_numpy(np.gradient(test_data.splines[0](xc_u), xc_u)), torch.from_numpy(np.gradient(test_data.splines[1](xc_l), xc_l))
                     z_u, z_l = torch.from_numpy(test_data.splines[0](xc_u)), torch.from_numpy(test_data.splines[1](xc_l))
                     
@@ -512,7 +516,8 @@ def unpack_model(use_gpu=False):
     # Set to eval mode
     model.to(torch.float32) # float32 for memory reduction
     if use_gpu: # push model to cuda if using GPU
-        model.cuda()
+        model = model.cuda()
+        train_x, train_y, train_noise = train_x.cuda(), train_y.cuda(), train_noise.cuda()
     model.eval()
     likelihood.eval()
     model.use_gpu = use_gpu
