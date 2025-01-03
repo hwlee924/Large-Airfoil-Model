@@ -157,30 +157,51 @@ class lam_adapt(gpytorch.models.ExactGP):
                     dzdx_u, dzdx_l = torch.from_numpy(np.gradient(test_data.splines[0](xc_u), xc_u)), torch.from_numpy(np.gradient(test_data.splines[1](xc_l), xc_l))
                     z_u, z_l = torch.from_numpy(test_data.splines[0](xc_u)), torch.from_numpy(test_data.splines[1](xc_l))
                     
-                    match coefficient_str:
-                        case 'ca':
-                            # upper = torch.trapz(y=samples_u * dzdx_u, x=xc_u, dim=1)
-                            # lower = torch.trapz(y=samples_l * dzdx_l, x=xc_l, dim=1)
+                    # match coefficient_str: # for python 3.10 upwards
+                    #     case 'ca':
+                    #         # upper = torch.trapz(y=samples_u * dzdx_u, x=xc_u, dim=1)
+                    #         # lower = torch.trapz(y=samples_l * dzdx_l, x=xc_l, dim=1)
 
-                            dzdx_u = torch.diff(z_u) / torch.diff(xc_u)
-                            dzdx_l = torch.diff(z_l) / torch.diff(xc_l)
-                            upper = torch.sum(samples_u[:, 1:] * dzdx_u * torch.diff(xc_u), dim=1)
-                            lower = torch.sum(samples_l[:, :-1] * dzdx_l * torch.diff(xc_l), dim=1)
-                            coefficient_samples = upper - lower
-                        case 'cn':
-                            upper = torch.trapz(y=samples_u, x=xc_u, dim=1)
-                            lower = torch.trapz(y=samples_l, x=xc_l, dim=1)
-                            coefficient_samples = lower - upper 
-                        case 'cm': 
-                            dzdx_u, dzdx_l = torch.from_numpy(np.gradient(test_data.splines[0](xc_u), xc_u)), torch.from_numpy(np.gradient(test_data.splines[1](xc_l), xc_l))
-                            term1u = torch.trapz(samples_u*(xc_u - 0.25), x=xc_u)
-                            term1l = torch.trapz(samples_l*(xc_l - 0.25), x=xc_l)  
-                            term1 = term1u - term1l
+                    #         dzdx_u = torch.diff(z_u) / torch.diff(xc_u)
+                    #         dzdx_l = torch.diff(z_l) / torch.diff(xc_l)
+                    #         upper = torch.sum(samples_u[:, 1:] * dzdx_u * torch.diff(xc_u), dim=1)
+                    #         lower = torch.sum(samples_l[:, :-1] * dzdx_l * torch.diff(xc_l), dim=1)
+                    #         coefficient_samples = upper - lower
+                    #     case 'cn':
+                    #         upper = torch.trapz(y=samples_u, x=xc_u, dim=1)
+                    #         lower = torch.trapz(y=samples_l, x=xc_l, dim=1)
+                    #         coefficient_samples = lower - upper 
+                    #     case 'cm': 
+                    #         dzdx_u, dzdx_l = torch.from_numpy(np.gradient(test_data.splines[0](xc_u), xc_u)), torch.from_numpy(np.gradient(test_data.splines[1](xc_l), xc_l))
+                    #         term1u = torch.trapz(samples_u*(xc_u - 0.25), x=xc_u)
+                    #         term1l = torch.trapz(samples_l*(xc_l - 0.25), x=xc_l)  
+                    #         term1 = term1u - term1l
                             
-                            term2u = torch.trapz((samples_u * dzdx_u) * z_u, x=xc_u)
-                            term2l = torch.trapz((-samples_l * dzdx_l) * z_l, x=xc_l)
-                            term2 = term2u + term2l
-                            coefficient_samples = term1 + term2 
+                    #         term2u = torch.trapz((samples_u * dzdx_u) * z_u, x=xc_u)
+                    #         term2l = torch.trapz((-samples_l * dzdx_l) * z_l, x=xc_l)
+                    #         term2 = term2u + term2l
+                    #         coefficient_samples = term1 + term2 
+                            
+                    if coefficient_str == 'ca':
+                        dzdx_u = torch.diff(z_u) / torch.diff(xc_u)
+                        dzdx_l = torch.diff(z_l) / torch.diff(xc_l)
+                        upper = torch.sum(samples_u[:, 1:] * dzdx_u * torch.diff(xc_u), dim=1)
+                        lower = torch.sum(samples_l[:, :-1] * dzdx_l * torch.diff(xc_l), dim=1)
+                        coefficient_samples = upper - lower
+                    elif coefficient_str == 'cn':
+                        upper = torch.trapz(y=samples_u, x=xc_u, dim=1)
+                        lower = torch.trapz(y=samples_l, x=xc_l, dim=1)
+                        coefficient_samples = lower - upper 
+                    elif coefficient_str == 'cm': 
+                        dzdx_u, dzdx_l = torch.from_numpy(np.gradient(test_data.splines[0](xc_u), xc_u)), torch.from_numpy(np.gradient(test_data.splines[1](xc_l), xc_l))
+                        term1u = torch.trapz(samples_u*(xc_u - 0.25), x=xc_u)
+                        term1l = torch.trapz(samples_l*(xc_l - 0.25), x=xc_l)  
+                        term1 = term1u - term1l
+                        
+                        term2u = torch.trapz((samples_u * dzdx_u) * z_u, x=xc_u)
+                        term2l = torch.trapz((-samples_l * dzdx_l) * z_l, x=xc_l)
+                        term2 = term2u + term2l
+                        coefficient_samples = term1 + term2 
                     return coefficient_samples
                 ca_samples = get_coeff_samples('ca', test_data, posterior_samples)
                 cn_samples = get_coeff_samples('cn', test_data, posterior_samples)
@@ -343,50 +364,50 @@ class input_data():
         camberline_profile = digits[:3]
         reflex = digits[2]  
         ref_xc = torch.linspace(0, 1, 501) # reference xc 
-        match camberline_profile: # get camberline coefficient values 
-            # Non reflexed
-            case '210':
-                p = 0.05
-                r = 0.0580
-                k1 = 361.40
-            case '220':
-                p = 0.1
-                r = 0.126
-                k1 = 51.640
-            case '230':
-                p = 0.15
-                r = 0.2025
-                k1 = 15.957
-            case '240':
-                p = 0.20
-                r = 0.290
-                k1 = 6.643
-            case '250':
-                p = 0.25
-                r = 0.391
-                k1 = 3.230
-            case '221':
-                p = 0.1
-                r = 0.130
-                k1 = 51.990
-                k2k1 = 0.000764
-            case '231':
-                p = 0.15
-                r = 0.217
-                k1 = 15.793
-                k2k1 = 0.00677
-            case '241':
-                p = 0.20
-                r = 0.318
-                k1 = 6.520
-                k2k1 = 0.0303
-            case '251':
-                p = 0.25
-                r = 0.441
-                k1 = 3.191
-                k2k1 = 0.1355
-            case _:
-                raise ValueError('Please enter a valid NACA 5-digit airfoil.') 
+        # get camberline coefficient values 
+        # Non reflexed
+        if camberline_profile=='210':
+            p = 0.05
+            r = 0.0580
+            k1 = 361.40
+        elif camberline_profile=='220':
+            p = 0.1
+            r = 0.126
+            k1 = 51.640
+        elif camberline_profile=='230':
+            p = 0.15
+            r = 0.2025
+            k1 = 15.957
+        elif camberline_profile=='240':
+            p = 0.20
+            r = 0.290
+            k1 = 6.643
+        elif camberline_profile=='250':
+            p = 0.25
+            r = 0.391
+            k1 = 3.230
+        elif camberline_profile=='221':
+            p = 0.1
+            r = 0.130
+            k1 = 51.990
+            k2k1 = 0.000764
+        elif camberline_profile=='231':
+            p = 0.15
+            r = 0.217
+            k1 = 15.793
+            k2k1 = 0.00677
+        elif camberline_profile=='241':
+            p = 0.20
+            r = 0.318
+            k1 = 6.520
+            k2k1 = 0.0303
+        elif camberline_profile=='251':
+            p = 0.25
+            r = 0.441
+            k1 = 3.191
+            k2k1 = 0.1355
+        else:
+            raise ValueError('Please enter a valid NACA 5-digit airfoil.') 
         
         yt = 5*t*(0.2969*torch.sqrt(ref_xc) - 0.1260*ref_xc - 0.3516*ref_xc**2 + 0.2843*ref_xc**3 - 0.1015*ref_xc**4)
         yc, theta = torch.ones_like(ref_xc), torch.ones_like(ref_xc)
