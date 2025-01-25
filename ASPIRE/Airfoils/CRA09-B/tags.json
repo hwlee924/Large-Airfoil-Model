@@ -1,14 +1,16 @@
 {
   "flow_conditions" : {
-    "reynolds" : "",
+    "reynolds" : "3e6",
     "mach" : "0.60",
     "freestream": "",
     "alpha": "6, 7, 8, 9"
   },
   "uncertainty" : {
     "x" : "",
+    "z" : "",
     "cp" : "",
-    "alpha": ""
+    "alpha": "",
+    "mach": ""
   }, 
   "airfoil": {
     "name": "CRA09-B",
@@ -26,7 +28,7 @@
   "meta" : {
     "num_cases": "4",
     "num_remaining": "", 
-    "notes": "" 
+    "notes": "Re estimated" 
   }
 
 }
