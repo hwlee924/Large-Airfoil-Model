@@ -16,14 +16,15 @@
     "name": "CRA09-A",
     "camber": "Y",
     "supercritical": "N",
-    "application": "rotor"
+    "application": "Rotor"
   },
   "source": {
     "name": "Rotor airfoil aerodynamic design method and wind tunnel test verification",
     "author": "Zhang et al.",
     "year": "2019",
     "page": "2129", 
-    "type": "graph"
+    "type": "graph",
+    "url": "https://www.sciencedirect.com/science/article/pii/S1000936120301825"
   },
   "meta" : {
     "num_cases": "4",
