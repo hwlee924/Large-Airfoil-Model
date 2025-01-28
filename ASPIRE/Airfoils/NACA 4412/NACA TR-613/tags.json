@@ -1,13 +1,14 @@
 {
   "flow_conditions" : {
-    "reynolds" : "3.1e6",
-    "mach" : "0.05",
+    "reynolds" : "1.8e6",
+    "mach" : "0.059",
     "freestream": "",
     "alpha": "-20 - 30"
   },
   "uncertainty" : {
     "x" : "",
-    "cp" : "3%",
+    "z" : "",
+    "cp" : "",
     "alpha": "",
     "mach": ""
   }, 
@@ -18,16 +19,16 @@
     "application": "General"
   },
   "source": {
-    "name": "NACA Report 563",
+    "name": "NACA TR-613",
     "author": "Pinkerton, R.",
     "year": "1936",
-    "page": "5-7", 
+    "page": "79", 
     "type": "graph",
-    "url": "https://ntrs.nasa.gov/citations/19930091638"
+    "url": "https://ntrs.nasa.gov/api/citations/19930091689/downloads/19930091689.pdf"
   },
   "meta" : {
     "num_cases": "15",
-    "num_remaining": "", 
-    "notes": "M obtained from Re" 
+    "num_remaining": "119", 
+    "notes": "M obtained from air properties at given tank pressures, only 1.8e6 digitized" 
   }
 }
