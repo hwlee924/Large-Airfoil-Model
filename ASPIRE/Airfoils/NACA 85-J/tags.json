@@ -1,0 +1,36 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "5.8e6",
+    "mach" : "0.05",
+    "freestream": "",
+    "alpha": "1 - 19"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "z" : "",
+    "cp" : "",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "NACA 85-J",
+    "camber": "N",
+    "supercritical": "N",
+    "application": "General"
+  },
+  "source": {
+    "name": "NACA TR-353",
+    "author": "Jacobs E. N., Pinkerton, R. M.",
+    "year": "1931",
+    "page": "7", 
+    "type": "graph",
+    "url": "https://ntrs.nasa.gov/api/citations/19930091422/downloads/19930091422.pdf"
+  },
+  "meta" : {
+    "num_cases": "7",
+    "num_remaining": "", 
+    "notes": "M estimated" 
+  }
+
+}
+  
