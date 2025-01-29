@@ -3,7 +3,7 @@
     "reynolds" : "4.2e5",
     "mach" : "0.06",
     "freestream": "",
-    "alpha": "7, 10, 13"
+    "alpha": "7, 10, 13, 15"
   },
   "uncertainty" : {
     "x" : "",
