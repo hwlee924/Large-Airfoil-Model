@@ -1,9 +1,9 @@
 {
   "flow_conditions" : {
-    "reynolds" : "1.5e6",
+    "reynolds" : "1.6e6",
     "mach" : "0.106",
     "freestream": "",
-    "alpha": "5.741, 10.238, 12.112, 15.578, 17.347, 19.393"
+    "alpha": "-4.4 - 27.0"
   },
   "uncertainty" : {
     "x" : "",
@@ -25,7 +25,7 @@
     "url": "https://backend.orbit.dtu.dk/ws/portalfiles/portal/7751459/ris_r_1041.pdf"
   },
   "meta" : {
-    "num_cases": "6",
+    "num_cases": "18",
     "num_remaining": "", 
     "notes": "" 
   }
