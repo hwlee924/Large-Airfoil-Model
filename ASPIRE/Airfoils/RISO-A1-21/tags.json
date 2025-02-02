@@ -2,8 +2,8 @@
   "flow_conditions" : {
     "reynolds" : "1.6e6",
     "mach" : "0.122",
-    "freestream": "",
-    "alpha": "5.12, 8.29, 10.22, 12.31, 15.11, 17.88"
+    "freestream": "42 m/s",
+    "alpha": "0 - 28"
   },
   "uncertainty" : {
     "x" : "",
@@ -18,15 +18,15 @@
     "application": "Wind Turbine"
   },
   "source": {
-    "name": "Risoe-R 1280",
+    "name": "Risoe-R 1112",
     "year": "2001",
-    "page": "70", 
+    "page": "33", 
     "type": "graph",
-    "url": "https://backend.orbit.dtu.dk/ws/portalfiles/portal/7728949/ris_r_1280.pdf"
+    "url": "https://backend.orbit.dtu.dk/ws/portalfiles/portal/7731506/ris_r_1112.pdf"
   },
   "meta" : {
-    "num_cases": "6",
+    "num_cases": "8",
     "num_remaining": "", 
-    "notes": "" 
+    "notes": "coordinates found on https://skippy.org.uk/wp-content/uploads/2018/11/FFA-TN-1990-15-v.1-2-c.1.pdf, suction peak omitted on 16 deg+ cases due to cluttered graph" 
   }
 }
