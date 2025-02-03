@@ -7,6 +7,7 @@
   },
   "uncertainty" : {
     "x" : "",
+    "z" : "",
     "cp" : "",
     "alpha": "",
     "mach": ""
@@ -27,6 +28,6 @@
   "meta" : {
     "num_cases": "8",
     "num_remaining": "", 
-    "notes": "coordinates found on https://skippy.org.uk/wp-content/uploads/2018/11/FFA-TN-1990-15-v.1-2-c.1.pdf, suction peak omitted on 16 deg+ cases due to cluttered graph" 
+    "notes": "coordinates found on https://backend.orbit.dtu.dk/ws/portalfiles/portal/7728949/ris_r_1280.pdf, suction peak omitted on 16 deg+ cases due to cluttered graph" 
   }
 }
