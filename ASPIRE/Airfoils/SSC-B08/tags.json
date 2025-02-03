@@ -7,9 +7,12 @@
   },
   "uncertainty" : {
     "x" : "",
+    "z" : "",
     "cp" : "0.01",
-    "alpha": "0.1"
+    "alpha": "0.1",
+    "mach" : ""
   }, 
+  
   "airfoil": {
     "name": "SSC-B08",
     "camber": "Y",
