@@ -1,12 +1,13 @@
 {
   "flow_conditions" : {
-    "reynolds" : "",
-    "mach" : "0.0",
+    "reynolds" : "2e6",
+    "mach" : "0.1",
     "freestream": "",
     "alpha": "4.0, 12.0"
   },
   "uncertainty" : {
     "x" : "",
+    "z" : "", 
     "cp" : "",
     "alpha": "",
     "mach": ""
@@ -27,6 +28,6 @@
   "meta" : {
     "num_cases": "2",
     "num_remaining": "", 
-    "notes": "" 
+    "notes": "should be worth looking for original test document" 
   }
 }
