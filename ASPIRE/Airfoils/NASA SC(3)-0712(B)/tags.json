@@ -16,7 +16,7 @@
     "name" : "NASA SC(3)-0712(B)",
     "camber": "Y",
     "supercritical": "Y",
-    "application": "general"
+    "application": "General"
   },
   "source": {
     "name": "NASA Technical Memorandum M-86370",

@@ -7,7 +7,7 @@
   },
   "uncertainty" : {
     "x" : "",
-    "cp" : "0.002 - 0.02",
+    "cp" : "0.02",
     "alpha": "0.02",
     "mach": "0.001"
   }, 
@@ -27,6 +27,6 @@
   "meta" : {
     "num_cases": "17",
     "num_remaining": "", 
-    "notes": "" 
+    "notes": "Cp error of 0.002 - 0.02 range" 
   }
 }

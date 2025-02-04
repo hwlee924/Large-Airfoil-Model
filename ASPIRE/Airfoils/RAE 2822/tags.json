@@ -7,7 +7,7 @@
   },
   "uncertainty" : {
     "x" : "0.00004",
-    "cp" : "0.0026, 0.0064",
+    "cp" : "0.0064",
     "alpha": "0.01",
     "mach": "0.001"
   }, 
@@ -27,6 +27,6 @@
   "meta" : {
     "num_cases": "11",
     "num_remaining": "", 
-    "notes": "Fixed transition, A617" 
+    "notes": "Fixed transition, A617, Cp error 0.0026 and 0.0064" 
   }
 }

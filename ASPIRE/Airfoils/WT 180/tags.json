@@ -7,8 +7,10 @@
   },
   "uncertainty" : {
     "x" : "",
+    "z" : "",
     "cp" : "",
-    "alpha": ""
+    "alpha": "",
+    "mach" : ""
   }, 
   "airfoil": {
     "name": "WT 180",

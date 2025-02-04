@@ -13,7 +13,7 @@
     "mach": ""
   }, 
   "airfoil": {
-    "name": "17 Percent Thickness Thick Supercritical Airfoil",
+    "name": "17 Percent Thickness Supercritical Airfoil",
     "camber": "Y",
     "supercritical": "Y",
     "application": "General"

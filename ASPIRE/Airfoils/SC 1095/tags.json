@@ -16,7 +16,7 @@
     "name": "SC 1095",
     "camber": "Y",
     "supercritical": "N",
-    "application": "rotor"
+    "application": "Rotor"
   },
   "source": {
     "name": "NASA Contractor Report 166587",

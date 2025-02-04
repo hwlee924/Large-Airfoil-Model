@@ -17,7 +17,7 @@
     "name": "SSC-B08",
     "camber": "Y",
     "supercritical": "N",
-    "application": "rotor"
+    "application": "Rotor"
   },
   "source": {
     "name": "NASA Contractor Report 166587",
