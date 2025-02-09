@@ -1,0 +1,35 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "6.8e4",
+    "mach" : "0.029",
+    "freestream": "",
+    "alpha": "6, 7, 8, 9, 10, 11, 12, 14"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "z" : "",
+    "cp" : "",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "GA(W)-1",
+    "camber": "Y",
+    "supercritical": "N",
+    "application": ""
+  },
+  "source": {
+    "name": "An Experimental Investigation on the Flow Separation on a Low-Reynolds-Number Airfoil",
+    "author": "Yang et al.",
+    "year": "2012",
+    "page": "", 
+    "type": "graph",
+    "url": "https://arc.aiaa.org/doi/abs/10.2514/6.2007-275"
+  },
+  "meta" : {
+    "num_cases": "8",
+    "num_remaining": "", 
+    "notes": "" 
+  }
+
+}
