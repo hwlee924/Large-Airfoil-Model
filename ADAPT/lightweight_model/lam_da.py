@@ -16,14 +16,18 @@ import json
 import pickle
 import lam_adapt
 from difflib import get_close_matches
+import warnings
 logging.set_verbosity_error()
-
+warnings.simplefilter(action='ignore', category=FutureWarning)
 # %% Set up
 """
 Extract a substring before a user indicated marker in a full string
 """
 def extract_before_substring(full_string, marker):
     return full_string.split(marker)[0]
+
+def extract_after(full_string, marker):
+    return full_string.split(marker)[1]
 
 def extract_between(full_string, start_marker, end_marker):
     pattern = re.escape(start_marker) + r'(.*?)' + re.escape(end_marker)
@@ -41,7 +45,7 @@ class aspire_retriever:
         self.git_token = git_token
         # Read and create context snippets from ASPIRE database
         if self.show_debug_logs:
-            print('[DEBUG] Reading all csv files from ASPIRE database...')
+            print('[DEBUG] Reading all csv files from ASPIRE database...' if self.show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
         if load_save is None:
             self.data_csv = [] # initialize data_csv
             self.get_cp_files_from_aspire() # fill data_csv 
@@ -49,10 +53,6 @@ class aspire_retriever:
         else: 
             self.load_contexts_from_pickle(load_save)
         self.airfoil_name_list = list(dict.fromkeys([entry["airfoil"].lower() for entry in self.data_csv]))
-        # self.sentence_transformer = SentenceTransformer("all-MiniLM-L6-v2")
-        # Tokenize and set up retriever via BM25 CHANGE THIS PART 
-        # tokenized_airfoil = [doc.split() for doc in self.airfoil_contexts]
-        # self.airfoil_retriever = BM25Okapi(tokenized_airfoil)
         self.lambert = self.load_bert_pipeline()
         # self.af_score_thresh = 5
         self.data_score_thresh = 0.5
@@ -60,65 +60,63 @@ class aspire_retriever:
     """ Load in BERT pipeline """
     def load_bert_pipeline(self):
         # Load LAMBERT pipeline using pretrained weights
-        print('[DEBUG] Loading in LAMBERT pipeline...' if self.show_debug_logs else '')
+        print('[DEBUG] Loading in LAMBERT pipeline...' if self.show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
         tokenizer = BertTokenizer.from_pretrained("bert-large-uncased-whole-word-masking-finetuned-squad")
         model = BertForQuestionAnswering.from_pretrained("bert-large-uncased-whole-word-masking-finetuned-squad")
         
         # Utilize GPU if available 
         device = "cuda" if torch.cuda.is_available() else "cpu"
         model.to(device)
-        print(f"[DEBUG] LAMBERT is using device: {device}" if self.show_debug_logs else '')
+        print(f"[DEBUG] LAMBERT is using device: {device}" if self.show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
         qa_pipeline = pipeline("question-answering", model=model, tokenizer=tokenizer, device=0 if device == "cuda" else -1)
         return qa_pipeline
 
     def extract_query_parameters(self, query, qa_pipeline):
+        #background context for the model to use when answering questions
+        structured_context = f"""
+        The user wants to extract aerodynamic data.
+        The airfoil name, angle of attack, Mach number, and Reynolds number are mentioned in the query.
+        Extract these values from the following user request: {query}
         """
-        Uses BERT to extract Angle of Attack, Mach Number, and Reynolds Number from the query.
-        Accepts:
-        - 'angle of attack', 'a', or '__ degrees' for AoA
-        - 'mach number' or 'm' for Mach
-        - 'reynolds number' or 're' for Re
-        """
-        parameters = { #  
-            "Angle of attack": ["angle of attack", "angle", "degrees", "alpha", "aoa", "deg", '=', 'of', 'attack'],
-            "Mach": ["mach number", "m", '=', 'of', 'number'],
-            "Reynolds": ["reynolds number", "re", '=', 'of', 'number'], 
-            "Airfoil": []
+
+        #questions for the model to find the various values in the user's prompt
+        parameters = {
+            "Airfoil": "What is the airfoil name?",
+            "Angle of attack": "What is the angle of attack in degrees, allowing for optional negative degrees? It may be written as aoa or a",
+            "Mach": "What is the Mach number? It may be written as m or mach",
+            "Reynolds": "What is the Reynolds number or re? It may be written as reynolds or re"
         }
 
         extracted_parameters = {}
 
-        for param, keywords in parameters.items():
-            # context = f"The {param} is specified in the following sentence: {query}"
-            Q = f"What {param} is this sentence about?"
-            context = query #f"The {param} is specified in the following sentence: {query}"
+        for param, question in parameters.items():
             try:
-                response = qa_pipeline(question=Q, context=context) # param
+                #uses BERT to extract the data from the query
+                response = qa_pipeline(question=question, context=structured_context)
                 extracted_value = response["answer"]
-                for keyword in keywords:
-                    extracted_value = extracted_value.replace(keyword, "").strip()
 
-                match = re.search(r"[-+]?\d*\.?\d+(?:[eE][-+]?\d+)?", extracted_value)
-                if response['score'] > 0.5:
-                    if param != 'Airfoil':
-                        extracted_value = float(match.group(0))
-                    else:
-                        extracted_value = extracted_value
+                print(f"[DEBUG] BERT raw output for {param}: {extracted_value}" if self.show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
+
+                #remove any commas from the extracted data
+                extracted_value = extracted_value.replace(",", "").strip()
+
+                if param == "Airfoil":
+                    extracted_parameters[param] = extracted_value
+                    if "Mach" in extracted_value.lower():
+                        extracted_parameters[param] = None
+                    if "Reynolds" in extracted_value.lower():
+                        extracted_parameters[param] = None
+                    if "Angle of attack" in extracted_value.lower() or "aoa" in extracted_value.lower() or "degrees" in extracted_value.lower():
+                        extracted_parameters[param] = None
                 else:
-                    if param == 'Angle of attack':
-                        extracted_value = None # 0.0
-                    elif param == 'Mach': 
-                        extracted_value = None #0.0
-                    elif param == 'Reynolds':
-                        extracted_value = None
-                    else: 
-                        extracted_value = None
-                extracted_parameters[param] = extracted_value
+                    #extract only the numerical values
+                    match = re.search(r"[-+]?\d*\.?\d+(?:[eE][-+]?\d+)?", extracted_value)
+                    extracted_parameters[param] = float(match.group(0)) if match else None
 
             except Exception as e:
-                print(f"[DEBUG] Could not extract {param}: {e}\n" if self.show_debug_logs else '')
+                #handle errors if unable to extract value
+                print(f"Error extracting {param}: {e}" if self.show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
                 extracted_parameters[param] = None
-        print(f"[DEBUG] Extracted Parameters: {extracted_parameters}\n" if self.show_debug_logs else '')
         return extracted_parameters
 
     def extract_metadata_from_filename(self, filename):
@@ -140,7 +138,7 @@ class aspire_retriever:
             # print(f"Extracted from {filename}: {extracted_data}")
             return extracted_data
 
-        print(f"No match found for {filename}")
+        print(f"No match found for {filename}" if self.show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
         return None
 
     def retrieve_context(self, query): 
@@ -156,7 +154,7 @@ class aspire_retriever:
             retrieved_airfoil = self.airfoil_contexts[af_match_idx] # context for airfoil
             file_list = self.file_list[af_match_idx] # list of files 
         else:
-            return 'There is no matching airfoil available in the database' # return empty string for no context 
+            return 'There is no matching airfoil available in the database. You cannot retrieve the airfoil coordinates. Do not invoke any functions.' # return empty string for no context 
         
         best_score = float('inf')
         metadata_list = [self.extract_metadata_from_filename(file) for file in file_list if self.extract_metadata_from_filename(file)]
@@ -309,8 +307,10 @@ class aspire_retriever:
             nav_str = f"The pressure distribution can be accessed by the user through the html of {entry['nav_url']}. "
            
             # This is regarding the tag information
-            tag_loc = extract_between(entry['download_url'], base_url, '/')
-            tag_info = self.read_tag_file(base_url + tag_loc + '/tags.json')
+            tag_locs = entry['download_url'].split('/')#extract_between(entry['download_url'], base_url, '/')
+            tag_loc = "/".join(tag_locs[:-1])
+            tag_info = self.read_tag_file(tag_loc + '/tags.json')
+
             camber_str = f"The {entry['airfoil']} airfoil is {tag_info['camber']}. "
             super_str = f"The {entry['airfoil']} airfoil is {tag_info['super']}. "
             usage_str = f"The {entry['airfoil']} airfoil is used for {tag_info['apply']} applications. "
@@ -387,24 +387,24 @@ class rag_model:
 
         # initialize session memory
         if self.show_debug_logs:
-            print('[DEBUG] Initializing session memory...')
+            print('[DEBUG] Initializing session memory...' if show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
         self.memory = session_memory_tracker()
 
         # call data retriever for RAG 
-        print('[DEBUG] Initializing ASPIRE retriever for RAG...' if self.show_debug_logs else '')
+        print('[DEBUG] Initializing ASPIRE retriever for RAG...' if self.show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
         self.retriever = aspire_retriever(git_token, show_debug_logs=self.show_debug_logs, load_save=context_save_file)
 
         # initialize ADAPT prediction module 
-        print('[DEBUG] Initializing ADAPT prediction module...' if self.show_debug_logs else '')
+        print('[DEBUG] Initializing ADAPT prediction module...' if self.show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
         self.predictor = adapt_predictor(show_debug_logs=self.show_debug_logs, use_gpu=self.use_gpu)
         
         # show complete message 
-        print('[DEBUG] Model initialized!' if self.show_debug_logs else '')
+        print('[DEBUG] Model initialized!' if self.show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
             
     def ask_query(self, query):
         if self.show_debug_logs:
             print(textwrap.fill(f"[DEBUG] Query: {query}", width=90))
-            print("\n")
+            # print("\n" if self.show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
             
         if self.memory.memory_snippets is not None: # if this is not the first question 
             # retrieve memory and include in the instructions 
@@ -414,7 +414,7 @@ class rag_model:
             self.append_to_instructions(retrieved_memory) 
             
         retrieved_context = self.retriever.retrieve_context(query) # get context for RAG 
-        self.append_to_instructions(f"When generating links, ONLY the context provided by the following sentences. {retrieved_context}") # add context to underlying instruction for model   
+        self.append_to_instructions(f"When answering the user inquiries, use ONLY the context provided by the following sentences. {retrieved_context}") # add context to underlying instruction for model   
         # assemble message 
         messages = [
             {"role": "system", "content": self.instructions},
@@ -422,23 +422,24 @@ class rag_model:
         ]
 
         # Generate a response using the text generation pipeline 
-        response = self.generator(messages, max_new_tokens=128 * 3)[-1]["generated_text"][-1]["content"]
+        response = self.generator(messages, temperature=0.1, max_new_tokens=128 * 3)[-1]["generated_text"][-1]["content"]
 
         # Debugging outputs
         if self.show_debug_logs:
             print(textwrap.fill(f"[DEBUG] Context: {retrieved_context}", width=90))
-            print("\n")
+            # print("\n" )
             if self.memory.memory_snippets is not None:
                 print(textwrap.fill(f"[DEBUG] Memory: {retrieved_memory}", width=90))
-                print("\n")
+                # print("\n")
             print(textwrap.fill(f"[DEBUG] Uncut Answer: {response}", width=90))
-            print("\n")
+            # print("\n")
 
         # Parse
         if "[" in response and "]" in response:
             response = self.parse_function_call(response)
 
         print(textwrap.fill(f"Answer: {response}", width=90), flush=True)
+        print('\n')
         
         # Retain memory and clear instructions
         self.memory.add_entry(query, response, retrieved_context)
@@ -448,13 +449,13 @@ class rag_model:
         self.function_definitions = """[
         {
             "name": "retrieve_and_plot_cp_from_csv",
-            "description": "Visualizes the pressure distribution over an airfoil by reading in an existing file from the database and plotting it. This should only be invoked if it is evident that the relevant csv file exists.",
+            "description": "Visualizes the pressure distribution over an airfoil by reading in an existing file from the database and plotting it. This should only be invoked if it is evident that the airfoil coordinate files and the pressure distribution csv file exist.",
             "parameters": {
                 "type": "object",
                 "properties": {
                     "cp_file_url": {
                         "type": "string",
-                        "description": "The pressure distribution file download url defined that is only used by the function."
+                        "description": "The pressure distribution file download url defined that is only used by the function. This should be a real url."
                     },
                 },
                 "required": ["cp_file_url"]
@@ -462,13 +463,13 @@ class rag_model:
         },
         {
             "name": "retrieve_and_plot_geometry_from_csv",
-            "description": "Visualizes the airfoil geometry or shape by reading in an existing coordinates file from the database and plotting it. This should be only invoked if the user asks for the airfoil geometry.",
+            "description": "Visualizes the airfoil geometry or shape by reading in an existing coordinates file from the database and plotting it. This should be only invoked if the user asks for the airfoil geometry and the airfoil coordinate files exist.",
             "parameters": {
                 "type": "object",
                 "properties": {
                     "coordinates_file_url": {
                         "type": "string",
-                        "description": "The airfoil coordinates/geometry/shape file download url defined that is only used by the function."
+                        "description": "The airfoil coordinates/geometry/shape file download url defined that is only used by the function. This should be a real url."
                     },
                 },
                 "required": ["coordinates_file_url"]
@@ -476,7 +477,7 @@ class rag_model:
         },
         {
             "name": "predict_using_adapt",
-            "description": "Predicts the pressure distribution using the ADAPT module if there is a matching airfoil. If there is no matching airfoil, the function will not be invoked.",
+            "description": "Predicts the pressure distribution using the ADAPT module if there is a matching airfoil coordinates file. If there is no matching airfoil, the function will not be invoked.",
             "parameters": {
                 "type": "object",
                 "properties": {
@@ -504,21 +505,21 @@ class rag_model:
                 You should identify all of the tasks within the user query and invoke the appropriate functions if necessary.
                 Here is a list of functions in JSON format that you can invoke: {self.function_definitions}
 
-                Task 1: If the user asks for the pressure distribution of an airfoil under different operating conditions, retrieve the appropriate file name within the ASPIRE database and plot it.
+                Task 1: If the user asks for the pressure distribution of an airfoil under different operating conditions, retrieve the appropriate file name within the ASPIRE database and plot it only if the file eixsts.
                 Task 2: If there is a matching airfoil, but the pressure distribution file does not exist, generate a prediction of it using the predict_using_adapt function. 
                 However, if there is not matching airfoil file, Do not invoke any functions and let the user know.
-                Task 3: If the user asks for a prediction of the pressure distribution of an airfoil under different operating condtions, generate a prediction using the predict_using_adapt function. 
+                Task 3: If the user asks for a prediction of the pressure distribution of an airfoil under different operating condtions, generate a prediction using the predict_using_adapt function only if the file eixsts. 
                 Task 4: If the user asks for the geometry of an airfoil (what it looks like), retrieve the appropriate coordinates file within the ASPIRE database and plot it. 
                 Note that if the user directly asks for the link, you will output the html. However, if you are to invoke functions, you should use the download url but only utilize the context in retrieving the url.
 
                 If you decide to invoke any of the function(s), you MUST put it in the format like this within brackets [function1(params_name1=params_value1, params_name2=params_value2...), function2(params)].
                 ONLY use URLs and HTML links when invoking a function within the brackets. Link should not be located outside these brackets.   
                 Please explain the outputs you generate by explaning what it is and what file you obtained the information but don't explicitly mention evoking a function.
-                Please speak like you are a kind assistant and explain what you are doing to the user. 
+                Please speak like you are a kind assistant. 
                 If you invoke a function, make sure the output brackets that includes ALL the invoked function are the very LAST sentence.
 
                 Provide the answer to the user questions and relevant clarifying questions, or invoke a function to the following query per the task workflow defined above.
-                Provide your answers in as few sentences as possible, while taking into account the previous instructions.
+                Provide your answers in as few sentences as possible, while taking into account the previous instructions. 
                 """
 
     """ 
@@ -536,13 +537,12 @@ class rag_model:
                     raw_response.strip().split("[")[1].split("]")[0]
                 )  # get the function call within [] 
         function_calls_list = re.findall(r'\w+\(.*?\)', function_calls) #[item.strip() for item in function_calls.split('),')] 
-        print(function_calls_list)
         try:
             for function_calls in function_calls_list:
-                print(f'[DEBUG] Running internal function {function_calls}' if self.show_debug_logs else '')
+                print(f'[DEBUG] Running internal function {function_calls}' if self.show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
                 eval('self.' + function_calls)
         except Exception as e:
-            print(f"Error in parsing function: {e}")
+            print(f"[DEBUG] Error in parsing function: {e}" if self.show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
         # output everything except the function call.
         return raw_response.split("[")[0]
 
@@ -554,7 +554,7 @@ class rag_model:
         # Retrieve file from the file ULR
         response = requests.get(cp_file_url)
         if response.status_code != 200:
-            print("Error downloading file.")
+            print("[DEBUG] Error downloading file." if self.show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
             return
 
         # obtain data
@@ -593,7 +593,7 @@ class rag_model:
 
         response = requests.get(coordinates_file_url)
         if response.status_code != 200:
-            print("Error downloading file.")
+            print("[DEBUG] Error downloading file." if self.show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
             return
 
         # obtain data
@@ -740,7 +740,7 @@ class adapt_predictor():
             prediction_mean[:self.num_points_per_surface] - 2 * prediction_sig[:self.num_points_per_surface],
             prediction_mean[:self.num_points_per_surface] + 2 * prediction_sig[:self.num_points_per_surface],
             color="lightgray",
-            label="Predicted 2$\sigma",
+            label="Predicted 2$\sigma$",
         )
         # Lower surface, mean
         plt.plot(
@@ -766,7 +766,7 @@ class adapt_predictor():
         
 #%% Run the model 
 if __name__ == "__main__": 
-    token_str = "ASK ME FOR THIS"
+    token_str = ""
     use_gpu = True
     if use_gpu:  # 6 is for personal use
         os.environ["CUDA_VISIBLE_DEVICES"] = "7"
@@ -779,18 +779,18 @@ if __name__ == "__main__":
         print("Using CPU")
     else:
         raise ValueError("Incorrect value of useGPU variable")
-    llambda = rag_model(git_token=token_str, show_debug_logs=True, context_save_file='temp_model.pkl')
+    lam_da = rag_model(git_token=token_str, show_debug_logs=True, context_save_file='temp_model.pkl') # 
     
     while True:
-        llambda.reset_memory() # reseting memory everytime cuz memory is kinda jank right now
+        lam_da.reset_memory() # reseting memory everytime cuz memory is kinda jank right now
         query = input("Enter your query: ")
         print(f'Query: {query}', flush=True)
         if query.lower() == "exit":
             print(f'Answer: Good bye!', flush=True)
             break
-        llambda.ask_query(query)
+        lam_da.ask_query(query)
 
-#%% List of useful questions
+#%% List of useful test questions
 query = 'What is the NACA0012 airfoil?' # General question about airfoil
 query = 'Can you plot what the NACA0012 airfoil look like?' # Specific inquiry about airfoil geometric profile
 query = 'Can you plot the SC1095 airfoil Cp distribution at angle of attack = 6.2 and Mach number = 0.6?' # Retrival of existing Cp distribution
