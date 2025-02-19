@@ -34,6 +34,7 @@ def extract_between(full_string, start_marker, end_marker):
     match = re.search(pattern, full_string)
     return match.group(1) if match else None
 
+
 """
 Set up retriever
 """
@@ -154,7 +155,7 @@ class aspire_retriever:
             retrieved_airfoil = self.airfoil_contexts[af_match_idx] # context for airfoil
             file_list = self.file_list[af_match_idx] # list of files 
         else:
-            return 'There is no matching airfoil available in the database. You cannot retrieve the airfoil coordinates. Do not invoke any functions.' # return empty string for no context 
+            return 'There is no matching airfoil available in the database. You cannot retrieve the airfoil coordinates from the database. Maybe the attachment has information you can use.' # return empty string for no context 
         
         best_score = float('inf')
         metadata_list = [self.extract_metadata_from_filename(file) for file in file_list if self.extract_metadata_from_filename(file)]
@@ -401,7 +402,7 @@ class rag_model:
         # show complete message 
         print('[DEBUG] Model initialized!' if self.show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
             
-    def ask_query(self, query):
+    def ask_query(self, query, attachment=None):
         if self.show_debug_logs:
             print(textwrap.fill(f"[DEBUG] Query: {query}", width=90))
             # print("\n" if self.show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
@@ -415,6 +416,11 @@ class rag_model:
             
         retrieved_context = self.retriever.retrieve_context(query) # get context for RAG 
         self.append_to_instructions(f"When answering the user inquiries, use ONLY the context provided by the following sentences. {retrieved_context}") # add context to underlying instruction for model   
+        if attachment is not None:
+            attachment_str = f" This is the airfoil coordinates as an attachment: {attachment}."
+            # self.append_to_instructions(attachment_str)
+            query += attachment_str
+            print('[DEBUG]' + attachment_str if self.show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
         # assemble message 
         messages = [
             {"role": "system", "content": self.instructions},
@@ -423,7 +429,10 @@ class rag_model:
 
         # Generate a response using the text generation pipeline 
         response = self.generator(messages, temperature=0.1, max_new_tokens=128 * 3)[-1]["generated_text"][-1]["content"]
-
+        responses = {
+            'PLACEHOLDER': ['hiya']
+        }
+        
         # Debugging outputs
         if self.show_debug_logs:
             print(textwrap.fill(f"[DEBUG] Context: {retrieved_context}", width=90))
@@ -455,7 +464,7 @@ class rag_model:
                 "properties": {
                     "cp_file_url": {
                         "type": "string",
-                        "description": "The pressure distribution file download url defined that is only used by the function. This should be a real url."
+                        "description": "The pressure distribution file download url defined that is only used by the function. This should be a real url or a real file directory provided by the user."
                     },
                 },
                 "required": ["cp_file_url"]
@@ -469,7 +478,7 @@ class rag_model:
                 "properties": {
                     "coordinates_file_url": {
                         "type": "string",
-                        "description": "The airfoil coordinates/geometry/shape file download url defined that is only used by the function. This should be a real url."
+                        "description": "The airfoil coordinates/geometry/shape file defined that is only used by the function. This should be a real url or a real file directory provided by the user."
                     },
                 },
                 "required": ["coordinates_file_url"]
@@ -477,7 +486,7 @@ class rag_model:
         },
         {
             "name": "predict_using_adapt",
-            "description": "Predicts the pressure distribution using the ADAPT module if there is a matching airfoil coordinates file. If there is no matching airfoil, the function will not be invoked.",
+            "description": "Predicts the pressure distribution using the ADAPT module if there is a matching coordinate file and/or pressure data.",
             "parameters": {
                 "type": "object",
                 "properties": {
@@ -500,34 +509,36 @@ class rag_model:
         ]"""
 
     def init_model_instructions(self):
-        self.instructions = f"""You are an AI-driven airfoil aerodynamics analysis assistant.
+        self.instructions = f"""You are an AI-driven airfoil aerodynamics analysis digital assistant, named Large Airfoil Model Digital Assistant (LAMDA).
                 You have access to a set of tasks. Your job is to identify the user-defined task and act accordingly. You also have the capacity to make function/tool calls when necessary.
                 You should identify all of the tasks within the user query and invoke the appropriate functions if necessary.
                 Here is a list of functions in JSON format that you can invoke: {self.function_definitions}
 
-                Task 1: If the user asks for the pressure distribution of an airfoil under different operating conditions, retrieve the appropriate file name within the ASPIRE database and plot it only if the file eixsts.
-                Task 2: If there is a matching airfoil, but the pressure distribution file does not exist, generate a prediction of it using the predict_using_adapt function. 
-                However, if there is not matching airfoil file, Do not invoke any functions and let the user know.
-                Task 3: If the user asks for a prediction of the pressure distribution of an airfoil under different operating condtions, generate a prediction using the predict_using_adapt function only if the file eixsts. 
-                Task 4: If the user asks for the geometry of an airfoil (what it looks like), retrieve the appropriate coordinates file within the ASPIRE database and plot it. 
+                Task 1: If the user asks for the pressure distribution of an airfoil under different operating conditions, retrieve the appropriate file name within the ASPIRE database and plot it only if the file exists.
+                Task 2: If there is a matching airfoil, but the pressure distribution file does not exist, generate a prediction of it using the ADAPT module.  
+                Task 3: If there is no matching airfoil, but user provided the coordinates attachment, and the user asks for a prediction of the pressure distribution of an airfoil under different operating condtions, generate a prediction using the ADAPT module. 
+                Task 4: If the user asks for the geometry of an airfoil (what it looks like), retrieve the appropriate coordinates file within the ASPIRE database or attachment and plot it. 
                 Note that if the user directly asks for the link, you will output the html. However, if you are to invoke functions, you should use the download url but only utilize the context in retrieving the url.
-
+                
+                If there is no matching airfoil and no attached coordinates file, then your tasks cannot be performed.
+                
                 If you decide to invoke any of the function(s), you MUST put it in the format like this within brackets [function1(params_name1=params_value1, params_name2=params_value2...), function2(params)].
                 ONLY use URLs and HTML links when invoking a function within the brackets. Link should not be located outside these brackets.   
                 Please explain the outputs you generate by explaning what it is and what file you obtained the information but don't explicitly mention evoking a function.
                 Please speak like you are a kind assistant. 
                 If you invoke a function, make sure the output brackets that includes ALL the invoked function are the very LAST sentence.
 
-                Provide the answer to the user questions and relevant clarifying questions, or invoke a function to the following query per the task workflow defined above.
-                Provide your answers in as few sentences as possible, while taking into account the previous instructions. 
+                Only provide the answer to the user questions, or invoke a function to the following query per the task workflow defined above.
+                Answer in one or two sentences and do not be repetitive in your response.
+                Prioritize the existing attachment over the database files. 
                 """
-
+#                 However, if there is not matching airfoil file, Do not invoke any functions and let the user know.z
     """ 
     Append new strings to the existing instructions for the model 
     new_text: string
     """
     def append_to_instructions(self, new_text):
-        self.instructions = self.instructions + new_text
+        self.instructions = self.instructions + new_text # predict_using_adapt
     
     """
     Parses the function call string and dynamically executes the function if allowed.
@@ -589,23 +600,25 @@ class rag_model:
     Visualizes the airfoil geometry by reading in an existing coordinates from the database and plotting it
     """
     def retrieve_and_plot_geometry_from_csv(self, coordinates_file_url):
-        # Retrieve file from the file URL
+        # Retrieve file from the file URL or directory
+        if os.path.isfile(coordinates_file_url): # utilizing attachment file if it exists 
+            df = pd.read_csv(coordinates_file_url, header=None)
+        else: # directory option
+            response = requests.get(coordinates_file_url)
+            if response.status_code != 200:
+                print("[DEBUG] Error downloading file." if self.show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
+                return
 
-        response = requests.get(coordinates_file_url)
-        if response.status_code != 200:
-            print("[DEBUG] Error downloading file." if self.show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
-            return
+            # obtain data
+            data = response.text.split("\n")  # split the file by lines
+            data = data[1:]  # skips the first line
+            # removes commas from file
+            data = [line.replace(",", " ") for line in data if line.strip()]
+            df = pd.DataFrame(
+                [line.split() for line in data], dtype=float
+            )  # creates a data frame object
 
-        # obtain data
-        data = response.text.split("\n")  # split the file by lines
-        data = data[1:]  # skips the first line
-        # removes commas from file
-        data = [line.replace(",", " ") for line in data if line.strip()]
-        df = pd.DataFrame(
-            [line.split() for line in data], dtype=float
-        )  # creates a data frame object
-
-        df = df.iloc[:, :2]  # only uses first two columns
+            df = df.iloc[:, :2]  # only uses first two columns
 
         # plots the data
         plt.figure(figsize=(8, 6))
@@ -627,19 +640,22 @@ class rag_model:
     """
     def predict_using_adapt(self, alpha, mach, coordinates_file_url):
         # Download CSV coordinate file file 
-        response = requests.get(coordinates_file_url)
-        if response.status_code != 200:
-            print("Error downloading file.")
-            return
-
-        # obtain data
-        data = response.text.split("\n")  # split the file by lines 
-        # removes commas from file
-        data = [line.replace(",", " ") for line in data if line.strip()]
-        df = pd.DataFrame(
-            [line.split() for line in data], dtype=float
-        )  # creates a data frame object
-        airfoil_nparray = df.iloc[:, :2].values  # only uses first two columns
+        if os.path.isfile(coordinates_file_url): # utilizing attachment file if it exists 
+            airfoil_nparray = pd.read_csv(coordinates_file_url, header=None).values
+        else: 
+            response = requests.get(coordinates_file_url)
+            if response.status_code != 200:
+                print("[DEBUG] Error downloading file." if self.show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
+                return
+            
+            # obtain data
+            data = response.text.split("\n")  # split the file by lines 
+            # removes commas from file
+            data = [line.replace(",", " ") for line in data if line.strip()]
+            df = pd.DataFrame(
+                [line.split() for line in data], dtype=float
+            )  # creates a data frame object
+            airfoil_nparray = df.iloc[:, :2].values  # only uses first two columns
         
         airfoil_input = self.predictor.create_input(airfoil_nparray, alpha, mach) # create input tensor from LLM input
         predictions = self.predictor.predict(airfoil_input) # Generate prediction using ADAPT module
@@ -779,7 +795,7 @@ if __name__ == "__main__":
         print("Using CPU")
     else:
         raise ValueError("Incorrect value of useGPU variable")
-    lam_da = rag_model(git_token=token_str, show_debug_logs=True, context_save_file='temp_model.pkl') # 
+    lam_da = rag_model(git_token=token_str, show_debug_logs=False, context_save_file='temp_model.pkl') # 
     
     while True:
         lam_da.reset_memory() # reseting memory everytime cuz memory is kinda jank right now
@@ -788,7 +804,10 @@ if __name__ == "__main__":
         if query.lower() == "exit":
             print(f'Answer: Good bye!', flush=True)
             break
-        lam_da.ask_query(query)
+        attachment = input("Enter directory to any attachments: ") 
+        print(f'Attachment: {attachment}', flush=True)
+        
+        lam_da.ask_query(query, attachment)
 
 #%% List of useful test questions
 query = 'What is the NACA0012 airfoil?' # General question about airfoil
@@ -797,4 +816,11 @@ query = 'Can you plot the SC1095 airfoil Cp distribution at angle of attack = 6.
 query = 'Can you predict the SC1095 airfoil Cp distribution at angle of attack = 10.2 and Mach number = 0.6?' # Prediction of Cp distribution 
 # "Bad" questions
 query = 'Can you predict the SC1115 airfoil Cp distribution at angle of attack = 10.2 and Mach number = 0.6?' # Bad user input wrt airfoil
-query = 'Cp distribution over SC1095 at Angle of X and Mach Y?' # Bad user input wrt operating conditions
+query = 'Cp distribution over SC1095 at Angle of X and Mach Y?' # Bad user input wrt operatinfg conditions
+#%% 
+lam_da.reset_memory()
+query = 'Predict this airfoil Cp distribution at AoA = 5 degrees, Mach = 0.08 please?'
+attachment = '/home/hlee981/LAM-LLM/WT 180_coordinates.csv' 
+print(f'Query: {query}', flush=True)
+print(f'Attachment: {attachment}', flush=True)
+lam_da.ask_query(query, attachment)
