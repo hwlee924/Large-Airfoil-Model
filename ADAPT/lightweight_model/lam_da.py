@@ -3,7 +3,7 @@ from huggingface_hub import login
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline, BertTokenizer, BertForQuestionAnswering, logging
 from sentence_transformers import SentenceTransformer
 import os
-os.chdir('/home/hlee981/LAM-LLM/')
+#os.chdir('/home/hlee981/LAM-LLM/')
 
 import re
 import torch
@@ -142,7 +142,7 @@ class aspire_retriever:
         print(f"No match found for {filename}" if self.show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
         return None
 
-    def retrieve_context(self, query): 
+    def retrieve_context(self, query, angle_threshold, mach_threshold, re_threshold): 
         # retrieve the extracted query parameters
         query_params = self.extract_query_parameters(query, self.lambert)
         
@@ -177,7 +177,7 @@ class aspire_retriever:
                 mach_score = abs(metadata["mach_number"] - query_params["Mach"])
                 re_score = abs(metadata["reynolds_number"] - query_params["Reynolds"])
 
-                if angle_score < 0.1 and mach_score < 0.01 : # and re_score < 100000
+                if angle_score < angle_threshold and mach_score < mach_threshold : # and re_score < re_threshold
                     score = angle_score + mach_score + re_score
                     if score < best_score: 
                         best_score = score
@@ -189,7 +189,26 @@ class aspire_retriever:
         if best_match_idx:
             return retrieved_airfoil + self.data_contexts[af_match_idx][best_match_idx]
         else:
-            return retrieved_airfoil + ' No relevant pressure distribution file was found in the database. You should instead predict the results using the ADAPT module.'
+            change_thresholds = input("No relevant pressure distribution file was found in the database. \n The current thresholds are " + str(angle_threshold) + " degrees for angle of attack, " + str(mach_threshold) + " for mach number, " + str(re_threshold) + " for reynold's number. Would you like to change these? (y/n)")
+            if (change_thresholds.lower() == "y"):
+                angle_threshold_1 = (input("New angle of attack threshold: "))
+                try:
+                    angle_threshold_new = float(angle_threshold_1)
+                except ValueError:
+                    angle_threshold_new = angle_threshold
+                mach_threshold_1 = (input("New mach number threshold: "))
+                try:
+                    mach_threshold_new = float(mach_threshold_1)
+                except ValueError:
+                    mach_threshold_new = mach_threshold
+                re_threshold_1 = (input("New reynolds number threshold: "))
+                try:
+                    re_threshold_new = float(re_threshold_1)
+                except ValueError:
+                    re_threshold_new = re_threshold
+                return self.retrieve_context(query, angle_threshold_new, mach_threshold_new, re_threshold_new)
+            else:
+                return retrieved_airfoil + ' No relevant pressure distribution file was found in the database. You should instead predict the results using the ADAPT module.'
 
     def best_match(self, target, choices):
         matches = get_close_matches(target, choices, n=1, cutoff=0.9)
@@ -414,7 +433,7 @@ class rag_model:
             # print(query)
             self.append_to_instructions(retrieved_memory) 
             
-        retrieved_context = self.retriever.retrieve_context(query) # get context for RAG 
+        retrieved_context = self.retriever.retrieve_context(query, 0.1, 0.01, 100000) # get context for RAG 
         self.append_to_instructions(f"When answering the user inquiries, use ONLY the context provided by the following sentences. {retrieved_context}") # add context to underlying instruction for model   
         if attachment is not None:
             attachment_str = f" This is the airfoil coordinates as an attachment: {attachment}."
@@ -756,7 +775,7 @@ class adapt_predictor():
             prediction_mean[:self.num_points_per_surface] - 2 * prediction_sig[:self.num_points_per_surface],
             prediction_mean[:self.num_points_per_surface] + 2 * prediction_sig[:self.num_points_per_surface],
             color="lightgray",
-            label="Predicted 2$\sigma$",
+            label="Predicted 2$sigma$",
         )
         # Lower surface, mean
         plt.plot(
@@ -782,7 +801,7 @@ class adapt_predictor():
         
 #%% Run the model 
 if __name__ == "__main__": 
-    token_str = ""
+    token_str = "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"
     use_gpu = True
     if use_gpu:  # 6 is for personal use
         os.environ["CUDA_VISIBLE_DEVICES"] = "7"
