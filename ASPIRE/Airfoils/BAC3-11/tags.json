@@ -1,0 +1,35 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "2.05e7, 2.7e6, 2e7, 3.6e7, 2.03e7, 7.5e6",
+    "mach" : "0.7, 0.73",
+    "freestream": "",
+    "alpha": "0, 2"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "z" : "",
+    "cp" : "",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "BAC3-11/RES/30/21",
+    "camber": "Y",
+    "supercritical": "Y",
+    "application": ""
+  },
+  "source": {
+    "name": "Airfoil Flow Visualization and Pressure Measurements in High-Reynolds-Number Transonic Flow",
+    "author": "Olivier-et-al",
+    "year": "2003",
+    "page": "", 
+    "type": "graph",
+    "url": "https://arc.aiaa.org/doi/epdf/10.2514/2.2098"
+  },
+  "meta" : {
+    "num_cases": "6",
+    "num_remaining": "", 
+    "notes": "Official airfoil coordinates data not available" 
+  }
+
+}
