@@ -494,7 +494,7 @@ use_gpu: determine whether to use GPU | Boolean
 returns model and likelihood which are used to make predictions
 """
 def unpack_model(use_gpu=False, show_debug_logs=True):
-    print('[DEBUG] Loading in model...' if show_debug_logs else '')
+    print('[DEBUG] Loading in model...' if show_debug_logs else '', end='' if not show_debug_logs else '\n')
     assert os.path.isdir('./model/'), 'Model directory does not exist'
     # reads in train_x, train_y, noise_model, and Lxx (cholesky Kxx)
     global L, train_x, train_y, train_noise
@@ -505,7 +505,7 @@ def unpack_model(use_gpu=False, show_debug_logs=True):
         # Load in pickled main covariance matrix Kxx 
         if 'L' not in globals():
             if os.path.exists('./model/lam_L.pt'):
-                print('[DEBUG] lam_L.pt file already exists. Loading file...' if show_debug_logs else '')
+                print('[DEBUG] lam_L.pt file already exists. Loading file...' if show_debug_logs else '', end='' if not show_debug_logs else '\n')
                 L = torch.load('./model/lam_L.pt', map_location='cpu')
             else:
                 # if not included, message to download the file  
@@ -527,8 +527,8 @@ def unpack_model(use_gpu=False, show_debug_logs=True):
                     else:
                         download_response = input()
         else:
-            print('[DEBUG] lam_L.pt file already loaded...')
-        print('[DEBUG] Loading complete!')
+            print('[DEBUG] lam_L.pt file already loaded...' if show_debug_logs else '', end='' if not show_debug_logs else '\n')
+        print('[DEBUG] Loading complete!' if show_debug_logs else '', end='' if not show_debug_logs else '\n')
         scaler = 10 # model scaling 
 
     # Load likelihood
