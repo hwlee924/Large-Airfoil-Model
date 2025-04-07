@@ -1,8 +1,5 @@
 # %% Import Libs
 from huggingface_hub import login
-#from google.colab import userdata
-#HF_TOKEN = userdata.get('HuggingFace')
-#login(HF_TOKEN)
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline, BertTokenizer, BertForQuestionAnswering, logging
 from sentence_transformers import SentenceTransformer
 import os
@@ -10,6 +7,7 @@ import os
 
 import re
 import torch
+print(torch.__version__)
 import requests
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -149,20 +147,32 @@ class aspire_retriever:
         print(f"No match found for {filename}" if self.show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
         return None
 
-    def retrieve_context(self, query, angle_threshold, mach_threshold, re_threshold):
+    def retrieve_context(self, query, angle_threshold, mach_threshold, re_threshold, last_airfoil=None):
         # retrieve the extracted query parameters
         query_params = self.extract_query_parameters(query, self.lambert)
 
+        print(f"[DEBUG] last airfoil: {last_airfoil}" if self.show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
         # find appropriate list using airfoil match index
         if not query_params["Airfoil"]:
-            return ''
+            return None, ''
 
         af_match_idx = self.best_match(query_params["Airfoil"].lower(), self.airfoil_name_list)
         if af_match_idx is not None:
             retrieved_airfoil = self.airfoil_contexts[af_match_idx] # context for airfoil
             file_list = self.file_list[af_match_idx] # list of files
+        elif last_airfoil is not None:
+            last_match = re.search(r"about the ([A-Za-z0-9]+) airfoil", last_airfoil)
+            last_airfoil_name = last_match.group(1) if last_match else None
+            af_old_match_idx = self.best_match(last_airfoil_name.lower(), self.airfoil_name_list)
+            if af_old_match_idx is not None:
+                retrieved_airfoil = self.airfoil_contexts[af_old_match_idx]
+                file_list = self.file_list[af_old_match_idx]
+                af_match_idx = af_old_match_idx
+            else:
+                return None, 'There is no matching airfoil available in the database. You cannot retrieve the airfoil coordinates from the database. Maybe the attachment has information you can use.' # return empty string for no context
         else:
-            return 'There is no matching airfoil available in the database. You cannot retrieve the airfoil coordinates from the database. Maybe the attachment has information you can use.' # return empty string for no context
+                return None, 'There is no matching airfoil available in the database. You cannot retrieve the airfoil coordinates from the database. Maybe the attachment has information you can use.' # return empty string for no context
+        print(f"[DEBUG] retrieved airfoil: {retrieved_airfoil}" if self.show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
 
         best_score = float('inf')
         metadata_list = [self.extract_metadata_from_filename(file) for file in file_list if self.extract_metadata_from_filename(file)]
@@ -195,7 +205,7 @@ class aspire_retriever:
 
         print(query_params)
         if best_match_idx is not None:
-            return retrieved_airfoil + self.data_contexts[af_match_idx][best_match_idx]
+            return retrieved_airfoil, retrieved_airfoil + self.data_contexts[af_match_idx][best_match_idx]
         elif "predict" not in query.lower() and ((query_params["Angle of attack"] is not None) or (query_params["Mach"] is not None)):
             change_thresholds = input("No relevant pressure distribution file was found in the database. \n The current thresholds are " + str(angle_threshold) + " degrees for angle of attack, " + str(mach_threshold) + " for mach number, " + str(re_threshold) + " for reynold's number. Would you like to change these? (y/n)")
             if (change_thresholds.lower() == "y"):
@@ -216,9 +226,9 @@ class aspire_retriever:
                     re_threshold_new = re_threshold
                 return self.retrieve_context(query, angle_threshold_new, mach_threshold_new, re_threshold_new)
             else:
-                return retrieved_airfoil + ' No relevant pressure distribution file was found in the database. You should instead predict the results using the ADAPT module.'
+                return retrieved_airfoil, retrieved_airfoil + ' No relevant pressure distribution file was found in the database. You should instead predict the results using the ADAPT module.'
         else:
-            return retrieved_airfoil + ' No relevant pressure distribution file was found in the database. You should instead predict the results using the ADAPT module.'
+            return retrieved_airfoil, retrieved_airfoil + ' No relevant pressure distribution file was found in the database. You should instead predict the results using the ADAPT module.'
 
     def best_match(self, target, choices):
         matches = get_close_matches(target, choices, n=1, cutoff=0.9)
@@ -410,7 +420,7 @@ class rag_model:
         tokenizer.pad_token_id = tokenizer.eos_token_id  # to suppress warning
         llama_model = AutoModelForCausalLM.from_pretrained(checkpoint, torch_dtype=torch.bfloat16)
         self.generator = pipeline("text-generation", model=llama_model, tokenizer=tokenizer, device=0 if use_gpu else -1)
-
+        self.last_airfoil = None
         # initialize model instructions
         self.init_function_definitions()
         self.init_model_instructions() # this calls the BASE instructions
@@ -443,7 +453,7 @@ class rag_model:
             # print(query)
             self.append_to_instructions(retrieved_memory)
 
-        retrieved_context = self.retriever.retrieve_context(query, 0.1, 0.01, 100000) # get context for RAG
+        airfoil_name, retrieved_context = self.retriever.retrieve_context(query, 0.1, 0.01, 100000, self.last_airfoil) # get context for RAG
         self.append_to_instructions(f"When answering the user inquiries, use ONLY the context provided by the following sentences. {retrieved_context}") # add context to underlying instruction for model
         if attachment:
             attachment_str = f" This is the airfoil coordinates as an attachment: {attachment}."
@@ -482,6 +492,9 @@ class rag_model:
         # Retain memory and clear instructions
         self.memory.add_entry(query, response, retrieved_context)
         self.init_model_instructions()
+        if airfoil_name is not None:
+            self.last_airfoil = airfoil_name
+
 
     def init_function_definitions(self):
         self.function_definitions = """[
@@ -729,9 +742,9 @@ class session_memory_tracker:
     def retrieve_recent_memory(self, num_entries=3):
         retrieval_num = np.min([len(self.memory["query"]), num_entries])
         retrieved_memory = ''
-        for i in range(-retrieval_num, -1+1):
+        for i in range(len(self.memory["query"]) - 1, len(self.memory["query"]) - retrieval_num -1, -1):
             retrieved_memory += self.memory_snippets[i]
-        intro_str = "The following sentences refer to what was discussed before this query. You can choose to use these facts or not."
+        intro_str = "The following sentences refer to what was discussed before this query in order from most recent to oldest. You can choose to use these facts or not to aid in gaining more context behind the user's query. Use the most recent answers before looking at the older ones."
         return intro_str + retrieved_memory
 
 
@@ -811,7 +824,6 @@ class adapt_predictor():
 
 #%% Run the model
 if __name__ == "__main__":
-    #token_str = userdata.get("github")
     use_gpu = True
     if use_gpu:  # 6 is for personal use
         # os.environ["CUDA_VISIBLE_DEVICES"] = "0"
@@ -833,7 +845,7 @@ if __name__ == "__main__":
         lam_da = rag_model(git_token=token_str, show_debug_logs=False, context_save_file=None)
 
     while True:
-        lam_da.reset_memory() # reseting memory everytime cuz memory is kinda jank right now
+        #lam_da.reset_memory() # reseting memory everytime cuz memory is kinda jank right now
         query = input("Enter your query: ")
         print(f'Query: {query}', flush=True)
         if query.lower() == "exit":
