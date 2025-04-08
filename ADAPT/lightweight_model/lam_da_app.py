@@ -1,5 +1,5 @@
 # %% Import Libs
-run_local = True
+run_local = False
 from huggingface_hub import login
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline, BertTokenizer, BertForQuestionAnswering, logging
 from sentence_transformers import SentenceTransformer
@@ -51,6 +51,7 @@ class aspire_retriever:
         # Debug?
         self.show_debug_logs = show_debug_logs
         self.conversation = conversation
+        self.git_token = 'redacted'
         # Read and create context snippets from ASPIRE database
         if self.show_debug_logs:
             print('[DEBUG] Reading all csv files from ASPIRE database...' if self.show_debug_logs else '', end='' if not self.show_debug_logs else '\n')
@@ -64,6 +65,7 @@ class aspire_retriever:
         self.lambert = self.load_bert_pipeline()
         # self.af_score_thresh = 5
         self.data_score_thresh = 0.5
+        
         
     """ Load in BERT pipeline """
     def load_bert_pipeline(self):
@@ -205,7 +207,7 @@ class aspire_retriever:
         if best_match_idx:
             return retrieved_airfoil + self.data_contexts[af_match_idx][best_match_idx]
         else:
-            return retrieved_airfoil + ' No relevant pressure distribution file was found in the database. Pressure should be predicted using the ADAPT module. Coefficients can also be predicted.'
+            return retrieved_airfoil + ' Pressure distribution file could NOT be found in the database. Pressure distribution should be predicted using the ADAPT module (refer to the list of functions). Coefficients can also be predicted.'
 
     def best_match(self, target, choices):
         matches = get_close_matches(target, choices, n=1, cutoff=0.9)
@@ -309,16 +311,16 @@ class aspire_retriever:
         for entry in csv_list: 
             base_url = 'https://raw.githubusercontent.com/hwlee924/Large-Airfoil-Model/main/ASPIRE/Airfoils/'
             # This is regarding the airfoil
-            file_str = f"{entry['name']} describes the Cp, or pressure coefficient, distribution of the {entry['airfoil']} airfoil. "
+            file_str = f"There is a file that describes the airfoil Cp, or pressure coefficient, within the database: {entry['name']}. The file describes the Cp, or pressure coefficient, distribution of the {entry['airfoil']} airfoil in the following operating conditions: "
             airfoil_str = f"The following is information about the {entry['airfoil']} airfoil. "
             geom_str_1 = f"Your functions should retrieve the airfoil geometry (or shape) file with the download url {extract_before_substring(entry['download_url'], '_A') + '_coordinates.csv'}. "
             geom_str_2 = f"The {entry['airfoil']} airfoil's geometry can be accessed by the user through the html of {extract_before_substring(entry['nav_url'], '_A') + '_coordinates.csv'}. "
            
             # This is regarding the operating conditions
-            alph_str = f"The {entry['airfoil']} airfoil is at the angle of attack, or alpha, of {entry['alpha']}, degrees. "
-            mach_str = f"The {entry['airfoil']} airfoil is at a Mach number, or M, of {entry['mach']}, "
+            alph_str = f"the angle of attack, or alpha, of {entry['alpha']}, degrees. "
+            mach_str = f"the Mach number, or M, of {entry['mach']}, "
             reyn_str = (
-                f"The {entry['airfoil']} airfoil is at a Reynolds number, or Re, of {entry['reynolds']}. "
+                f"a Reynolds number, or Re, of {entry['reynolds']}. "
             )
             dl_str = f"Your functions should retrieve the pressure distribution file with the download url {entry['download_url']}. "
             nav_str = f"The pressure distribution can be accessed by the user through the html of {entry['nav_url']}. "
@@ -328,9 +330,9 @@ class aspire_retriever:
             tag_loc = "/".join(tag_locs[:-1])
             tag_info = self.read_tag_file(tag_loc + '/tags.json')
 
-            camber_str = f"The {entry['airfoil']} airfoil is {tag_info['camber']}. "
-            super_str = f"The {entry['airfoil']} airfoil is {tag_info['super']}. "
-            usage_str = f"The {entry['airfoil']} airfoil is used for {tag_info['apply']} applications. "
+            camber_str = f"The {entry['airfoil']} airfoil is {tag_info['camber'].lower()}. "
+            super_str = f"The {entry['airfoil']} airfoil is {tag_info['super'].lower()}. "
+            usage_str = f"The {entry['airfoil']} airfoil is used for {tag_info['apply'].lower()} applications. "
             # This is regarding Cp files
             cp_snippets__ = file_str + alph_str + mach_str + reyn_str + dl_str + nav_str + camber_str + super_str + usage_str
             airfoil_snippets_ = airfoil_str + geom_str_1 + geom_str_2 + camber_str + super_str + usage_str
@@ -398,7 +400,7 @@ class rag_model:
         checkpoint = "meta-llama/Llama-3.2-3B-Instruct"
         tokenizer = AutoTokenizer.from_pretrained(checkpoint)
         tokenizer.pad_token_id = tokenizer.eos_token_id  # to suppress warning 
-        llama_model = AutoModelForCausalLM.from_pretrained(checkpoint, torch_dtype=torch.bfloat16)
+        llama_model = AutoModelForCausalLM.from_pretrained(checkpoint, torch_dtype="auto")
         self.generator = pipeline("text-generation", model=llama_model, tokenizer=tokenizer, device="cuda")
 
         # initialize model instructions
@@ -447,7 +449,7 @@ class rag_model:
             
         retrieved_context = self.retriever.retrieve_context(query) # get context for RAG 
         self.conversation.add_context(retrieved_context)
-        self.append_to_instructions(f"When answering the user inquiries, use ONLY the context provided by the following sentences. However, they can be ignored if the user query is irrelevant to airfoil aerodynamics. {retrieved_context}") # add context to underlying instruction for model   
+        self.prepend_to_instructions(f"When answering the user inquiries, use ONLY the context provided by the sentences in the brackets. Context: [{retrieved_context}]") # add context to underlying instruction for model   
         if attachment is not None:
             attachment_str = f" This is the airfoil coordinates as an attachment: {attachment}."
             # self.append_to_instructions(attachment_str)
@@ -463,7 +465,7 @@ class rag_model:
         ]
 
         # Generate a response using the text generation pipeline 
-        response = self.generator(messages, temperature=0.1, max_new_tokens=128 * 3)[-1]["generated_text"][-1]["content"]
+        response = self.generator(messages, temperature=0.001, max_new_tokens=128 * 3)[-1]["generated_text"][-1]["content"]
         
         # Debugging outputs
         if self.show_debug_logs:
@@ -492,7 +494,7 @@ class rag_model:
         self.function_definitions = """[
         {
             "name": "retrieve_and_plot_cp_from_csv",
-            "description": "Visualizes the pressure distribution over an airfoil by reading in an existing file from the database and plotting it. This should only be invoked if it is evident that the airfoil coordinate files and the pressure distribution csv file exist.",
+            "description": "Visualizes the pressure distribution over an airfoil by reading in an existing file from the database and plotting it. ONLY invoke this function if BOTH the airfoil coordinate files and the pressure distribution csv file exist IN THE DATABASE.",
             "parameters": {
                 "type": "object",
                 "properties": {
@@ -520,7 +522,7 @@ class rag_model:
         },
         {
             "name": "predict_using_adapt",
-            "description": "Predicts the pressure (Cp) distribution using the ADAPT module if there is no relevant pressure data. Do not use this for obtaining the normal force, axial force, and moment coefficients and use get_coefficients() instead.",
+            "description": "Predicts the pressure (Cp) distribution using the ADAPT module if there is no relevant pressure data in the database. Do not use this for obtaining the normal force, axial force, and moment coefficients and use get_coefficients() instead.",
             "parameters": {
                 "type": "object",
                 "properties": {
@@ -566,34 +568,33 @@ class rag_model:
 
     def init_model_instructions(self):
         self.instructions = f"""You are an AI-driven airfoil aerodynamics analysis digital assistant, named Large Airfoil Model Digital Assistant (LAMDA). 
-                You have access to a set of tasks. Your job is to identify the user-defined task and act accordingly. You also have the capacity to make function/tool calls when necessary.
+                You have access to a set of tasks. Your job is to identify the user-defined task and act accordingly, basing your answer purely on the provided context. You also have the capacity to make function/tool calls when necessary.
                 You should identify all of the tasks within the user query and invoke the appropriate functions if necessary.
-                Here is a list of functions in JSON format that you can invoke: {self.function_definitions}
+                Here is a list of functions in JSON format that you can invoke: {self.function_definitions}.  
  
-                Task 1: If the user asks for the pressure distribution of an airfoil, retrieve the appropriate pressure data file name within the ASPIRE database and plot it only if the file exists.
-                Task 2: If there is a matching airfoil, but the relevant pressure distribution file does not exist, generate a prediction of it using the ADAPT module.  
-                Task 3: This task can happen for two cases: 1) there is no matching airfoil, but the coordinates are attached, or 2) there is a matching airfoil but the relevant pressure data is not available. If the user asks for a prediction of the pressure distribution of an airfoil under different operating condtions, generate a prediction using the ADAPT module. 
-                Task 4: If the user asks for the normal force, axial force, or moment coefficients (aerodynamic coefficients) of an airfoil, you can return the ADAPT-predicted coefficients. Do not directly mention these numbers as they will be retrieved separately.
-                Task 5: If the user asks for the geometry of an airfoil (what it looks like), retrieve the appropriate coordinates file within the ASPIRE database or attachment and plot it.  
-                Relatedly, if the user asks about a general behavior of airfoil specifically, not the pressure distribution, there is no need to discuss its pressure distributions.
-                Note that if the user directly asks for the link, you will output the html. However, if you are to invoke functions, you should use the download url but only utilize the context in retrieving the url.
+                Task 1: This is the task if the user asks for the pressure distribution over an airfoil AND the relevant pressure data file was found in the database. For this task, plot the pressure distribution csv file. This task should be prioritized over prediction if the relevant Cp distribution file exists in the database. This will require invoking the function "retrieve_and_plot_cp_from_csv". Do not discuss airfoil-specific information like camber and supercriticality during this task.
+                Task 2: This is the task if the user asks for the pressure distribution over an airfoil AND there is no relevant pressure data file in the database AND the airfoil geometry can be accessed in the database. In this task, predict the cp distribution using ADAPT using the airfoil coordinates from the database. This will require invoking the function "predict_using_adapt". Do not discuss airfoil-specific information like camber and supercriticality during this task.
+                Task 3-1: This is the task if the user asks for the pressure distribution over an airfoil AND there is no relevant pressure data file in the database AND the airfoil geometry can NOT be accessed in the database AND the user provided an attachment file. In this task, predict the cp distribution using ADAPT using the attached airfoil coordinates from the database. This will require invoking the function "predict_using_adapt". Do not discuss airfoil-specific information like camber and supercriticality during this task.
+                Task 3-2: This is the task if the user asks for the pressure distribution over an airfoil AND there is no relevant pressure data file in the database AND the airfoil geometry can NOT be accessed in the database AND the user did not provide an attachment file. In this task, you cannot provide what the user seeks as the airfoil geometry is missing. The user should provide the coordinates as an attachment file. Do not discuss airfoil-specific information like camber and supercriticality during this task.
+                Task 4: This is the task if the user asks for the normal force, axial force, or moment coefficients (aerodynamic coefficients) of an airfoil. In this task, return the ADAPT-predicted coefficients. Do not directly mention these numbers as they will be retrieved separately. This will require invoking the function "get_coefficients".
+                Task 5: This is the task if the user asks for the geometry of an airfoil (what it looks like) specifically. In this task, retrieve the appropriate coordinates file within the ASPIRE database or attachment and plot it.
+                Task 6: This is the task if the user asks about a general question about airfoils, rather than the pressure distribution. Refer to ONLY the context to answer this question and answer the user's inquiry. There is no need to discuss the pressure distribution.
+                Task 7: This is the task if the user inquiry does not satisfy any of the other tasks. Tell the user that you cannot answer this question as it is not within your scope.
                 
-                If the user asks a casual or non-aerodynamics related question like "Hi", "How are you", or "What's up", respond casually and do not invoke any functions. For example:
-                - User: "Hi"
-                Response: "Hello! How can I assist you today?"
-                - User: "How are you?"
-                Response: "I'm just a digital assistant, but I'm here to help you with any questions you have!"
-                - User: "What's up?"
-                Response: "Not much, just here to help you with airfoil-related queries. What can I do for you?"
+                Note that if the user directly asks for the link, you will output the html i.e. it should not be the raw link. However, if you are to invoke functions, you should use the download url but only utilize the context in retrieving the url.
                 
                 If you decide to invoke any of the function(s), you MUST put it in the format like this within brackets [function1(params_name1=params_value1, params_name2=params_value2...), function2(params)].
                 ONLY use URLs and HTML links when invoking a function within the brackets. Link should not be located outside these brackets.   
+                Try to avoid calling multiple functions in a single response. 
+                
                 Please speak like you are a kind assistant. Your answers must be based on the aerodynamics-based context of the word (e.g. symmetry, camber, etc.)
                 If you invoke a function, make sure the output brackets that includes ALL the invoked function are the very LAST sentence.
 
                 Only provide the answer to the user questions, or invoke a function to the following query per the task workflow defined above.
-                Answer concisely but do mention what you are outputting. Make sure to avoid directly mentioning function names though.
+                This answer should be very concise concisely, ideally in one or two sentences. Make sure to avoid directly mentioning function names though.
                 Prioritize the existing attachment over the database files. 
+                Do not directly mention the Tasks and their numbers.
+                
                 """
 #                 However, if there is not matching airfoil file, Do not invoke any functions and let the user know.z
 # by explaining what it is and what file you obtained the information but . 
@@ -602,8 +603,10 @@ class rag_model:
     new_text: string
     """
     def append_to_instructions(self, new_text):
-        self.instructions = self.instructions + new_text # predict_using_adapt
+        self.instructions = self.instructions + new_text 
     
+    def prepend_to_instructions(self, new_text):
+        self.instructions = new_text + self.instructions
     """
     Parses the function call string and dynamically executes the function if allowed.
     """
@@ -969,7 +972,7 @@ def predict(web_query):
     return json.dumps(lam_da.conversation.talk_json)
 
 #%% Run the model  
-token_str = "GITHUB TOKEN HERE"
+token_str = "insert github token here"
 use_gpu = True
 if use_gpu:  # 6 is for personal use
     if run_local:
@@ -986,13 +989,13 @@ else:
     raise ValueError("Incorrect value of useGPU variable")
 
 if run_local:
-    llama_token = 'HUGGINFACE TOKEN FOR LLAMA HERE'
-    lam_da = rag_model(show_debug_logs=True, context_save_file='temp_model.pkl', online=True)
+    llama_token = 'redacted'
+    lam_da = rag_model(show_debug_logs=True, context_save_file='saved_contexts.pkl', online=True) # None
     print('Running locally...')
 else: # run this if this is running on huggingface 
-    llama_token = 'SECRET HERE, DO NOT USE'
+    llama_token = os.getenv("Llama_access_token") 
     login(llama_token)
-    lam_da = rag_model(show_debug_logs=False, context_save_file='temp_model.pkl', online=True) # 
+    lam_da = rag_model(show_debug_logs=False, context_save_file='saved_contexts.pkl', online=True) # 
 
     demo = gr.Interface(fn=predict, inputs="json", outputs="json")
     demo.launch()
@@ -1025,11 +1028,12 @@ else: # run this if this is running on huggingface
 # lam_da.ask_query(query, attachment)
 #%% 
 # DUMMY 
-lam_da.reset_memory()
-dummy_json = lamda_interaction()
-dummy_json.add_query('Can you show me the Cp distribution of SC1095 at angle of attack of 6.2 degrees and Mach 0.6?')
-dummy_webInput = json.dumps(dummy_json.talk_json)
-lam_da.ask_query(dummy_webInput)
+# lam_da.reset_memory()
+# dummy_json = lamda_interaction()
+# dummy_json.add_query('What is the Cp distribution of the SC1095 airfoil at angle of attack = 4.2 and Mach = 0.6?')
+# dummy_webInput = json.dumps(dummy_json.talk_json)
+# lam_da.ask_query(dummy_webInput)
 
-print(lam_da.conversation.talk_json['reply'])
+# print(lam_da.conversation.talk_json['reply'])
+
 # %%
