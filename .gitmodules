@@ -2,3 +2,6 @@
 	path = LAMBERT submodule
 	url = https://github.com/SaveAanchal/CEREAL-LLM-Testing.git
 	branch = LAMBERT
+[submodule "Large-Wing-Model"]
+	path = Example Use Cases/Large-Wing-Model
+	url = https://github.com/hwlee924/Large-Wing-Model
