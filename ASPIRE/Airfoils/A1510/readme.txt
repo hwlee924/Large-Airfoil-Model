@@ -1,0 +1,2 @@
+- the airfoil geometry obtained by indirectly digitizing the coordinates provided by https://apps.dtic.mil/sti/tr/pdf/ADP011115.pdf
+- only the steady pressures (Fig. 4 of the source document) have been digitized.
