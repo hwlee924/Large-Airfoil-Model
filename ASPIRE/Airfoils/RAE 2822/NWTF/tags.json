@@ -144,7 +144,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.99_M0.73_Re2.72e6_A.csv",
+        "file_name": "RAE 2822_Am1.99_M0.73_Re2.72e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.98788 degrees, Mach number of 0.731378.",
         "flow conditions": {
             "reynolds": "2.72e6",
@@ -192,7 +192,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.02_M0.73_Re2.71e6_A.csv",
+        "file_name": "RAE 2822_Am1.02_M0.73_Re2.71e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.02284 degrees, Mach number of 0.730204.",
         "flow conditions": {
             "reynolds": "2.71e6",
@@ -240,7 +240,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-0.02_M0.73_Re2.71e6_A.csv",
+        "file_name": "RAE 2822_Am0.02_M0.73_Re2.71e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -0.0243667 degrees, Mach number of 0.73035.",
         "flow conditions": {
             "reynolds": "2.71e6",
@@ -528,7 +528,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-0.02_M0.3_Re7.59e6_A.csv",
+        "file_name": "RAE 2822_Am0.02_M0.3_Re7.59e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -0.019088 degrees, Mach number of 0.300493.",
         "flow conditions": {
             "reynolds": "7.59e6",
@@ -960,7 +960,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-2.02_M0.5_Re11.86e6_A.csv",
+        "file_name": "RAE 2822_Am2.02_M0.5_Re11.86e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -2.01578 degrees, Mach number of 0.500384.",
         "flow conditions": {
             "reynolds": "11.86e6",
@@ -1008,7 +1008,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.52_M0.5_Re11.86e6_A.csv",
+        "file_name": "RAE 2822_Am1.52_M0.5_Re11.86e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.52395 degrees, Mach number of 0.50014.",
         "flow conditions": {
             "reynolds": "11.86e6",
@@ -1056,7 +1056,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.03_M0.5_Re11.87e6_A.csv",
+        "file_name": "RAE 2822_Am1.03_M0.5_Re11.87e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.03412 degrees, Mach number of 0.500267.",
         "flow conditions": {
             "reynolds": "11.87e6",
@@ -1104,7 +1104,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-0.54_M0.5_Re11.91e6_A.csv",
+        "file_name": "RAE 2822_Am0.54_M0.5_Re11.91e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -0.536555 degrees, Mach number of 0.500071.",
         "flow conditions": {
             "reynolds": "11.91e6",
@@ -1152,7 +1152,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-0.03_M0.5_Re11.88e6_A.csv",
+        "file_name": "RAE 2822_Am0.03_M0.5_Re11.88e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -0.0272686 degrees, Mach number of 0.500148.",
         "flow conditions": {
             "reynolds": "11.88e6",
@@ -1968,7 +1968,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-2.01_M0.6_Re13.6e6_A.csv",
+        "file_name": "RAE 2822_Am2.01_M0.6_Re13.6e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -2.01481 degrees, Mach number of 0.600379.",
         "flow conditions": {
             "reynolds": "13.6e6",
@@ -2016,7 +2016,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.51_M0.6_Re13.49e6_A.csv",
+        "file_name": "RAE 2822_Am1.51_M0.6_Re13.49e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.50841 degrees, Mach number of 0.599479.",
         "flow conditions": {
             "reynolds": "13.49e6",
@@ -2064,7 +2064,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.03_M0.6_Re13.45e6_A.csv",
+        "file_name": "RAE 2822_Am1.03_M0.6_Re13.45e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.02548 degrees, Mach number of 0.599559.",
         "flow conditions": {
             "reynolds": "13.45e6",
@@ -2112,7 +2112,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-0.51_M0.6_Re13.43e6_A.csv",
+        "file_name": "RAE 2822_Am0.51_M0.6_Re13.43e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -0.506741 degrees, Mach number of 0.599621.",
         "flow conditions": {
             "reynolds": "13.43e6",
@@ -2976,7 +2976,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-2.0_M0.7_Re15.82e6_A.csv",
+        "file_name": "RAE 2822_Am2.0_M0.7_Re15.82e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -2.00242 degrees, Mach number of 0.700064.",
         "flow conditions": {
             "reynolds": "15.82e6",
@@ -3024,7 +3024,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.02_M0.7_Re15.84e6_A.csv",
+        "file_name": "RAE 2822_Am1.02_M0.7_Re15.84e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.02012 degrees, Mach number of 0.699228.",
         "flow conditions": {
             "reynolds": "15.84e6",
@@ -6192,7 +6192,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-2.0_M0.71_Re15.69e6_A.csv",
+        "file_name": "RAE 2822_Am2.0_M0.71_Re15.69e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -2.00297 degrees, Mach number of 0.709718.",
         "flow conditions": {
             "reynolds": "15.69e6",
@@ -6240,7 +6240,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.03_M0.71_Re15.67e6_A.csv",
+        "file_name": "RAE 2822_Am1.03_M0.71_Re15.67e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.02848 degrees, Mach number of 0.709759.",
         "flow conditions": {
             "reynolds": "15.67e6",
@@ -6624,7 +6624,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.99_M0.72_Re15.55e6_A.csv",
+        "file_name": "RAE 2822_Am1.99_M0.72_Re15.55e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.99224 degrees, Mach number of 0.720235.",
         "flow conditions": {
             "reynolds": "15.55e6",
@@ -6672,7 +6672,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.51_M0.72_Re15.53e6_A.csv",
+        "file_name": "RAE 2822_Am1.51_M0.72_Re15.53e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.51413 degrees, Mach number of 0.720357.",
         "flow conditions": {
             "reynolds": "15.53e6",
@@ -6720,7 +6720,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.01_M0.72_Re15.5e6_A.csv",
+        "file_name": "RAE 2822_Am1.01_M0.72_Re15.5e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.00712 degrees, Mach number of 0.720324.",
         "flow conditions": {
             "reynolds": "15.5e6",
@@ -6768,7 +6768,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-0.5_M0.72_Re15.72e6_A.csv",
+        "file_name": "RAE 2822_Am0.5_M0.72_Re15.72e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -0.502616 degrees, Mach number of 0.720752.",
         "flow conditions": {
             "reynolds": "15.72e6",
@@ -7440,7 +7440,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-2.01_M0.73_Re15.8e6_A.csv",
+        "file_name": "RAE 2822_Am2.01_M0.73_Re15.8e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -2.01006 degrees, Mach number of 0.729602.",
         "flow conditions": {
             "reynolds": "15.8e6",
@@ -7488,7 +7488,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.52_M0.73_Re15.83e6_A.csv",
+        "file_name": "RAE 2822_Am1.52_M0.73_Re15.83e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.52291 degrees, Mach number of 0.729815.",
         "flow conditions": {
             "reynolds": "15.83e6",
@@ -7536,7 +7536,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.03_M0.73_Re15.83e6_A.csv",
+        "file_name": "RAE 2822_Am1.03_M0.73_Re15.83e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.02993 degrees, Mach number of 0.729869.",
         "flow conditions": {
             "reynolds": "15.83e6",
@@ -7584,7 +7584,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-0.49_M0.73_Re15.83e6_A.csv",
+        "file_name": "RAE 2822_Am0.49_M0.73_Re15.83e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -0.487835 degrees, Mach number of 0.729883.",
         "flow conditions": {
             "reynolds": "15.83e6",
@@ -8256,7 +8256,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-2.0_M0.74_Re15.81e6_A.csv",
+        "file_name": "RAE 2822_Am2.0_M0.74_Re15.81e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -2.0026 degrees, Mach number of 0.739815.",
         "flow conditions": {
             "reynolds": "15.81e6",
@@ -8304,7 +8304,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.54_M0.74_Re15.75e6_A.csv",
+        "file_name": "RAE 2822_Am1.54_M0.74_Re15.75e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.53677 degrees, Mach number of 0.740263.",
         "flow conditions": {
             "reynolds": "15.75e6",
@@ -8352,7 +8352,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.47_M0.74_Re15.71e6_A.csv",
+        "file_name": "RAE 2822_Am1.47_M0.74_Re15.71e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.47261 degrees, Mach number of 0.740471.",
         "flow conditions": {
             "reynolds": "15.71e6",
@@ -8400,7 +8400,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.02_M0.74_Re15.65e6_A.csv",
+        "file_name": "RAE 2822_Am1.02_M0.74_Re15.65e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.01912 degrees, Mach number of 0.74047.",
         "flow conditions": {
             "reynolds": "15.65e6",
@@ -8448,7 +8448,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-0.49_M0.74_Re15.64e6_A.csv",
+        "file_name": "RAE 2822_Am0.49_M0.74_Re15.64e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -0.49447 degrees, Mach number of 0.740504.",
         "flow conditions": {
             "reynolds": "15.64e6",
@@ -9120,7 +9120,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-2.02_M0.75_Re15.67e6_A.csv",
+        "file_name": "RAE 2822_Am2.02_M0.75_Re15.67e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -2.02451 degrees, Mach number of 0.749712.",
         "flow conditions": {
             "reynolds": "15.67e6",
@@ -9168,7 +9168,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.0_M0.75_Re15.71e6_A.csv",
+        "file_name": "RAE 2822_Am1.0_M0.75_Re15.71e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -0.998484 degrees, Mach number of 0.750956.",
         "flow conditions": {
             "reynolds": "15.71e6",
@@ -9504,7 +9504,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-3.98_M0.76_Re15.61e6_A.csv",
+        "file_name": "RAE 2822_Am3.98_M0.76_Re15.61e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -3.97985 degrees, Mach number of 0.759322.",
         "flow conditions": {
             "reynolds": "15.61e6",
@@ -9552,7 +9552,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-2.01_M0.76_Re15.73e6_A.csv",
+        "file_name": "RAE 2822_Am2.01_M0.76_Re15.73e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -2.01236 degrees, Mach number of 0.760858.",
         "flow conditions": {
             "reynolds": "15.73e6",
@@ -9600,7 +9600,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.0_M0.76_Re15.75e6_A.csv",
+        "file_name": "RAE 2822_Am1.0_M0.76_Re15.75e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -0.999484 degrees, Mach number of 0.760938.",
         "flow conditions": {
             "reynolds": "15.75e6",
@@ -9936,7 +9936,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-3.99_M0.77_Re15.62e6_A.csv",
+        "file_name": "RAE 2822_Am3.99_M0.77_Re15.62e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -3.99003 degrees, Mach number of 0.770472.",
         "flow conditions": {
             "reynolds": "15.62e6",
@@ -9984,7 +9984,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.98_M0.77_Re15.79e6_A.csv",
+        "file_name": "RAE 2822_Am1.98_M0.77_Re15.79e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.97903 degrees, Mach number of 0.771198.",
         "flow conditions": {
             "reynolds": "15.79e6",
@@ -10032,7 +10032,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.0_M0.77_Re15.82e6_A.csv",
+        "file_name": "RAE 2822_Am1.0_M0.77_Re15.82e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.00176 degrees, Mach number of 0.769853.",
         "flow conditions": {
             "reynolds": "15.82e6",
@@ -10656,7 +10656,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-0.04_M0.78_Re15.69e6_A.csv",
+        "file_name": "RAE 2822_Am0.04_M0.78_Re15.69e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -0.0374046 degrees, Mach number of 0.779919.",
         "flow conditions": {
             "reynolds": "15.69e6",
@@ -10752,7 +10752,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.03_M0.78_Re15.66e6_A.csv",
+        "file_name": "RAE 2822_Am1.03_M0.78_Re15.66e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.0283 degrees, Mach number of 0.778744.",
         "flow conditions": {
             "reynolds": "15.66e6",
@@ -10800,7 +10800,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-2.01_M0.78_Re15.59e6_A.csv",
+        "file_name": "RAE 2822_Am2.01_M0.78_Re15.59e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -2.01111 degrees, Mach number of 0.779611.",
         "flow conditions": {
             "reynolds": "15.59e6",
@@ -10848,7 +10848,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-3.0_M0.78_Re15.54e6_A.csv",
+        "file_name": "RAE 2822_Am3.0_M0.78_Re15.54e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -3.00009 degrees, Mach number of 0.779966.",
         "flow conditions": {
             "reynolds": "15.54e6",
@@ -10896,7 +10896,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-4.0_M0.78_Re15.49e6_A.csv",
+        "file_name": "RAE 2822_Am4.0_M0.78_Re15.49e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -4.0043 degrees, Mach number of 0.780179.",
         "flow conditions": {
             "reynolds": "15.49e6",
@@ -10944,7 +10944,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.99_M0.73_Re15.73e6_A.csv",
+        "file_name": "RAE 2822_Am1.99_M0.73_Re15.73e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.98715 degrees, Mach number of 0.730432.",
         "flow conditions": {
             "reynolds": "15.73e6",
@@ -10992,7 +10992,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.0_M0.73_Re15.72e6_A.csv",
+        "file_name": "RAE 2822_Am1.0_M0.73_Re15.72e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.00267 degrees, Mach number of 0.729693.",
         "flow conditions": {
             "reynolds": "15.72e6",
@@ -11328,7 +11328,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-2.02_M0.73_Re13.63e6_A.csv",
+        "file_name": "RAE 2822_Am2.02_M0.73_Re13.63e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -2.01697 degrees, Mach number of 0.729821.",
         "flow conditions": {
             "reynolds": "13.63e6",
@@ -11376,7 +11376,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.5_M0.73_Re13.52e6_A.csv",
+        "file_name": "RAE 2822_Am1.5_M0.73_Re13.52e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.50404 degrees, Mach number of 0.731252.",
         "flow conditions": {
             "reynolds": "13.52e6",
@@ -11424,7 +11424,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.02_M0.73_Re13.53e6_A.csv",
+        "file_name": "RAE 2822_Am1.02_M0.73_Re13.53e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.02357 degrees, Mach number of 0.729519.",
         "flow conditions": {
             "reynolds": "13.53e6",
@@ -11472,7 +11472,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-0.51_M0.73_Re13.48e6_A.csv",
+        "file_name": "RAE 2822_Am0.51_M0.73_Re13.48e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -0.511104 degrees, Mach number of 0.729897.",
         "flow conditions": {
             "reynolds": "13.48e6",
@@ -11520,7 +11520,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-0.01_M0.73_Re13.48e6_A.csv",
+        "file_name": "RAE 2822_Am0.01_M0.73_Re13.48e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -0.00799878 degrees, Mach number of 0.730089.",
         "flow conditions": {
             "reynolds": "13.48e6",
@@ -12144,7 +12144,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-2.01_M0.73_Re11.31e6_A.csv",
+        "file_name": "RAE 2822_Am2.01_M0.73_Re11.31e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -2.01315 degrees, Mach number of 0.729347.",
         "flow conditions": {
             "reynolds": "11.31e6",
@@ -12192,7 +12192,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.5_M0.73_Re11.35e6_A.csv",
+        "file_name": "RAE 2822_Am1.5_M0.73_Re11.35e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.50323 degrees, Mach number of 0.729473.",
         "flow conditions": {
             "reynolds": "11.35e6",
@@ -12240,7 +12240,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.02_M0.73_Re11.31e6_A.csv",
+        "file_name": "RAE 2822_Am1.02_M0.73_Re11.31e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.02166 degrees, Mach number of 0.730601.",
         "flow conditions": {
             "reynolds": "11.31e6",
@@ -12288,7 +12288,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-0.51_M0.73_Re11.34e6_A.csv",
+        "file_name": "RAE 2822_Am0.51_M0.73_Re11.34e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -0.513013 degrees, Mach number of 0.729149.",
         "flow conditions": {
             "reynolds": "11.34e6",
@@ -12960,7 +12960,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-2.0_M0.6_Re8.98e6_A.csv",
+        "file_name": "RAE 2822_Am2.0_M0.6_Re8.98e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.99742 degrees, Mach number of 0.597929.",
         "flow conditions": {
             "reynolds": "8.98e6",
@@ -13008,7 +13008,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.02_M0.6_Re8.98e6_A.csv",
+        "file_name": "RAE 2822_Am1.02_M0.6_Re8.98e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.02073 degrees, Mach number of 0.597614.",
         "flow conditions": {
             "reynolds": "8.98e6",
@@ -13056,7 +13056,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-0.02_M0.6_Re9.0e6_A.csv",
+        "file_name": "RAE 2822_Am0.02_M0.6_Re9.0e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -0.0243016 degrees, Mach number of 0.59789.",
         "flow conditions": {
             "reynolds": "9.0e6",
@@ -13488,7 +13488,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.97_M0.72_Re8.93e6_A.csv",
+        "file_name": "RAE 2822_Am1.97_M0.72_Re8.93e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.97348 degrees, Mach number of 0.719521.",
         "flow conditions": {
             "reynolds": "8.93e6",
@@ -13536,7 +13536,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.04_M0.72_Re8.9e6_A.csv",
+        "file_name": "RAE 2822_Am1.04_M0.72_Re8.9e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.03506 degrees, Mach number of 0.719319.",
         "flow conditions": {
             "reynolds": "8.9e6",
@@ -13584,7 +13584,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-0.06_M0.72_Re8.93e6_A.csv",
+        "file_name": "RAE 2822_Am0.06_M0.72_Re8.93e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -0.05984 degrees, Mach number of 0.719604.",
         "flow conditions": {
             "reynolds": "8.93e6",
@@ -13920,7 +13920,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-2.01_M0.73_Re8.95e6_A.csv",
+        "file_name": "RAE 2822_Am2.01_M0.73_Re8.95e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -2.0077 degrees, Mach number of 0.729778.",
         "flow conditions": {
             "reynolds": "8.95e6",
@@ -13968,7 +13968,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.5_M0.73_Re8.95e6_A.csv",
+        "file_name": "RAE 2822_Am1.5_M0.73_Re8.95e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.50214 degrees, Mach number of 0.729819.",
         "flow conditions": {
             "reynolds": "8.95e6",
@@ -14016,7 +14016,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.04_M0.73_Re8.93e6_A.csv",
+        "file_name": "RAE 2822_Am1.04_M0.73_Re8.93e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.03612 degrees, Mach number of 0.729634.",
         "flow conditions": {
             "reynolds": "8.93e6",
@@ -14064,7 +14064,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-0.55_M0.73_Re8.92e6_A.csv",
+        "file_name": "RAE 2822_Am0.55_M0.73_Re8.92e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -0.548336 degrees, Mach number of 0.729601.",
         "flow conditions": {
             "reynolds": "8.92e6",
@@ -14112,7 +14112,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-0.06_M0.73_Re8.93e6_A.csv",
+        "file_name": "RAE 2822_Am0.06_M0.73_Re8.93e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -0.0556745 degrees, Mach number of 0.729601.",
         "flow conditions": {
             "reynolds": "8.93e6",
@@ -14736,7 +14736,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-2.0_M0.74_Re9.06e6_A.csv",
+        "file_name": "RAE 2822_Am2.0_M0.74_Re9.06e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -2.00378 degrees, Mach number of 0.74103.",
         "flow conditions": {
             "reynolds": "9.06e6",
@@ -14784,7 +14784,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.04_M0.74_Re9.05e6_A.csv",
+        "file_name": "RAE 2822_Am1.04_M0.74_Re9.05e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.04171 degrees, Mach number of 0.740727.",
         "flow conditions": {
             "reynolds": "9.05e6",
@@ -14832,7 +14832,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-0.06_M0.74_Re9.05e6_A.csv",
+        "file_name": "RAE 2822_Am0.06_M0.74_Re9.05e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -0.0608638 degrees, Mach number of 0.740687.",
         "flow conditions": {
             "reynolds": "9.05e6",
@@ -15120,7 +15120,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-2.0_M0.75_Re8.98e6_A.csv",
+        "file_name": "RAE 2822_Am2.0_M0.75_Re8.98e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.99647 degrees, Mach number of 0.751983.",
         "flow conditions": {
             "reynolds": "8.98e6",
@@ -15168,7 +15168,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-1.04_M0.75_Re8.98e6_A.csv",
+        "file_name": "RAE 2822_Am1.04_M0.75_Re8.98e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -1.03639 degrees, Mach number of 0.751822.",
         "flow conditions": {
             "reynolds": "8.98e6",
@@ -15216,7 +15216,7 @@
         }
     },
     {
-        "file_name": "RAE 2822_A-0.06_M0.75_Re8.99e6_A.csv",
+        "file_name": "RAE 2822_Am0.06_M0.75_Re8.99e6_A.csv",
         "description": "Cp distribution of a RAE 2822 airfoil at an angle of attack of -0.0640119 degrees, Mach number of 0.75133.",
         "flow conditions": {
             "reynolds": "8.99e6",
