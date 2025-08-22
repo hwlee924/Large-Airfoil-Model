@@ -1,0 +1,35 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "2.1e6, 10.3e6, 1.1e6, 4.3e6, 10.9e6, 17.0e6",
+    "mach" : "0.741, 0.743, 0.786, 0.750, 0.751, 0.754, 0.781, 0.783, 0.784, 0.780",
+    "freestream": "",
+    "alpha": "0"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "z" : "",
+    "cp" : "",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "18% Thick Circular-Arc Airfoil",
+    "camber": "N",
+    "supercritical": "N",
+    "application": ""
+  },
+  "source": {
+    "name": "Transonic Flow about a Thick Circular-Arc Airfoil",
+    "author": "mcdevitt-et-al",
+    "year": "2012",
+    "page": "", 
+    "type": "graph",
+    "url": "https://arc.aiaa.org/doi/epdf/10.2514/3.61402"
+  },
+  "meta" : {
+    "num_cases": "4",
+    "num_remaining": "", 
+    "notes": "Cp data only available for one surface of the airfoil - assumed that the airfoil is symmetry based on geometry and same values used corresponding x/c locations for Both surfaces" 
+  }
+
+}
