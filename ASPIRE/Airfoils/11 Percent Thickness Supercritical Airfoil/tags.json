@@ -1,4 +1,9 @@
-{
+[
+  {
+    "file_name" : "11 Percent Thickness Supercritical Airfoil_A0.0_M0.4_Re3e6_A.csv",
+
+  "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 0 degrees, Mach number of 0.4.",
+    
   "flow_conditions" : {
     "reynolds" : "3.6e6 - 7.74e6",
     "mach" : "0.35 - 0.80",
@@ -29,5 +34,636 @@
     "num_cases": "18",
     "num_remaining": "", 
     "notes": "" 
-  }
+  },
+    "flow features" : {
+    ["near zero lift"]
+
+},
+        "file_name" : "11 Percent Thickness Supercritical Airfoil_A0.0_M0.60_Re3e6_A.csv",
+
+  "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 0 degrees, Mach number of 0.6.",
+    
+  "flow_conditions" : {
+    "reynolds" : "3.6e6 - 7.74e6",
+    "mach" : "0.35 - 0.80",
+    "freestream": "",
+    "alpha": "-0.5 - 10.5"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "1%",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "11 Percent Thickness Supercritical Airfoil",
+    "camber": "Y",
+    "supercritical": "Y",
+    "application": "Rotor"
+  },
+  "source": {
+    "name": "NASA TM X-1831",
+    "author": "Blackwell, Jr., James",
+    "year": "1969",
+    "page": "31-40", 
+    "type": "graph",
+    "url": "https://ntrs.nasa.gov/citations/19890004845"
+  },
+  "meta" : {
+    "num_cases": "18",
+    "num_remaining": "", 
+    "notes": "" 
+  },
+    "flow features" : {
+    ["near zero lift"]
+
+},
+          "file_name" : "11 Percent Thickness Supercritical Airfoil_A0.0_M0.70_Re3e6_A.csv", 
+
+  "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 0 degrees, Mach number of 0.7.",
+    
+  "flow_conditions" : {
+    "reynolds" : "3.6e6 - 7.74e6",
+    "mach" : "0.35 - 0.80",
+    "freestream": "",
+    "alpha": "-0.5 - 10.5"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "1%",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "11 Percent Thickness Supercritical Airfoil",
+    "camber": "Y",
+    "supercritical": "Y",
+    "application": "Rotor"
+  },
+  "source": {
+    "name": "NASA TM X-1831",
+    "author": "Blackwell, Jr., James",
+    "year": "1969",
+    "page": "31-40", 
+    "type": "graph",
+    "url": "https://ntrs.nasa.gov/citations/19890004845"
+  },
+  "meta" : {
+    "num_cases": "18",
+    "num_remaining": "", 
+    "notes": "" 
+  },
+    "flow features" : {
+    ["near zero lift"]
+
+},
+  "file_name" : "11 Percent Thickness Supercritical Airfoil_A0.0_M0.82_Re3e6_A.csv", 
+
+  "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 0 degrees, Mach number of 0.82.",
+    
+  "flow_conditions" : {
+    "reynolds" : "3.6e6 - 7.74e6",
+    "mach" : "0.35 - 0.80",
+    "freestream": "",
+    "alpha": "-0.5 - 10.5"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "1%",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "11 Percent Thickness Supercritical Airfoil",
+    "camber": "Y",
+    "supercritical": "Y",
+    "application": "Rotor"
+  },
+  "source": {
+    "name": "NASA TM X-1831",
+    "author": "Blackwell, Jr., James",
+    "year": "1969",
+    "page": "31-40", 
+    "type": "graph",
+    "url": "https://ntrs.nasa.gov/citations/19890004845"
+  },
+  "meta" : {
+    "num_cases": "18",
+    "num_remaining": "", 
+    "notes": "" 
+  },
+    "flow features" : {
+    ["near zero lift"]
+
+},
+ "file_name" : "11 Percent Thickness Supercritical Airfoil_A0.0_M0.83_Re3e6_A.csv", 
+
+  "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 0 degrees, Mach number of 0.83.",
+    
+  "flow_conditions" : {
+    "reynolds" : "3.6e6 - 7.74e6",
+    "mach" : "0.35 - 0.80",
+    "freestream": "",
+    "alpha": "-0.5 - 10.5"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "1%",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "11 Percent Thickness Supercritical Airfoil",
+    "camber": "Y",
+    "supercritical": "Y",
+    "application": "Rotor"
+  },
+  "source": {
+    "name": "NASA TM X-1831",
+    "author": "Blackwell, Jr., James",
+    "year": "1969",
+    "page": "31-40", 
+    "type": "graph",
+    "url": "https://ntrs.nasa.gov/citations/19890004845"
+  },
+  "meta" : {
+    "num_cases": "18",
+    "num_remaining": "", 
+    "notes": "" 
+  },
+    "flow features" : {
+    ["near zero lift"]
+
+},
+  "file_name" : "11 Percent Thickness Supercritical Airfoil_A0.0_M0.84_Re3e6_A.csv", 
+
+  "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 0 degrees, Mach number of 0.84.",
+    
+  "flow_conditions" : {
+    "reynolds" : "3.6e6 - 7.74e6",
+    "mach" : "0.35 - 0.80",
+    "freestream": "",
+    "alpha": "-0.5 - 10.5"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "1%",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "11 Percent Thickness Supercritical Airfoil",
+    "camber": "Y",
+    "supercritical": "Y",
+    "application": "Rotor"
+  },
+  "source": {
+    "name": "NASA TM X-1831",
+    "author": "Blackwell, Jr., James",
+    "year": "1969",
+    "page": "31-40", 
+    "type": "graph",
+    "url": "https://ntrs.nasa.gov/citations/19890004845"
+  },
+  "meta" : {
+    "num_cases": "18",
+    "num_remaining": "", 
+    "notes": "" 
+  },
+    "flow features" : {
+    ["near zero lift"]
+
+},
+   "file_name" : "11 Percent Thickness Supercritical Airfoil_A0.0_M0.80_Re3e6_A.csv", 
+
+  "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 0 degrees, Mach number of 0.8.",
+    
+  "flow_conditions" : {
+    "reynolds" : "3.6e6 - 7.74e6",
+    "mach" : "0.35 - 0.80",
+    "freestream": "",
+    "alpha": "-0.5 - 10.5"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "1%",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "11 Percent Thickness Supercritical Airfoil",
+    "camber": "Y",
+    "supercritical": "Y",
+    "application": "Rotor"
+  },
+  "source": {
+    "name": "NASA TM X-1831",
+    "author": "Blackwell, Jr., James",
+    "year": "1969",
+    "page": "31-40", 
+    "type": "graph",
+    "url": "https://ntrs.nasa.gov/citations/19890004845"
+  },
+  "meta" : {
+    "num_cases": "18",
+    "num_remaining": "", 
+    "notes": "" 
+  },
+    "flow features" : {
+    ["near zero lift"]
+
+},
+   "file_name" : "11 Percent Thickness Supercritical Airfoil_A1.0_M0.40_Re3e6_A.csv", 
+
+  "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 1 degrees, Mach number of 0.4.",
+    
+  "flow_conditions" : {
+    "reynolds" : "3.6e6 - 7.74e6",
+    "mach" : "0.35 - 0.80",
+    "freestream": "",
+    "alpha": "-0.5 - 10.5"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "1%",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "11 Percent Thickness Supercritical Airfoil",
+    "camber": "Y",
+    "supercritical": "Y",
+    "application": "Rotor"
+  },
+  "source": {
+    "name": "NASA TM X-1831",
+    "author": "Blackwell, Jr., James",
+    "year": "1969",
+    "page": "31-40", 
+    "type": "graph",
+    "url": "https://ntrs.nasa.gov/citations/19890004845"
+  },
+  "meta" : {
+    "num_cases": "18",
+    "num_remaining": "", 
+    "notes": "" 
+  },
+    "flow features" : {
+    ["incompressible"], ["no shock"]
+
+},
+
+   "file_name" : "11 Percent Thickness Supercritical Airfoil_A10.5_M0.40_Re3e6_A.csv", 
+
+  "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 10.5 degrees, Mach number of 0.4.",
+    
+  "flow_conditions" : {
+    "reynolds" : "3.6e6 - 7.74e6",
+    "mach" : "0.35 - 0.80",
+    "freestream": "",
+    "alpha": "-0.5 - 10.5"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "1%",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "11 Percent Thickness Supercritical Airfoil",
+    "camber": "Y",
+    "supercritical": "Y",
+    "application": "Rotor"
+  },
+  "source": {
+    "name": "NASA TM X-1831",
+    "author": "Blackwell, Jr., James",
+    "year": "1969",
+    "page": "31-40", 
+    "type": "graph",
+    "url": "https://ntrs.nasa.gov/citations/19890004845"
+  },
+  "meta" : {
+    "num_cases": "18",
+    "num_remaining": "", 
+    "notes": "" 
+  },
+    "flow features" : {
+    ["incompressible"], ["no shock"]
+
+},
+       "file_name" : "11 Percent Thickness Supercritical Airfoil_A2.0_M0.40_Re3e6_A.csv", 
+
+  "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 2 degrees, Mach number of 0.4.",
+    
+  "flow_conditions" : {
+    "reynolds" : "3.6e6 - 7.74e6",
+    "mach" : "0.35 - 0.80",
+    "freestream": "",
+    "alpha": "-0.5 - 10.5"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "1%",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "11 Percent Thickness Supercritical Airfoil",
+    "camber": "Y",
+    "supercritical": "Y",
+    "application": "Rotor"
+  },
+  "source": {
+    "name": "NASA TM X-1831",
+    "author": "Blackwell, Jr., James",
+    "year": "1969",
+    "page": "31-40", 
+    "type": "graph",
+    "url": "https://ntrs.nasa.gov/citations/19890004845"
+  },
+  "meta" : {
+    "num_cases": "18",
+    "num_remaining": "", 
+    "notes": "" 
+  },
+    "flow features" : {
+    ["incompressible"], ["no shock"],["low dip", "trailing edge"] 
+
+},
+       "file_name" : "11 Percent Thickness Supercritical Airfoil_A3.5_M0.40_Re3e6_A.csv", 
+
+  "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 3.5 degrees, Mach number of 0.4.",
+    
+  "flow_conditions" : {
+    "reynolds" : "3.6e6 - 7.74e6",
+    "mach" : "0.35 - 0.80",
+    "freestream": "",
+    "alpha": "-0.5 - 10.5"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "1%",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "11 Percent Thickness Supercritical Airfoil",
+    "camber": "Y",
+    "supercritical": "Y",
+    "application": "Rotor"
+  },
+  "source": {
+    "name": "NASA TM X-1831",
+    "author": "Blackwell, Jr., James",
+    "year": "1969",
+    "page": "31-40", 
+    "type": "graph",
+    "url": "https://ntrs.nasa.gov/citations/19890004845"
+  },
+  "meta" : {
+    "num_cases": "18",
+    "num_remaining": "", 
+    "notes": "" 
+  },
+    "flow features" : {
+    ["incompressible"], ["no shock"],["low dip", "trailing edge"] 
+
+},
+             "file_name" : "11 Percent Thickness Supercritical Airfoil_A5.5_M0.40_Re3e6_A.csv", 
+
+  "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 5.5 degrees, Mach number of 0.4.",
+    
+  "flow_conditions" : {
+    "reynolds" : "3.6e6 - 7.74e6",
+    "mach" : "0.35 - 0.80",
+    "freestream": "",
+    "alpha": "-0.5 - 10.5"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "1%",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "11 Percent Thickness Supercritical Airfoil",
+    "camber": "Y",
+    "supercritical": "Y",
+    "application": "Rotor"
+  },
+  "source": {
+    "name": "NASA TM X-1831",
+    "author": "Blackwell, Jr., James",
+    "year": "1969",
+    "page": "31-40", 
+    "type": "graph",
+    "url": "https://ntrs.nasa.gov/citations/19890004845"
+  },
+  "meta" : {
+    "num_cases": "18",
+    "num_remaining": "", 
+    "notes": "" 
+  },
+    "flow features" : {
+    ["incompressible"], ["no shock"]
+
+},
+             "file_name" : "11 Percent Thickness Supercritical Airfoil_A2.0_M0.40_Re3e6_A.csv", 
+
+  "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 2 degrees, Mach number of 0.4.",
+    
+  "flow_conditions" : {
+    "reynolds" : "3.6e6 - 7.74e6",
+    "mach" : "0.35 - 0.80",
+    "freestream": "",
+    "alpha": "-0.5 - 10.5"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "1%",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "11 Percent Thickness Supercritical Airfoil",
+    "camber": "Y",
+    "supercritical": "Y",
+    "application": "Rotor"
+  },
+  "source": {
+    "name": "NASA TM X-1831",
+    "author": "Blackwell, Jr., James",
+    "year": "1969",
+    "page": "31-40", 
+    "type": "graph",
+    "url": "https://ntrs.nasa.gov/citations/19890004845"
+  },
+  "meta" : {
+    "num_cases": "18",
+    "num_remaining": "", 
+    "notes": "" 
+  },
+    "flow features" : {
+    ["incompressible"], ["no shock"]
+
+},
+   "file_name" : "11 Percent Thickness Supercritical Airfoil_A5.5_M0.60_Re3e6_A.csv", 
+
+  "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 5.5 degrees, Mach number of 0.6.",
+    
+  "flow_conditions" : {
+    "reynolds" : "3.6e6 - 7.74e6",
+    "mach" : "0.35 - 0.80",
+    "freestream": "",
+    "alpha": "-0.5 - 10.5"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "1%",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "11 Percent Thickness Supercritical Airfoil",
+    "camber": "Y",
+    "supercritical": "Y",
+    "application": "Rotor"
+  },
+  "source": {
+    "name": "NASA TM X-1831",
+    "author": "Blackwell, Jr., James",
+    "year": "1969",
+    "page": "31-40", 
+    "type": "graph",
+    "url": "https://ntrs.nasa.gov/citations/19890004845"
+  },
+  "meta" : {
+    "num_cases": "18",
+    "num_remaining": "", 
+    "notes": "" 
+  },
+    "flow features" : {
+    ["compressibility effect"], ["no shock"]
+
+},
+
+   "file_name" : "11 Percent Thickness Supercritical Airfoil_A5.5_M0.70_Re3e6_A.csv", 
+
+  "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 5.5 degrees, Mach number of 0.7.",
+    
+  "flow_conditions" : {
+    "reynolds" : "3.6e6 - 7.74e6",
+    "mach" : "0.35 - 0.80",
+    "freestream": "",
+    "alpha": "-0.5 - 10.5"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "1%",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "11 Percent Thickness Supercritical Airfoil",
+    "camber": "Y",
+    "supercritical": "Y",
+    "application": "Rotor"
+  },
+  "source": {
+    "name": "NASA TM X-1831",
+    "author": "Blackwell, Jr., James",
+    "year": "1969",
+    "page": "31-40", 
+    "type": "graph",
+    "url": "https://ntrs.nasa.gov/citations/19890004845"
+  },
+  "meta" : {
+    "num_cases": "18",
+    "num_remaining": "", 
+    "notes": "" 
+  },
+    "flow features" : {
+    ["compressibility effect"], ["no shock"]
+
+},
+         "file_name" : "11 Percent Thickness Supercritical Airfoil_A5.5_M0.74_Re3e6_A.csv", 
+
+  "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 5.5 degrees, Mach number of 0.74.",
+    
+  "flow_conditions" : {
+    "reynolds" : "3.6e6 - 7.74e6",
+    "mach" : "0.35 - 0.80",
+    "freestream": "",
+    "alpha": "-0.5 - 10.5"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "1%",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "11 Percent Thickness Supercritical Airfoil",
+    "camber": "Y",
+    "supercritical": "Y",
+    "application": "Rotor"
+  },
+  "source": {
+    "name": "NASA TM X-1831",
+    "author": "Blackwell, Jr., James",
+    "year": "1969",
+    "page": "31-40", 
+    "type": "graph",
+    "url": "https://ntrs.nasa.gov/citations/19890004845"
+  },
+  "meta" : {
+    "num_cases": "18",
+    "num_remaining": "", 
+    "notes": "" 
+  },
+    "flow features" : {
+    ["compressibility effect"], ["no shock"]
+
+},
+         "file_name" : "11 Percent Thickness Supercritical Airfoil_A8.5_M0.40_Re3e6_A.csv", 
+
+  "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 8.5 degrees, Mach number of 0.4.",
+    
+  "flow_conditions" : {
+    "reynolds" : "3.6e6 - 7.74e6",
+    "mach" : "0.35 - 0.80",
+    "freestream": "",
+    "alpha": "-0.5 - 10.5"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "1%",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "11 Percent Thickness Supercritical Airfoil",
+    "camber": "Y",
+    "supercritical": "Y",
+    "application": "Rotor"
+  },
+  "source": {
+    "name": "NASA TM X-1831",
+    "author": "Blackwell, Jr., James",
+    "year": "1969",
+    "page": "31-40", 
+    "type": "graph",
+    "url": "https://ntrs.nasa.gov/citations/19890004845"
+  },
+  "meta" : {
+    "num_cases": "18",
+    "num_remaining": "", 
+    "notes": "" 
+  },
+    "flow features" : {
+    ["linear regime"],["incompressible"], ["no shock"]
+
 }
+}
+]
