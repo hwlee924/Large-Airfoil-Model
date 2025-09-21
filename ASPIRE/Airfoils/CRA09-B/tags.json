@@ -37,7 +37,7 @@
     "notes": "Re estimated" 
   }
     "flow_features" : [
-      ["linear regime"],["incompressible"]
+      ["linear regime"],["compressible"]
     ]
 
 },
