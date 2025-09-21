@@ -43,7 +43,7 @@
     },
 
     "flow_features": [
-      ["linear regime"]
+      ["linear regime"],["incompressible"],["no shock present"]
     ],
 
     "aerodynamic_coefficients": { 
@@ -95,7 +95,8 @@
     },
 
     "flow_features": [
-      ["linear regime"]
+      ["linear regime"], ["incompressible"]
+
     ],
 
     "aerodynamic_coefficients": { 
