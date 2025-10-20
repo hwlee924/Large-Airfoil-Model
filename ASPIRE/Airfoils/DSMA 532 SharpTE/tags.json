@@ -1,32 +1,481 @@
-{
-  "flow_conditions" : {
-    "reynolds" : "2.0e6",
-    "mach" : "0.6 - 0.83",
-    "freestream": "",
-    "alpha": "0.78 - 1.6"
+[
+  {
+    "file_name": "DSMA 523 SharpTE_A0.01_M0.760_Re3.96e6_A_TM81336.csv",
+
+    "description": "Cp distribution of a DSMA 523 SharpTE airfoil at an angle of attack of 0.01 degrees, Mach number of 0.760.",
+
+    "flow_conditions" : {
+      "reynolds" : "3.96e6",
+      "mach" : "0.760",
+      "freestream": "",
+      "alpha": "0.01"
+    },
+
+    "airfoil": {
+      "name": "DSMA 523 SharpTE",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x" : "not_provided",
+      "z" : "not_provided",
+      "cp" : "0.03",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    }, 
+
+    "experiment": {
+      "name": ["NASA TM-81336-SUPPL"],
+      "authors": [
+        "F. W. Spaid",
+        "J. A. Dahlin",
+        "F. W. Roos",
+        "L. S. Stivers, Jr."
+      ],
+      "institution": ["McDonnell Douglas Research Laboratories", "Douglas Aircraft Company", "NASA Ames Research Center"],
+      "publisher": [],
+      "year": "1983",
+      "page": "28-31",
+      "type": "tabulated",
+      "url": "https://ntrs.nasa.gov/api/citations/19830025575/downloads/19830025575.pdf"
+    },
+
+    "flow_features": [["compressibility effect"], ["weak shock", "upper surface", "mid-chord"]],
+
+    "aerodynamic_coefficients": {}
   },
-  "uncertainty" : {
-    "x" : "",
-    "cp" : "0.03",
-    "alpha": "",
-    "mach": ""
-  }, 
-  "airfoil": {
-    "name": "DSMA 523",
-    "camber": "Y",
-    "supercritical": "Y",
-    "application": "General"
+
+  {
+    "file_name": "DSMA 523 SharpTE_A0.24_M0.784_Re3.91e6_A_TM81336.csv",
+
+    "description": "Cp distribution of a DSMA 523 SharpTE airfoil at an angle of attack of 0.24 degrees, Mach number of 0.784.",
+
+    "flow_conditions" : {
+      "reynolds" : "3.91e6",
+      "mach" : "0.784",
+      "freestream": "",
+      "alpha": "0.24"
+    },
+
+    "airfoil": {
+      "name": "DSMA 523 SharpTE",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x" : "not_provided",
+      "z" : "not_provided",
+      "cp" : "0.03",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    }, 
+
+    "experiment": {
+      "name": ["NASA TM-81336-SUPPL"],
+      "authors": [
+        "F. W. Spaid",
+        "J. A. Dahlin",
+        "F. W. Roos",
+        "L. S. Stivers, Jr."
+      ],
+      "institution": ["McDonnell Douglas Research Laboratories", "Douglas Aircraft Company", "NASA Ames Research Center"],
+      "publisher": [],
+      "year": "1983",
+      "page": "28-31",
+      "type": "tabulated",
+      "url": "https://ntrs.nasa.gov/api/citations/19830025575/downloads/19830025575.pdf"
+    },
+
+    "flow_features": [["compressibility effect"], ["weak shock", "upper surface", "mid-chord"]],
+
+    "aerodynamic_coefficients": {}
   },
-  "source": {
-    "name": "NASA TM-81336-SUPPL",
-    "year": "1983",
-    "page": "28 - 31", 
-    "type": "tabulated",
-    "url": "https://ntrs.nasa.gov/api/citations/19830025575/downloads/19830025575.pdf"
+
+  {
+    "file_name": "DSMA 523 SharpTE_A0.47_M0.755_Re3.81e6_A_TM81336.csv",
+
+    "description": "Cp distribution of a DSMA 523 SharpTE airfoil at an angle of attack of 0.47 degrees, Mach number of 0.755.",
+
+    "flow_conditions" : {
+      "reynolds" : "3.81e6",
+      "mach" : "0.755",
+      "freestream": "",
+      "alpha": "0.47"
+    },
+
+    "airfoil": {
+      "name": "DSMA 523 SharpTE",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x" : "not_provided",
+      "z" : "not_provided",
+      "cp" : "0.03",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    }, 
+
+    "experiment": {
+      "name": ["NASA TM-81336-SUPPL"],
+      "authors": [
+        "F. W. Spaid",
+        "J. A. Dahlin",
+        "F. W. Roos",
+        "L. S. Stivers, Jr."
+      ],
+      "institution": ["McDonnell Douglas Research Laboratories", "Douglas Aircraft Company", "NASA Ames Research Center"],
+      "publisher": [],
+      "year": "1983",
+      "page": "28-31",
+      "type": "tabulated",
+      "url": "https://ntrs.nasa.gov/api/citations/19830025575/downloads/19830025575.pdf"
+    },
+
+    "flow_features": [["compressibility effect"], ["weak shock", "upper surface", "mid-chord"]],
+
+    "aerodynamic_coefficients": {}
   },
-  "meta" : {
-    "num_cases": "7",
-    "num_remaining": "7", 
-    "notes": "Fixed transition, only 2e6 cases digitized" 
+
+  {
+    "file_name": "DSMA 523 SharpTE_A0.76_M0.759_Re3.93e6_A_TM81336.csv",
+
+    "description": "Cp distribution of a DSMA 523 SharpTE airfoil at an angle of attack of 0.76 degrees, Mach number of 0.759.",
+
+    "flow_conditions" : {
+      "reynolds" : "3.93e6",
+      "mach" : "0.759",
+      "freestream": "",
+      "alpha": "0.76"
+    },
+
+    "airfoil": {
+      "name": "DSMA 523 SharpTE",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x" : "not_provided",
+      "z" : "not_provided",
+      "cp" : "0.03",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    }, 
+
+    "experiment": {
+      "name": ["NASA TM-81336-SUPPL"],
+      "authors": [
+        "F. W. Spaid",
+        "J. A. Dahlin",
+        "F. W. Roos",
+        "L. S. Stivers, Jr."
+      ],
+      "institution": ["McDonnell Douglas Research Laboratories", "Douglas Aircraft Company", "NASA Ames Research Center"],
+      "publisher": [],
+      "year": "1983",
+      "page": "28-31",
+      "type": "tabulated",
+      "url": "https://ntrs.nasa.gov/api/citations/19830025575/downloads/19830025575.pdf"
+    },
+
+    "flow_features": [["compressibility effect"], ["weak shock", "upper surface", "mid-chord"]],
+
+    "aerodynamic_coefficients": {}
+  },
+
+  {
+    "file_name": "DSMA 523 SharpTE_A0.78_M0.758_Re3.94e6_A_TM81336.csv",
+
+    "description": "Cp distribution of a DSMA 523 SharpTE airfoil at an angle of attack of 0.78 degrees, Mach number of 0.758.",
+
+    "flow_conditions" : {
+      "reynolds" : "3.94e6",
+      "mach" : "0.758",
+      "freestream": "",
+      "alpha": "0.78"
+    },
+
+    "airfoil": {
+      "name": "DSMA 523 SharpTE",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x" : "not_provided",
+      "z" : "not_provided",
+      "cp" : "0.03",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    }, 
+
+    "experiment": {
+      "name": ["NASA TM-81336-SUPPL"],
+      "authors": [
+        "F. W. Spaid",
+        "J. A. Dahlin",
+        "F. W. Roos",
+        "L. S. Stivers, Jr."
+      ],
+      "institution": ["McDonnell Douglas Research Laboratories", "Douglas Aircraft Company", "NASA Ames Research Center"],
+      "publisher": [],
+      "year": "1983",
+      "page": "28-31",
+      "type": "tabulated",
+      "url": "https://ntrs.nasa.gov/api/citations/19830025575/downloads/19830025575.pdf"
+    },
+
+    "flow_features": [["compressibility effect"], ["weak shock", "upper surface", "mid-chord"]],
+
+    "aerodynamic_coefficients": {}
+  },
+  
+  {
+    "file_name": "DSMA 523 SharpTE_Am0.16_M0.760_Re3.96e6_A_TM81336.csv",
+
+    "description": "Cp distribution of a DSMA 523 SharpTE airfoil at an angle of attack of -0.16 degrees, Mach number of 0.760.",
+
+    "flow_conditions" : {
+      "reynolds" : "3.96e6",
+      "mach" : "0.760",
+      "freestream": "",
+      "alpha": "-0.16"
+    },
+
+    "airfoil": {
+      "name": "DSMA 523 SharpTE",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x" : "not_provided",
+      "z" : "not_provided",
+      "cp" : "0.03",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    }, 
+
+    "experiment": {
+      "name": ["NASA TM-81336-SUPPL"],
+      "authors": [
+        "F. W. Spaid",
+        "J. A. Dahlin",
+        "F. W. Roos",
+        "L. S. Stivers, Jr."
+      ],
+      "institution": ["McDonnell Douglas Research Laboratories", "Douglas Aircraft Company", "NASA Ames Research Center"],
+      "publisher": [],
+      "year": "1983",
+      "page": "28-31",
+      "type": "tabulated",
+      "url": "https://ntrs.nasa.gov/api/citations/19830025575/downloads/19830025575.pdf"
+    },
+
+    "flow_features": [["incompressible regime"], ["no shock present"], ["leading-edge suction peak", "upper surface"]],
+
+    "aerodynamic_coefficients": {}
+  },
+
+  {
+    "file_name": "DSMA 523 SharpTE_Am0.58_M0.759_Re3.97e6_A_TM81336.csv",
+
+    "description": "Cp distribution of a DSMA 523 SharpTE airfoil at an angle of attack of -0.58 degrees, Mach number of 0.759.",
+
+    "flow_conditions" : {
+      "reynolds" : "3.97e6",
+      "mach" : "0.759",
+      "freestream": "",
+      "alpha": "-0.58"
+    },
+
+    "airfoil": {
+      "name": "DSMA 523 SharpTE",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x" : "not_provided",
+      "z" : "not_provided",
+      "cp" : "0.03",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    }, 
+
+    "experiment": {
+      "name": ["NASA TM-81336-SUPPL"],
+      "authors": [
+        "F. W. Spaid",
+        "J. A. Dahlin",
+        "F. W. Roos",
+        "L. S. Stivers, Jr."
+      ],
+      "institution": ["McDonnell Douglas Research Laboratories", "Douglas Aircraft Company", "NASA Ames Research Center"],
+      "publisher": [],
+      "year": "1983",
+      "page": "28-31",
+      "type": "tabulated",
+      "url": "https://ntrs.nasa.gov/api/citations/19830025575/downloads/19830025575.pdf"
+    },
+
+    "flow_features": [["incompressible"],["no shock"],["minimal lift"]],
+
+    "aerodynamic_coefficients": {}
+  },
+
+  {
+    "file_name": "DSMA 523 SharpTE_Am0.59_M0.759_Re4.03e6_A_TM81336.csv",
+
+    "description": "Cp distribution of a DSMA 523 SharpTE airfoil at an angle of attack of -0.59 degrees, Mach number of 0.759.",
+
+    "flow_conditions" : {
+      "reynolds" : "4.03e6",
+      "mach" : "0.759",
+      "freestream": "",
+      "alpha": "-0.59"
+    },
+
+    "airfoil": {
+      "name": "DSMA 523 SharpTE",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x" : "not_provided",
+      "z" : "not_provided",
+      "cp" : "0.03",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    }, 
+
+    "experiment": {
+      "name": ["NASA TM-81336-SUPPL"],
+      "authors": [
+        "F. W. Spaid",
+        "J. A. Dahlin",
+        "F. W. Roos",
+        "L. S. Stivers, Jr."
+      ],
+      "institution": ["McDonnell Douglas Research Laboratories", "Douglas Aircraft Company", "NASA Ames Research Center"],
+      "publisher": [],
+      "year": "1983",
+      "page": "28-31",
+      "type": "tabulated",
+      "url": "https://ntrs.nasa.gov/api/citations/19830025575/downloads/19830025575.pdf"
+    },
+
+    "flow_features": [["incompressible"],["no shock"],["minimal lift"]],
+
+    "aerodynamic_coefficients": {}
+  },
+
+  {
+    "file_name": "DSMA 523 SharpTE_Am0.63_M0.760_Re3.96e6_A_TM81336.csv",
+
+    "description": "Cp distribution of a DSMA 523 SharpTE airfoil at an angle of attack of -0.63 degrees, Mach number of 0.760.",
+
+    "flow_conditions" : {
+      "reynolds" : "3.96e6",
+      "mach" : "0.760",
+      "freestream": "",
+      "alpha": "-0.63"
+    },
+
+    "airfoil": {
+      "name": "DSMA 523 SharpTE",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x" : "not_provided",
+      "z" : "not_provided",
+      "cp" : "0.03",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    }, 
+
+    "experiment": {
+      "name": ["NASA TM-81336-SUPPL"],
+      "authors": [
+        "F. W. Spaid",
+        "J. A. Dahlin",
+        "F. W. Roos",
+        "L. S. Stivers, Jr."
+      ],
+      "institution": ["McDonnell Douglas Research Laboratories", "Douglas Aircraft Company", "NASA Ames Research Center"],
+      "publisher": [],
+      "year": "1983",
+      "page": "28-31",
+      "type": "tabulated",
+      "url": "https://ntrs.nasa.gov/api/citations/19830025575/downloads/19830025575.pdf"
+    },
+
+    "flow_features": [["incompressible"],["no shock"],["minimal lift"]],
+
+    "aerodynamic_coefficients": {}
+  },
+
+  {
+    "file_name": "DSMA 523 SharpTE_Am1.21_M0.760_Re3.95e6_A_TM81336.csv",
+
+    "description": "Cp distribution of a DSMA 523 SharpTE airfoil at an angle of attack of -1.21 degrees, Mach number of 0.760.",
+
+    "flow_conditions" : {
+      "reynolds" : "3.95e6",
+      "mach" : "0.760",
+      "freestream": "",
+      "alpha": "-1.21"
+    },
+
+    "airfoil": {
+      "name": "DSMA 523 SharpTE",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x" : "not_provided",
+      "z" : "not_provided",
+      "cp" : "0.03",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    }, 
+
+    "experiment": {
+      "name": ["NASA TM-81336-SUPPL"],
+      "authors": [
+        "F. W. Spaid",
+        "J. A. Dahlin",
+        "F. W. Roos",
+        "L. S. Stivers, Jr."
+      ],
+      "institution": ["McDonnell Douglas Research Laboratories", "Douglas Aircraft Company", "NASA Ames Research Center"],
+      "publisher": [],
+      "year": "1983",
+      "page": "28-31",
+      "type": "tabulated",
+      "url": "https://ntrs.nasa.gov/api/citations/19830025575/downloads/19830025575.pdf"
+    },
+
+    "flow_features": [["incompressible"],["no shock present"]],
+
+    "aerodynamic_coefficients": {}
   }
-}
+]
