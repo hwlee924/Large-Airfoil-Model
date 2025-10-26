@@ -92,10 +92,7 @@
       "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
     },
 
-    "flow_features": [["attached flow", "upper surface"],
-  ["attached flow", "lower surface"],
-  ["no shock present"],
-  ["moderate positive lift"]],
+    "flow_features": [["attached flow", "upper surface"], ["attached flow", "lower surface"], ["no shock present"], ["moderate positive lift"]],
 
     "aerodynamic_coefficients": {}
   },
@@ -144,10 +141,7 @@
       "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
     },
 
-    "flow_features": [["attached flow", "upper surface"],
-  ["attached flow", "lower surface"],
-  ["no shock present"],
-  ["moderate positive lift"]],
+    "flow_features": [["attached flow", "upper surface"], ["attached flow", "lower surface"], ["no shock present"], ["moderate positive lift"]],
 
     "aerodynamic_coefficients": {}
   },
@@ -196,10 +190,7 @@
       "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
     },
 
-    "flow_features": [["attached flow", "upper surface"],
-  ["attached flow", "lower surface"],
-  ["no shock present"],
-  ["moderate positive lift"]],
+    "flow_features": [["attached flow", "upper surface"], ["attached flow", "lower surface"], ["no shock present"], ["moderate positive lift"]],
 
     "aerodynamic_coefficients": {}
   },
@@ -394,7 +385,7 @@
       "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
     },
 
-    "flow_features": [],
+    "flow_features": [["weak shock", "upper surface", "leading edge"], ["compressibility effect"]],
 
     "aerodynamic_coefficients": {}
   },
@@ -443,7 +434,7 @@
       "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
     },
 
-    "flow_features": [],
+    "flow_features": [["weak shock", "upper surface", "leading edge"], ["compressibility effect"]],
 
     "aerodynamic_coefficients": {}
   },
@@ -492,7 +483,7 @@
       "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
     },
 
-    "flow_features": [],
+    "flow_features": [["weak shock", "upper surface", "mid chord"], ["compressibility effect"]],
 
     "aerodynamic_coefficients": {}
   },
@@ -541,7 +532,7 @@
       "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
     },
 
-    "flow_features": [],
+    "flow_features": [["weak shock", "upper surface", "mid chord"], ["compressibility effect"]],
 
     "aerodynamic_coefficients": {}
   },
@@ -590,7 +581,7 @@
       "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
     },
 
-    "flow_features": [],
+    "flow_features": [["weak shock", "upper surface", "mid chord"], ["compressibility effect"]],
 
     "aerodynamic_coefficients": {}
   },
@@ -638,7 +629,7 @@
       "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
     },
 
-    "flow_features": [],
+    "flow_features": [["linear regime"], ["no shock present"], ["compressibility effect"]],
 
     "aerodynamic_coefficients": {}
   },
@@ -687,7 +678,7 @@
       "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
     },
 
-    "flow_features": [],
+    "flow_features": [["weak shock", "upper surface", "leading edge"], ["compressibility effect"]],
 
     "aerodynamic_coefficients": {}
   },
@@ -736,7 +727,7 @@
       "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
     },
 
-    "flow_features": [],
+    "flow_features": [["weak shock", "upper surface", "mid chord"], ["compressibility effect"]],
 
     "aerodynamic_coefficients": {}
   },
@@ -785,7 +776,7 @@
       "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
     },
 
-    "flow_features": [],
+    "flow_features": [["weak shock", "upper surface", "mid chord"], ["compressibility effect"]],
 
     "aerodynamic_coefficients": {}
   }
