@@ -1,9 +1,14 @@
-{
+[
+  {
+    "file_name" : "CRA09-B_A6.0_M0.6_Re3e6_A.csv",
+
+    "description" : "Cp distribution of a CRA09-B airfoil at an angle of attack of 6 degrees, Mach number of 0.60.",
+    
   "flow_conditions" : {
     "reynolds" : "3e6",
     "mach" : "0.60",
     "freestream": "",
-    "alpha": "6, 7, 8, 9"
+    "alpha": "6"
   },
   "uncertainty" : {
     "x" : "",
@@ -20,7 +25,7 @@
   },
   "source": {
     "name": "Rotor airfoil aerodynamic design method and wind tunnel test verification",
-    "author": "Zhang et al.",
+    "author": ["W. Zhang", "J. Sun", "L. Wang", "J. Wu", "L. He"],
     "year": "2019",
     "page": "2129", 
     "type": "graph",
@@ -31,5 +36,136 @@
     "num_remaining": "", 
     "notes": "Re estimated" 
   }
+    "flow_features" : [
+      ["linear regime"],["incompressible"]
+    ]
 
-}
+},
+
+  {
+    "file_name" : "CRA09-B_A7.0_M0.6_Re3e6_A.csv",
+
+    "description" : "Cp distribution of a CRA09-B airfoil at an angle of attack of 7 degrees, Mach number of 0.60.",
+    
+  "flow_conditions" : {
+    "reynolds" : "3e6",
+    "mach" : "0.60",
+    "freestream": "",
+    "alpha": "7"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "z" : "",
+    "cp" : "",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "CRA09-B",
+    "camber": "Y",
+    "supercritical": "N",
+    "application": "Rotor"
+  },
+  "source": {
+    "name": "Rotor airfoil aerodynamic design method and wind tunnel test verification",
+    "author": ["W. Zhang", "J. Sun", "L. Wang", "J. Wu", "L. He"],
+    "year": "2019",
+    "page": "2129", 
+    "type": "graph",
+    "url": "https://www.sciencedirect.com/science/article/pii/S1000936120301825"
+  },
+  "meta" : {
+    "num_cases": "4",
+    "num_remaining": "", 
+    "notes": "Re estimated" 
+  }
+    "flow_features" : [
+      ["linear regime"]
+    ]
+
+},
+  {
+    "file_name" : "CRA09-B_A8.0_M0.6_Re3e6_A.csv",
+
+    "description" : "Cp distribution of a CRA09-B airfoil at an angle of attack of 8 degrees, Mach number of 0.60.",
+    
+  "flow_conditions" : {
+    "reynolds" : "3e6",
+    "mach" : "0.60",
+    "freestream": "",
+    "alpha": "8"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "z" : "",
+    "cp" : "",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "CRA09-B",
+    "camber": "Y",
+    "supercritical": "N",
+    "application": "Rotor"
+  },
+  "source": {
+    "name": "Rotor airfoil aerodynamic design method and wind tunnel test verification",
+    "author": ["W. Zhang", "J. Sun", "L. Wang", "J. Wu", "L. He"],
+    "year": "2019",
+    "page": "2129", 
+    "type": "graph",
+    "url": "https://www.sciencedirect.com/science/article/pii/S1000936120301825"
+  },
+  "meta" : {
+    "num_cases": "4",
+    "num_remaining": "", 
+    "notes": "Re estimated" 
+  }
+    "flow_features" : [
+      ["linear regime"]
+    ]
+
+},
+    {
+    "file_name" : "CRA09-B_A9.0_M0.6_Re3e6_A.csv",
+
+    "description" : "Cp distribution of a CRA09-B airfoil at an angle of attack of 9 degrees, Mach number of 0.60.",
+    
+  "flow_conditions" : {
+    "reynolds" : "3e6",
+    "mach" : "0.60",
+    "freestream": "",
+    "alpha": "9"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "z" : "",
+    "cp" : "",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "CRA09-B",
+    "camber": "Y",
+    "supercritical": "N",
+    "application": "Rotor"
+  },
+  "source": {
+    "name": "Rotor airfoil aerodynamic design method and wind tunnel test verification",
+    "author": ["W. Zhang", "J. Sun", "L. Wang", "J. Wu", "L. He"],
+    "year": "2019",
+    "page": "2129", 
+    "type": "graph",
+    "url": "https://www.sciencedirect.com/science/article/pii/S1000936120301825"
+  },
+  "meta" : {
+    "num_cases": "4",
+    "num_remaining": "", 
+    "notes": "Re estimated" 
+  }
+    "flow_features" : [
+      ["linear regime"]
+    ]
+
+},
+]
