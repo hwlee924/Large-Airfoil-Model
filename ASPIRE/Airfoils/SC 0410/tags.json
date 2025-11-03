@@ -1,34 +1,792 @@
-{
-  "flow_conditions" : {
-    "reynolds" : "",
-    "mach" : "0.70 - 0.85",
-    "freestream": "",
-    "alpha": "-4.2, 1.7, 2.7, 4.9"
+[
+  {
+    "file_name": "SC 0410_Am4.2_M0.65_Re0.7e6_A.csv",
+
+    "description": "Cp distribution of a SC 0410 airfoil at an angle of attack of -4.2 degrees, Mach number of 0.65.",
+
+    "flow_conditions" : {
+      "reynolds" : "0.7e6",
+      "mach" : "0.65",
+      "freestream": "",
+      "alpha": "-4.2"
+    },
+
+    "airfoil": {
+      "name": "SC 0410",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x" : "not_provided",
+      "z" : "not_provided",
+      "cp" : "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    }, 
+
+    "experiment": {
+      "name": ["Experimental Investigation of Shock Wave Oscillation on a Thin Airfoil"],
+      "authors": [
+        "M. Masdari",
+        "M. Talebi",
+        "A. Zeinalzadeh",
+        "M. A. Abdi",
+        "M. R. Soltani"
+      ],
+      "institution": [],
+      "publisher": [],
+      "year": "2018",
+      "page": "800",
+      "type": "graph",
+      "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
+    },
+
+    "flow_features": [["attached flow", "upper surface"], ["attached flow", "lower surface"], ["no shock present"], ["moderate positive lift"]],
+
+    "aerodynamic_coefficients": {}
   },
-  "uncertainty" : {
-    "x" : "",
-    "z" : "",
-    "cp" : "",
-    "alpha": "",
-    "mach": ""
-  }, 
-  "airfoil": {
-    "name": "SC 0410",
-    "camber": "Y",
-    "supercritical": "Y",
-    "application": "General"
+
+  {
+    "file_name": "SC 0410_Am4.2_M0.71_Re0.7e6_A.csv",
+
+    "description": "Cp distribution of a SC 0410 airfoil at an angle of attack of -4.2 degrees, Mach number of 0.71.",
+
+    "flow_conditions" : {
+      "reynolds" : "0.7e6",
+      "mach" : "0.71",
+      "freestream": "",
+      "alpha": "-4.2"
+    },
+
+    "airfoil": {
+      "name": "SC 0410",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x" : "not_provided",
+      "z" : "not_provided",
+      "cp" : "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    }, 
+
+    "experiment": {
+      "name": ["Experimental Investigation of Shock Wave Oscillation on a Thin Airfoil"],
+      "authors": [
+        "M. Masdari",
+        "M. Talebi",
+        "A. Zeinalzadeh",
+        "M. A. Abdi",
+        "M. R. Soltani"
+      ],
+      "institution": [],
+      "publisher": [],
+      "year": "2018",
+      "page": "800",
+      "type": "graph",
+      "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
+    },
+
+    "flow_features": [["attached flow", "upper surface"],
+  ["attached flow", "lower surface"],
+  ["no shock present"],
+  ["moderate positive lift"]],
+
+    "aerodynamic_coefficients": {}
   },
-  "source": {
-    "name": "EXPERIMENTAL INVESTIGATION OF SHOCK WAVE OSCILLATION ON A THIN AIRFOIL",
-    "author": "Masdari et al.",
-    "year": "2018",
-    "page": "800", 
-    "type": "graph",
-    "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
+
+  {
+    "file_name": "SC 0410_Am4.2_M0.75_Re0.7e6_A.csv",
+
+    "description": "Cp distribution of a SC 0410 airfoil at an angle of attack of -4.2 degrees, Mach number of 0.75.",
+
+    "flow_conditions" : {
+      "reynolds" : "0.7e6",
+      "mach" : "0.75",
+      "freestream": "",
+      "alpha": "-4.2"
+    },
+
+    "airfoil": {
+      "name": "SC 0410",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x" : "not_provided",
+      "z" : "not_provided",
+      "cp" : "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    }, 
+
+    "experiment": {
+      "name": ["Experimental Investigation of Shock Wave Oscillation on a Thin Airfoil"],
+      "authors": [
+        "M. Masdari",
+        "M. Talebi",
+        "A. Zeinalzadeh",
+        "M. A. Abdi",
+        "M. R. Soltani"
+      ],
+      "institution": [],
+      "publisher": [],
+      "year": "2018",
+      "page": "800",
+      "type": "graph",
+      "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
+    },
+
+    "flow_features": [["attached flow", "upper surface"],
+  ["attached flow", "lower surface"],
+  ["no shock present"],
+  ["moderate positive lift"]],
+
+    "aerodynamic_coefficients": {}
   },
-  "meta" : {
-    "num_cases": "16",
-    "num_remaining": "", 
-    "notes": "https://pdf.sciencedirectassets.com/280665/1-s2.0-S1026309813X00045/1-s2.0-S1026309813000072/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAQaCXVzLWVhc3QtMSJHMEUCIQCB6MrmrtUW89FzPlqIEtbENhdPFvlAYN0Q6kcxfO9IngIgNWCL0OBZGD8er%2BRz2FuuryM2pU6tGDLasrTMmEk4PnAqsgUIHRAFGgwwNTkwMDM1NDY4NjUiDNi0azKMneNRtSWCPiqPBbPPnuO0b8w1KaOVsmaZTMbNkbLLe%2BzcyjFyoae9dqU05uUFUJ8bM5xIcL1yjfwFiL%2BHb4DXwmpbIlWkxPGGPMOaAhpiFtaNwDv7xxkSnVGD5FBqahNY9%2FKVug0qxsxHAs8NGeNI3HFFGLUB1LKAWJy8wHXA6HDUr8uZqYHqSzNg%2FDTcXf1Sd9%2FMVNtMB%2BB9FwDcWBZ0KrX2OAcWdPLu1R4%2FFuq96HWCsy06IRwN3U270zJyI7k52cIyBVAYHG%2FIxB4jbse1WvjZ6XqGKCaEswo64nQ%2BNPRrgCrt64D5yyLWY%2B%2FqJ0ieefbxx2CW%2BXkEBS1cDDPRXOArrgllOU7u7NdhZnu7fPALd%2FhczjXqkxp%2BppqaXOKHu9TH535brJk2JBr6jTtaObQvy19ViR6FQUEZAiAD%2BkWi0%2FJJsc6OfNmPBw%2FLQsjhaLGR1qpAg4ZdJtl2WXqHn3kfCx%2B8Fy5xaDj4uqU73x3MwLF%2B4rsswbEOx7utj6andy3oGKU4HRk%2B%2Fj66dOf37DSeXjMBc9VHdgCBZRHyJsf%2FYFypo%2BQVGbF1Gc72fcwzHR1eL1KCA%2BymW9djV9K%2FjYfmyNUmabt9jxY6EkZRJi%2BnyMcLFlNCzCwxA3W4cRnW1P%2FRebSuzjfTo9%2FAlAEy08BSBVybBpV1WHBEPN55ejCs3T3YpD1sidL9VPvI4JQLoOm91TI%2FqQcvp0tKYkwlX4nt7lGRL6N3tiO0UiUzAdUsfmGEka3q3x%2BKU6iyVMYH%2BzWu6OPOLEQmEjzsQlRtYLaG427tbQOwZeYEBIsjTKLa%2BnbptUWPgurX9gGD5yd0SYDcQ6%2BEGjO21DaoQxC%2BMe38WbFVG%2B5XK3bsNvqbdFt7Z5pVeXaBmg0wkLqEvQY6sQEREQoDIAa0kIT5F0O%2F%2FunFqNioQbCKTvhAS2JsHbpnwNf3oFwat5hTvEzCfIb%2ByqE%2ByMgdgs6KfJfm014OoT8dtYA1fn5Jnff7bfB3QQZ%2B7UCqjUIiBfZrqHkZmw7925ReU8dchzMakSvS3y5wBG200RdT7wRN4P2xduaEsxZeVN7Jfw3JrS2L1yRfdIXOsVxACqXobx8Du1zSaFO2NebXF5aNc7mG8cEsBOwFgYPRO%2BY%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250203T202330Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYQQGM76TB%2F20250203%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=775257d71a7337892b700e3c9aa492cf349c4cc16027c464b26d57b3e5abd50c&hash=def7f816502cf74e9d52107c7c55a9ccb7858adfd3cd3cb285ce11d37f086976&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S1026309813000072&tid=spdf-5c82b4ce-4db0-4e27-88d3-322b5d96bd70&sid=48bb242c28b5364a125a67123fac1ec2613agxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=131d5c5301525c550350&rr=90c523a0bda4878e&cc=us" 
+
+  {
+    "file_name": "SC 0410_Am4.2_M0.80_Re0.7e6_A.csv",
+
+    "description": "Cp distribution of a SC 0410 airfoil at an angle of attack of -4.2 degrees, Mach number of 0.80.",
+
+    "flow_conditions" : {
+      "reynolds" : "0.7e6",
+      "mach" : "0.80",
+      "freestream": "",
+      "alpha": "-4.2"
+    },
+
+    "airfoil": {
+      "name": "SC 0410",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x" : "not_provided",
+      "z" : "not_provided",
+      "cp" : "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    }, 
+
+    "experiment": {
+      "name": ["Experimental Investigation of Shock Wave Oscillation on a Thin Airfoil"],
+      "authors": [
+        "M. Masdari",
+        "M. Talebi",
+        "A. Zeinalzadeh",
+        "M. A. Abdi",
+        "M. R. Soltani"
+      ],
+      "institution": [],
+      "publisher": [],
+      "year": "2018",
+      "page": "800",
+      "type": "graph",
+      "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
+    },
+
+    "flow_features": [["attached flow", "upper surface"],
+  ["attached flow", "lower surface"],
+  ["no shock present"],
+  ["moderate positive lift"]],
+
+    "aerodynamic_coefficients": {}
+  },
+
+ {
+    "file_name": "SC 0410_A1.7_M0.75_Re0.7e6_A.csv",
+
+    "description": "Cp distribution of a SC 0410 airfoil at an angle of attack of 1.7 degrees, Mach number of 0.75.",
+
+    "flow_conditions": {
+      "reynolds": "0.7e6",
+      "mach": "0.75",
+      "freestream": "",
+      "alpha": "1.7"
+    },
+
+    "airfoil": {
+      "name": "SC 0410",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x": "not_provided",
+      "z": "not_provided",
+      "cp": "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    },
+
+    "experiment": {
+      "name": ["Experimental Investigation of Shock Wave Oscillation on a Thin Airfoil"],
+      "authors": [
+        "M. Masdari",
+        "M. Talebi",
+        "A. Zeinalzadeh",
+        "M. A. Abdi",
+        "M. R. Soltani"
+      ],
+      "institution": [],
+      "publisher": [],
+      "year": "2018",
+      "page": "800",
+      "type": "graph",
+      "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
+    },
+
+    "flow_features": [["no shock present"], ["moderate positive lift"],["compressibility effect"]],
+
+    "aerodynamic_coefficients": {}
+  },
+
+  {
+    "file_name": "SC 0410_A1.7_M0.80_Re0.7e6_A.csv",
+
+    "description": "Cp distribution of a SC 0410 airfoil at an angle of attack of 1.7 degrees, Mach number of 0.80.",
+
+    "flow_conditions": {
+      "reynolds": "0.7e6",
+      "mach": "0.80",
+      "freestream": "",
+      "alpha": "1.7"
+    },
+
+    "airfoil": {
+      "name": "SC 0410",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x": "not_provided",
+      "z": "not_provided",
+      "cp": "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    },
+
+    "experiment": {
+      "name": ["Experimental Investigation of Shock Wave Oscillation on a Thin Airfoil"],
+      "authors": [
+        "M. Masdari",
+        "M. Talebi",
+        "A. Zeinalzadeh",
+        "M. A. Abdi",
+        "M. R. Soltani"
+      ],
+      "institution": [],
+      "publisher": [],
+      "year": "2018",
+      "page": "800",
+      "type": "graph",
+      "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
+    },
+
+    "flow_features": [["no shock present"], ["moderate positive lift"],["compressibility effect"]],
+
+    "aerodynamic_coefficients": {}
+  },
+
+  {
+    "file_name": "SC 0410_A1.7_M0.85_Re0.7e6_A.csv",
+
+    "description": "Cp distribution of a SC 0410 airfoil at an angle of attack of 1.7 degrees, Mach number of 0.85.",
+
+    "flow_conditions": {
+      "reynolds": "0.7e6",
+      "mach": "0.85",
+      "freestream": "",
+      "alpha": "1.7"
+    },
+
+    "airfoil": {
+      "name": "SC 0410",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x": "not_provided",
+      "z": "not_provided",
+      "cp": "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    },
+
+    "experiment": {
+      "name": ["Experimental Investigation of Shock Wave Oscillation on a Thin Airfoil"],
+      "authors": [
+        "M. Masdari",
+        "M. Talebi",
+        "A. Zeinalzadeh",
+        "M. A. Abdi",
+        "M. R. Soltani"
+      ],
+      "institution": [],
+      "publisher": [],
+      "year": "2018",
+      "page": "800",
+      "type": "graph",
+      "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
+    },
+
+    "flow_features": [["no shock present"], ["moderate positive lift"],["compressibility effect"]],
+
+    "aerodynamic_coefficients": {}
+  },
+  {
+    "file_name": "SC 0410_A2.7_M0.60_Re0.7e6_A.csv",
+
+    "description": "Cp distribution of a SC 0410 airfoil at an angle of attack of 2.7 degrees, Mach number of 0.60.",
+
+    "flow_conditions": {
+      "reynolds": "0.7e6",
+      "mach": "0.60",
+      "freestream": "",
+      "alpha": "2.7"
+    },
+
+    "airfoil": {
+      "name": "SC 0410",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x": "not_provided",
+      "z": "not_provided",
+      "cp": "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    },
+
+    "experiment": {
+      "name": ["Experimental Investigation of Shock Wave Oscillation on a Thin Airfoil"],
+      "authors": [
+        "M. Masdari",
+        "M. Talebi",
+        "A. Zeinalzadeh",
+        "M. A. Abdi",
+        "M. R. Soltani"
+      ],
+      "institution": [],
+      "publisher": [],
+      "year": "2018",
+      "page": "800",
+      "type": "graph",
+      "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
+    },
+
+    "flow_features": [],
+
+    "aerodynamic_coefficients": {}
+  },
+
+  {
+    "file_name": "SC 0410_A2.7_M0.66_Re0.7e6_A.csv",
+
+    "description": "Cp distribution of a SC 0410 airfoil at an angle of attack of 2.7 degrees, Mach number of 0.66.",
+
+    "flow_conditions": {
+      "reynolds": "0.7e6",
+      "mach": "0.66",
+      "freestream": "",
+      "alpha": "2.7"
+    },
+
+    "airfoil": {
+      "name": "SC 0410",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x": "not_provided",
+      "z": "not_provided",
+      "cp": "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    },
+
+    "experiment": {
+      "name": ["Experimental Investigation of Shock Wave Oscillation on a Thin Airfoil"],
+      "authors": [
+        "M. Masdari",
+        "M. Talebi",
+        "A. Zeinalzadeh",
+        "M. A. Abdi",
+        "M. R. Soltani"
+      ],
+      "institution": [],
+      "publisher": [],
+      "year": "2018",
+      "page": "800",
+      "type": "graph",
+      "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
+    },
+
+    "flow_features": [],
+
+    "aerodynamic_coefficients": {}
+  },
+
+  {
+    "file_name": "SC 0410_A2.7_M0.70_Re0.7e6_A.csv",
+
+    "description": "Cp distribution of a SC 0410 airfoil at an angle of attack of 2.7 degrees, Mach number of 0.70.",
+
+    "flow_conditions": {
+      "reynolds": "0.7e6",
+      "mach": "0.70",
+      "freestream": "",
+      "alpha": "2.7"
+    },
+
+    "airfoil": {
+      "name": "SC 0410",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x": "not_provided",
+      "z": "not_provided",
+      "cp": "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    },
+
+    "experiment": {
+      "name": ["Experimental Investigation of Shock Wave Oscillation on a Thin Airfoil"],
+      "authors": [
+        "M. Masdari",
+        "M. Talebi",
+        "A. Zeinalzadeh",
+        "M. A. Abdi",
+        "M. R. Soltani"
+      ],
+      "institution": [],
+      "publisher": [],
+      "year": "2018",
+      "page": "800",
+      "type": "graph",
+      "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
+    },
+
+    "flow_features": [],
+
+    "aerodynamic_coefficients": {}
+  },
+
+  {
+    "file_name": "SC 0410_A2.7_M0.75_Re0.7e6_A.csv",
+
+    "description": "Cp distribution of a SC 0410 airfoil at an angle of attack of 2.7 degrees, Mach number of 0.75.",
+
+    "flow_conditions": {
+      "reynolds": "0.7e6",
+      "mach": "0.75",
+      "freestream": "",
+      "alpha": "2.7"
+    },
+
+    "airfoil": {
+      "name": "SC 0410",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x": "not_provided",
+      "z": "not_provided",
+      "cp": "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    },
+
+    "experiment": {
+      "name": ["Experimental Investigation of Shock Wave Oscillation on a Thin Airfoil"],
+      "authors": [
+        "M. Masdari",
+        "M. Talebi",
+        "A. Zeinalzadeh",
+        "M. A. Abdi",
+        "M. R. Soltani"
+      ],
+      "institution": [],
+      "publisher": [],
+      "year": "2018",
+      "page": "800",
+      "type": "graph",
+      "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
+    },
+
+    "flow_features": [],
+
+    "aerodynamic_coefficients": {}
+  },
+
+  {
+    "file_name": "SC 0410_A2.7_M0.80_Re0.7e6_A.csv",
+
+    "description": "Cp distribution of a SC 0410 airfoil at an angle of attack of 2.7 degrees, Mach number of 0.80.",
+
+    "flow_conditions": {
+      "reynolds": "0.7e6",
+      "mach": "0.80",
+      "freestream": "",
+      "alpha": "2.7"
+    },
+
+    "airfoil": {
+      "name": "SC 0410",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x": "not_provided",
+      "z": "not_provided",
+      "cp": "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    },
+
+    "experiment": {
+      "name": ["Experimental Investigation of Shock Wave Oscillation on a Thin Airfoil"],
+      "authors": [
+        "M. Masdari",
+        "M. Talebi",
+        "A. Zeinalzadeh",
+        "M. A. Abdi",
+        "M. R. Soltani"
+      ],
+      "institution": [],
+      "publisher": [],
+      "year": "2018",
+      "page": "800",
+      "type": "graph",
+      "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
+    },
+
+    "flow_features": [],
+
+    "aerodynamic_coefficients": {}
+  },
+  {
+    "file_name": "SC 0410_A4.9_M0.60_Re0.7e6_A.csv",
+
+    "description": "Cp distribution of a SC 0410 airfoil at an angle of attack of 4.9 degrees, Mach number of 0.60.",
+
+    "flow_conditions": {
+      "reynolds": "0.7e6",
+      "mach": "0.60",
+      "freestream": "",
+      "alpha": "4.9"
+    },
+
+    "airfoil": {
+      "name": "SC 0410",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x": "not_provided",
+      "z": "not_provided",
+      "cp": "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    },
+
+    "experiment": {
+      "name": ["Experimental Investigation of Shock Wave Oscillation on a Thin Airfoil"],
+      "authors": [
+        "M. Masdari",
+        "M. Talebi",
+        "A. Zeinalzadeh",
+        "M. A. Abdi",
+        "M. R. Soltani"
+      ],
+      "institution": [],
+      "publisher": [],
+      "year": "2018",
+      "page": "800",
+      "type": "graph",
+      "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
+    },
+
+    "flow_features": [],
+
+    "aerodynamic_coefficients": {}
+  },
+
+  {
+    "file_name": "SC 0410_A4.9_M0.66_Re0.7e6_A.csv",
+
+    "description": "Cp distribution of a SC 0410 airfoil at an angle of attack of 4.9 degrees, Mach number of 0.66.",
+
+    "flow_conditions": {
+      "reynolds": "0.7e6",
+      "mach": "0.66",
+      "freestream": "",
+      "alpha": "4.9"
+    },
+
+    "airfoil": {
+      "name": "SC 0410",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x": "not_provided",
+      "z": "not_provided",
+      "cp": "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    },
+
+    "experiment": {
+      "name": ["Experimental Investigation of Shock Wave Oscillation on a Thin Airfoil"],
+      "authors": [
+        "M. Masdari",
+        "M. Talebi",
+        "A. Zeinalzadeh",
+        "M. A. Abdi",
+        "M. R. Soltani"
+      ],
+      "institution": [],
+      "publisher": [],
+      "year": "2018",
+      "page": "800",
+      "type": "graph",
+      "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
+    },
+
+    "flow_features": [],
+
+    "aerodynamic_coefficients": {}
+  },
+
+  {
+    "file_name": "SC 0410_A4.9_M0.70_Re0.7e6_A.csv",
+
+    "description": "Cp distribution of a SC 0410 airfoil at an angle of attack of 4.9 degrees, Mach number of 0.70.",
+
+    "flow_conditions": {
+      "reynolds": "0.7e6",
+      "mach": "0.70",
+      "freestream": "",
+      "alpha": "4.9"
+    },
+
+    "airfoil": {
+      "name": "SC 0410",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x": "not_provided",
+      "z": "not_provided",
+      "cp": "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    },
+
+    "experiment": {
+      "name": ["Experimental Investigation of Shock Wave Oscillation on a Thin Airfoil"],
+      "authors": [
+        "M. Masdari",
+        "M. Talebi",
+        "A. Zeinalzadeh",
+        "M. A. Abdi",
+        "M. R. Soltani"
+      ],
+      "institution": [],
+      "publisher": [],
+      "year": "2018",
+      "page": "800",
+      "type": "graph",
+      "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
+    },
+
+    "flow_features": [],
+
+    "aerodynamic_coefficients": {}
+  },
+
+  {
+    "file_name": "SC 0410_A4.9_M0.75_Re0.7e6_A.csv",
+
+    "description": "Cp distribution of a SC 0410 airfoil at an angle of attack of 4.9 degrees, Mach number of 0.75.",
+
+    "flow_conditions": {
+      "reynolds": "0.7e6",
+      "mach": "0.75",
+      "freestream": "",
+      "alpha": "4.9"
+    },
+
+    "airfoil": {
+      "name": "SC 0410",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x": "not_provided",
+      "z": "not_provided",
+      "cp": "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    },
+
+    "experiment": {
+      "name": ["Experimental Investigation of Shock Wave Oscillation on a Thin Airfoil"],
+      "authors": [
+        "M. Masdari",
+        "M. Talebi",
+        "A. Zeinalzadeh",
+        "M. A. Abdi",
+        "M. R. Soltani"
+      ],
+      "institution": [],
+      "publisher": [],
+      "year": "2018",
+      "page": "800",
+      "type": "graph",
+      "url": "https://scientiairanica.sharif.edu/article_21200_61e93c200dd6f7fb002f8425fa7d304a.pdf"
+    },
+
+    "flow_features": [],
+
+    "aerodynamic_coefficients": {}
   }
-}
+]
