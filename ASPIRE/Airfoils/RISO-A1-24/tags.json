@@ -1,33 +1,345 @@
-{
-  "flow_conditions" : {
-    "reynolds" : "1.6e6",
-    "mach" : "0.122",
-    "freestream": "42 m/s",
-    "alpha": "0 - 28"
+[
+  {
+    "file_name": "RISO-A1-24_A0.0_M0.122_Re1.6e6_A.csv",
+
+    "description": "Cp distribution of a RISO-A1-24 airfoil at 0 angle of attack, Mach 0.122, Reynolds number 1.6e6.",
+
+    "flow_conditions": {
+      "reynolds": "1.6e6",
+      "mach": "0.122",
+      "freestream": "42 m/s",
+      "alpha": "0"
+    },
+
+    "airfoil": {
+      "name": "RISO-A1-24",
+      "camber": "y",
+      "supercritical": "n",
+      "application": "wind turbine"
+    },
+
+    "uncertainty": {
+      "x": "not_provided",
+      "z": "not_provided",
+      "cp": "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    },
+
+    "experiment": {
+      "name": ["Risoe-R Aerodynamic Airfoil Data"],
+      "authors": ["P. Fuglsang", "K.S. Dahl", "I. Antoniou"],
+      "institution": ["Risoe-R National Laboratory"],
+      "publisher": ["Risoe-R 1112"],
+      "year": "2001",
+      "page": "33",
+      "type": "graph",
+      "url": "https://backend.orbit.dtu.dk/ws/portalfiles/portal/7731506/ris_r_1112.pdf"
+    },
+
+    "flow_features": [["strong suction peak", "leading edge", "upper surface"], ["positive lift"], ["no shock present", "fully subsonic flow"]],
+
+    "aerodynamic_coefficients": {}
   },
-  "uncertainty" : {
-    "x" : "",
-    "z" : "",
-    "cp" : "",
-    "alpha": "",
-    "mach": ""
-  }, 
-  "airfoil": {
-    "name": "RISO-A1-24",
-    "camber": "Y",
-    "supercritical": "N",
-    "application": "Wind Turbine"
+
+  {
+    "file_name": "RISO-A1-24_A4.0_M0.122_Re1.6e6_A.csv",
+
+    "description": "Cp distribution of a RISO-A1-24 airfoil at 4 angle of attack, Mach 0.122, Reynolds number 1.6e6.",
+
+    "flow_conditions": {
+      "reynolds": "1.6e6",
+      "mach": "0.122",
+      "freestream": "42 m/s",
+      "alpha": "4"
+    },
+
+    "airfoil": {
+      "name": "RISO-A1-24",
+      "camber": "y",
+      "supercritical": "n",
+      "application": "wind turbine"
+    },
+
+    "uncertainty": {
+      "x": "not_provided",
+      "z": "not_provided",
+      "cp": "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    },
+
+    "experiment": {
+      "name": ["Risoe-R Aerodynamic Airfoil Data"],
+      "authors": ["P. Fuglsang", "K.S. Dahl", "I. Antoniou"],
+      "institution": ["Risoe-R National Laboratory"],
+      "publisher": ["Risoe-R 1112"],
+      "year": "2001",
+      "page": "33",
+      "type": "graph",
+      "url": "https://backend.orbit.dtu.dk/ws/portalfiles/portal/7731506/ris_r_1112.pdf"
+    },
+
+    "flow_features": [["strong suction peak", "leading edge", "upper surface"], ["positive lift"], ["no shock present", "fully subsonic flow"]],
+
+    "aerodynamic_coefficients": {}
   },
-  "source": {
-    "name": "Risoe-R 1112",
-    "year": "2001",
-    "page": "33", 
-    "type": "graph",
-    "url": "https://backend.orbit.dtu.dk/ws/portalfiles/portal/7731506/ris_r_1112.pdf"
+
+  {
+    "file_name": "RISO-A1-24_A8.0_M0.122_Re1.6e6_A.csv",
+
+    "description": "Cp distribution of a RISO-A1-24 airfoil at 8 angle of attack, Mach 0.122, Reynolds number 1.6e6.",
+
+    "flow_conditions": {
+      "reynolds": "1.6e6",
+      "mach": "0.122",
+      "freestream": "42 m/s",
+      "alpha": "8"
+    },
+
+    "airfoil": {
+      "name": "RISO-A1-24",
+      "camber": "y",
+      "supercritical": "n",
+      "application": "wind turbine"
+    },
+
+    "uncertainty": {
+      "x": "not_provided",
+      "z": "not_provided",
+      "cp": "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    },
+
+    "experiment": {
+      "name": ["Risoe-R Aerodynamic Airfoil Data"],
+      "authors": ["P. Fuglsang", "K.S. Dahl", "I. Antoniou"],
+      "institution": ["Risoe-R National Laboratory"],
+      "publisher": ["Risoe-R 1112"],
+      "year": "2001",
+      "page": "33",
+      "type": "graph",
+      "url": "https://backend.orbit.dtu.dk/ws/portalfiles/portal/7731506/ris_r_1112.pdf"
+    },
+
+    "flow_features": [["strong suction peak", "leading edge", "upper surface"], ["positive lift"], ["no shock present", "fully subsonic flow"]],
+
+    "aerodynamic_coefficients": {}
   },
-  "meta" : {
-    "num_cases": "8",
-    "num_remaining": "", 
-    "notes": "coordinates from https://backend.orbit.dtu.dk/ws/portalfiles/portal/7728949/ris_r_1280.pdf" 
+
+  {
+    "file_name": "RISO-A1-24_A12.0_M0.122_Re1.6e6_A.csv",
+
+    "description": "Cp distribution of a RISO-A1-24 airfoil at 12 angle of attack, Mach 0.122, Reynolds number 1.6e6.",
+
+    "flow_conditions": {
+      "reynolds": "1.6e6",
+      "mach": "0.122",
+      "freestream": "42 m/s",
+      "alpha": "12"
+    },
+
+    "airfoil": {
+      "name": "RISO-A1-24",
+      "camber": "y",
+      "supercritical": "n",
+      "application": "wind turbine"
+    },
+
+    "uncertainty": {
+      "x": "not_provided",
+      "z": "not_provided",
+      "cp": "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    },
+
+    "experiment": {
+      "name": ["Risoe-R Aerodynamic Airfoil Data"],
+      "authors": ["P. Fuglsang", "K.S. Dahl", "I. Antoniou"],
+      "institution": ["Risoe-R National Laboratory"],
+      "publisher": ["Risoe-R 1112"],
+      "year": "2001",
+      "page": "33",
+      "type": "graph",
+      "url": "https://backend.orbit.dtu.dk/ws/portalfiles/portal/7731506/ris_r_1112.pdf"
+    },
+
+    "flow_features": [["strong suction peak", "leading edge", "upper surface"], ["incompressible"], ["no shock present"]],
+
+    "aerodynamic_coefficients": {}
+  },
+
+  {
+    "file_name": "RISO-A1-24_A16.0_M0.122_Re1.6e6_A.csv",
+
+    "description": "Cp distribution of a RISO-A1-24 airfoil at 16 angle of attack.",
+
+    "flow_conditions": {
+      "reynolds": "1.6e6",
+      "mach": "0.122",
+      "freestream": "42 m/s",
+      "alpha": "16"
+    },
+
+    "airfoil": {
+      "name": "RISO-A1-24",
+      "camber": "y",
+      "supercritical": "n",
+      "application": "wind turbine"
+    },
+
+    "uncertainty": {
+      "x": "not_provided",
+      "z": "not_provided",
+      "cp": "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    },
+
+    "experiment": {
+      "name": ["Risoe-R Aerodynamic Airfoil Data"],
+      "authors": ["P. Fuglsang", "K.S. Dahl", "I. Antoniou"],
+      "institution": ["Risoe-R National Laboratory"],
+      "publisher": ["Risoe-R 1112"],
+      "year": "2001",
+      "page": "33",
+      "type": "graph",
+      "url": "https://backend.orbit.dtu.dk/ws/portalfiles/portal/7731506/ris_r_1112.pdf"
+    },
+
+    "flow_features": [["strong suction peak", "leading edge", "upper surface"], ["incompressible"], ["no shock present"]],
+
+    "aerodynamic_coefficients": {}
+  },
+
+  {
+    "file_name": "RISO-A1-24_A20.0_M0.122_Re1.6e6_A.csv",
+
+    "description": "Cp distribution of a RISO-A1-24 airfoil at 20 angle of attack.",
+
+    "flow_conditions": {
+      "reynolds": "1.6e6",
+      "mach": "0.122",
+      "freestream": "42 m/s",
+      "alpha": "20"
+    },
+
+    "airfoil": {
+      "name": "RISO-A1-24",
+      "camber": "y",
+      "supercritical": "n",
+      "application": "wind turbine"
+    },
+
+    "uncertainty": {
+      "x": "not_provided",
+      "z": "not_provided",
+      "cp": "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    },
+
+    "experiment": {
+      "name": ["Risoe-R Aerodynamic Airfoil Data"],
+      "authors": ["P. Fuglsang", "K.S. Dahl", "I. Antoniou"],
+      "institution": ["Risoe-R National Laboratory"],
+      "publisher": ["Risoe-R 1112"],
+      "year": "2001",
+      "page": "33",
+      "type": "graph",
+      "url": "https://backend.orbit.dtu.dk/ws/portalfiles/portal/7731506/ris_r_1112.pdf"
+    },
+
+    "flow_features": [["linear regime"], ["incompressible"], ["no shock present"]],
+
+    "aerodynamic_coefficients": {}
+  },
+
+  {
+    "file_name": "RISO-A1-24_A24.0_M0.122_Re1.6e6_A.csv",
+
+    "description": "Cp distribution of a RISO-A1-24 airfoil at 24 angle of attack.",
+
+    "flow_conditions": {
+      "reynolds": "1.6e6",
+      "mach": "0.122",
+      "freestream": "42 m/s",
+      "alpha": "24"
+    },
+
+    "airfoil": {
+      "name": "RISO-A1-24",
+      "camber": "y",
+      "supercritical": "n",
+      "application": "wind turbine"
+    },
+
+    "uncertainty": {
+      "x": "not_provided",
+      "z": "not_provided",
+      "cp": "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    },
+
+    "experiment": {
+      "name": ["Risoe-R Aerodynamic Airfoil Data"],
+      "authors": ["P. Fuglsang", "K.S. Dahl", "I. Antoniou"],
+      "institution": ["Risoe-R National Laboratory"],
+      "publisher": ["Risoe-R 1112"],
+      "year": "2001",
+      "page": "33",
+      "type": "graph",
+      "url": "https://backend.orbit.dtu.dk/ws/portalfiles/portal/7731506/ris_r_1112.pdf"
+    },
+
+    "flow_features": [["linear regime"], ["incompressible"], ["no shock present"]],
+
+    "aerodynamic_coefficients": {}
+  },
+
+  {
+    "file_name": "RISO-A1-24_A28.0_M0.122_Re1.6e6_A.csv",
+
+    "description": "Cp distribution of a RISO-A1-24 airfoil at 28 angle of attack.",
+
+    "flow_conditions": {
+      "reynolds": "1.6e6",
+      "mach": "0.122",
+      "freestream": "42 m/s",
+      "alpha": "28"
+    },
+
+    "airfoil": {
+      "name": "RISO-A1-24",
+      "camber": "y",
+      "supercritical": "n",
+      "application": "wind turbine"
+    },
+
+    "uncertainty": {
+      "x": "not_provided",
+      "z": "not_provided",
+      "cp": "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    },
+
+    "experiment": {
+      "name": ["Risoe-R Aerodynamic Airfoil Data"],
+      "authors": ["P. Fuglsang", "K.S. Dahl", "I. Antoniou"],
+      "institution": ["Risoe-R National Laboratory"],
+      "publisher": ["Risoe-R 1112"],
+      "year": "2001",
+      "page": "33",
+      "type": "graph",
+      "url": "https://backend.orbit.dtu.dk/ws/portalfiles/portal/7731506/ris_r_1112.pdf"
+    },
+
+    "flow_features": [["linear regime"], ["incompressible"], ["no shock present"]],
+
+    "aerodynamic_coefficients": {}
   }
-}
+]
