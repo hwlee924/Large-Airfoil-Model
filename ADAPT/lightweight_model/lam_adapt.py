@@ -149,6 +149,12 @@ class lam_adapt(gpytorch.models.ExactGP):
                 model_output = { 
                     'cp_distribution': posterior_dist,
                     'xc': xc_loc,
+                    'cl_mean': None,
+                    'cl_stdev': None,
+                    'cd_mean': None,
+                    'cd_stdev': None, 
+                    'cm_mean': None,
+                    'cm_stdev': None, 
                 }
                 return model_output
             else:
@@ -276,6 +282,25 @@ class input_data():
             temp_zcu, temp_zcl = cs_u(ref_xc), cs_l(ref_xc)
             self.dzdx_u = torch.from_numpy(np.interp(self.xc_u, ref_xc, np.gradient(temp_zcu, ref_xc)))
             self.dzdx_l = torch.from_numpy(np.interp(self.xc_l, ref_xc, np.gradient(temp_zcl, ref_xc)))
+        
+        elif isinstance(airfoil_input, np.ndarray): 
+            # if numpy array is provided
+            loaded_xc, loaded_zc = airfoil_input[:,0], airfoil_input[:,1] 
+            # interpolate to target location
+            surf_bound = int(np.argwhere(np.diff(np.sign(np.diff(loaded_xc))) != 0.)[0][0]+2)
+            loaded_xcu, loaded_xcl = np.flip(loaded_xc[:surf_bound]), loaded_xc[surf_bound:]
+            loaded_zcu, loaded_zcl = np.flip(loaded_zc[:surf_bound]), loaded_zc[surf_bound:]
+            self.zc_u = torch.tensor(np.interp(self.xc_u, loaded_xcu, loaded_zcu))
+            self.zc_l = torch.tensor(np.interp(self.xc_l, loaded_xcl, loaded_zcl))
+            
+            # get numerical gradient 
+            cs_u, cs_l = CubicSpline(loaded_xcu, loaded_zcu), CubicSpline(loaded_xcl, loaded_zcl)
+            self.splines = [cs_u, cs_l]
+            ref_xc = torch.linspace(0., 1., 501)
+            temp_zcu, temp_zcl = cs_u(ref_xc), cs_l(ref_xc)
+            self.dzdx_u = torch.from_numpy(np.interp(self.xc_u, ref_xc, np.gradient(temp_zcu, ref_xc)))
+            self.dzdx_l = torch.from_numpy(np.interp(self.xc_l, ref_xc, np.gradient(temp_zcl, ref_xc)))
+            
         # auto generate NACA
         elif airfoil_input[:5] == 'NACA ':  # 4/5 digit only 
             digits = airfoil_input[5:]
@@ -468,8 +493,8 @@ use_gpu: determine whether to use GPU | Boolean
 ----
 returns model and likelihood which are used to make predictions
 """
-def unpack_model(use_gpu=False):
-    print('Loading in model...')
+def unpack_model(use_gpu=False, show_debug_logs=True):
+    print('[DEBUG] Loading in model...' if show_debug_logs else '', end='' if not show_debug_logs else '\n')
     assert os.path.isdir('./model/'), 'Model directory does not exist'
     # reads in train_x, train_y, noise_model, and Lxx (cholesky Kxx)
     global L, train_x, train_y, train_noise
@@ -480,14 +505,14 @@ def unpack_model(use_gpu=False):
         # Load in pickled main covariance matrix Kxx 
         if 'L' not in globals():
             if os.path.exists('./model/lam_L.pt'):
-                print('    lam_L.pt file already exists. Loading file...')
+                print('[DEBUG] lam_L.pt file already exists. Loading file...' if show_debug_logs else '', end='' if not show_debug_logs else '\n')
                 L = torch.load('./model/lam_L.pt', map_location='cpu')
             else:
                 # if not included, message to download the file  
                 file_url = 'https://drive.google.com/uc?export=download&id=1uN1zAYjMSJgsjuYRmBlAVaKJ9rTXA42Q' 
                 save_path = './model/lam_L.pt'
-                print('    Missing lam_L.pt file.\nThis is a large file (6.1 GB) that will need to be downloaded from ' + file_url)
-                print('    Would you like to automatically download this file? y/n')
+                print('[DEBUG] Missing lam_L.pt file.\nThis is a large file (6.1 GB) that will need to be downloaded from ' + file_url)
+                print('[DEBUG] Would you like to automatically download this file? y/n')
                 while True:
                     download_response = input()
                     if download_response == 'y':
@@ -495,15 +520,15 @@ def unpack_model(use_gpu=False):
                         import gdown
                         file_id = '1uN1zAYjMSJgsjuYRmBlAVaKJ9rTXA42Q'
                         gdown.download(f"https://drive.google.com/uc?id={file_id}", save_path, quiet=False)
-                        print('    Download finished')
+                        print('[DEBUG] Download finished')
                         break
                     elif download_response== 'n':
                         raise ValueError('Missing lam_L.pt file')
                     else:
                         download_response = input()
         else:
-            print('    lam_L.pt file already loaded...')
-        print('    Loading complete!')
+            print('[DEBUG] lam_L.pt file already loaded...' if show_debug_logs else '', end='' if not show_debug_logs else '\n')
+        print('[DEBUG] Loading complete!' if show_debug_logs else '', end='' if not show_debug_logs else '\n')
         scaler = 10 # model scaling 
 
     # Load likelihood

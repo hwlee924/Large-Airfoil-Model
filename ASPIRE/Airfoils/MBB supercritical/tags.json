@@ -1,0 +1,211 @@
+[
+  {
+   "file_name":"MBB supercritical_Am0.5_M0.2_Re2e6_A.csv", 
+
+   "description": "Cp distribution of a MBB supercritical airfoil at an angle of attack of -0.5 degrees, Mach number of 0.20.", 
+
+   "flow_conditions" : {
+      "reynolds" : "2.0e6",
+      "mach" : "0.20",
+      "freestream": "",
+      "alpha": "-0.5"
+    },
+
+    "airfoil": {
+      "name": "MBB supercritical airfoil",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x" : "not_provided",
+      "z" : "not_provided",
+      "cp" : "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    }, 
+
+    "experiment": {
+      "name": ["aiaa 95-2192 shear and pressure measurements on an airfoil at angle of attack"
+              ],
+      "authors": ["George G. Mateer",
+      "Daryl J. Monson",
+      "Florian R. Menter"], 
+      "institution": ["nasa-ames research center",
+                      "eloret institute"],
+      "publisher": ["american institute of aeronautics and astronautics",
+                    "aiaa"],
+      "year": "1995",
+      "page": "6", 
+      "type": "graph",
+      "doi": " 10.2514/6.1995-2192"
+    },
+
+    "flow_features": [
+      ["linear regime"],["incompressible"],["no shock present"]
+    ],
+
+    "aerodynamic_coefficients": { 
+    }
+
+  }, 
+
+  {
+   "file_name":"MBB supercritical_A3.5_M0.2_Re2e6_A.csv", 
+
+   "description": "Cp distribution of a MBB supercritical airfoil at an angle of attack of 3.5 degrees, Mach number of 0.20.", 
+
+   "flow_conditions" : {
+      "reynolds" : "2.0e6",
+      "mach" : "0.20",
+      "freestream": "",
+      "alpha": "3.5"
+    },
+
+    "airfoil": {
+      "name": "MBB supercritical airfoil",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x" : "not_provided",
+      "z" : "not_provided",
+      "cp" : "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    }, 
+
+    "experiment": {
+      "name": ["aiaa 95-2192 shear and pressure measurements on an airfoil at angle of attack"
+              ],
+      "authors": ["George G. Mateer",
+      "Daryl J. Monson",
+      "Florian R. Menter"], 
+      "institution": ["nasa-ames research center",
+                      "eloret institute"],
+      "publisher": ["american institute of aeronautics and astronautics",
+                    "aiaa"],
+      "year": "1995",
+      "page": "6", 
+      "type": "graph",
+      "doi": " 10.2514/6.1995-2192"
+    },
+
+    "flow_features": [
+      ["linear regime"], ["incompressible"]
+
+    ],
+
+    "aerodynamic_coefficients": { 
+    }
+
+  }, 
+
+  {
+   "file_name":"MBB supercritical_A7.5_M0.2_Re2e6_A.csv", 
+
+   "description": "Cp distribution of a MBB supercritical airfoil at an angle of attack of 7.5 degrees, Mach number of 0.20.", 
+
+   "flow_conditions" : {
+      "reynolds" : "2.0e6",
+      "mach" : "0.20",
+      "freestream": "",
+      "alpha": "7.5"
+    },
+
+    "airfoil": {
+      "name": "MBB supercritical airfoil",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x" : "not_provided",
+      "z" : "not_provided",
+      "cp" : "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    }, 
+
+    "experiment": {
+      "name": ["aiaa 95-2192 shear and pressure measurements on an airfoil at angle of attack"
+              ],
+      "authors": ["George G. Mateer",
+      "Daryl J. Monson",
+      "Florian R. Menter"], 
+      "institution": ["nasa-ames_research_center",
+                      "eloret_institute"],
+      "publisher": ["american institute of aeronautics and astronautics",
+                    "aiaa"],
+      "year": "1995",
+      "page": "6", 
+      "type": "graph",
+      "doi": " 10.2514/6.1995-2192"
+    },
+
+    "flow_features": [
+      ["linear regime"],
+      ["sharp suction peak", "leading edge", "upper surface"]
+    ],
+
+    "aerodynamic_coefficients": { 
+    }
+
+  }, 
+  {
+   "file_name":"MBB supercritical_A11.5_M0.2_Re2e6_A.csv", 
+
+   "description": "Cp distribution of a MBB supercritical airfoil at an angle of attack of 11.5 degrees, Mach number of 0.20.", 
+
+   "flow_conditions" : {
+      "reynolds" : "2.0e6",
+      "mach" : "0.20",
+      "freestream": "",
+      "alpha": "11.5"
+    },
+
+    "airfoil": {
+      "name": "MBB supercritical airfoil",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "general"
+    },
+
+    "uncertainty": {
+      "x" : "not_provided",
+      "z" : "not_provided",
+      "cp" : "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    }, 
+
+    "experiment": {
+      "name": ["aiaa 95-2192 shear and pressure measurements on an airfoil at angle of attack"
+              ],
+      "authors": ["George G. Mateer",
+      "Daryl J. Monson",
+      "Florian R. Menter"], 
+      "institution": ["nasa-ames_research_center",
+                      "eloret_institute"],
+      "publisher": ["american institute of aeronautics and astronautics",
+                    "aiaa"],
+      "year": "1995",
+      "page": "6", 
+      "type": "graph",
+      "doi": " 10.2514/6.1995-2192"
+    },
+
+    "flow_features": [
+      ["linear regime"],
+      ["sharp suction peak", "leading edge", "upper surface"]
+    ],
+
+    "aerodynamic_coefficients": { 
+    }
+
+  }
+]

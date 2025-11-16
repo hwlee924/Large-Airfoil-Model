@@ -1,0 +1,209 @@
+[
+  {
+   "file_name":"VR-12_A5.0_M0.17_Re6.0e5_A.csv", 
+
+   "description": "Cp distribution of a VR-12 airfoil at an angle of attack of 5 degrees, Mach number of 0.17.", 
+
+   "flow_conditions" : {
+      "reynolds" : "6.0e5",
+      "mach" : "0.17",
+      "freestream": "58.32 m/s",
+      "alpha": "5"
+    },
+
+    "airfoil": {
+      "name": "vr-12",
+      "camber": "y",
+      "supercritical": "n",
+      "application": "rotor"
+    },
+
+    "uncertainty": {
+      "x" : "not_provided",
+      "z" : "not_provided",
+      "cp" : "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    }, 
+
+    "experiment": {
+      "name": ["reynolds scaling effects on dynamic stall of vr-7 and vr-12 airfoils"
+              ],
+      "authors": ["Wenbo Zhu",
+      "Jeffrey P. Bons",
+      "James W. Gregory"], 
+      "institution": ["the ohio state university"],
+      "publisher": ["american institute of aeronautics and astronautics",
+                    "aiaa"],
+      "year": "2019",
+      "page": "6", 
+      "type": "graph",
+      "doi": " 10.2514/6.2019-0304"
+    },
+
+    "flow_features": [
+      ["linear regime"]
+    ],
+
+    "aerodynamic_coefficients": {
+      "lift_coefficient": "0.5783"
+    }
+
+  }, 
+
+  {
+   "file_name":"VR-12_A12.0_M0.17_Re6.0e5_A.csv", 
+
+   "description": "Cp distribution of a VR-12 airfoil at an angle of attack of 12 degrees, Mach number of 0.17.", 
+
+   "flow_conditions" : {
+      "reynolds" : "6.0e5",
+      "mach" : "0.17",
+      "freestream": "58.32 m/s",
+      "alpha": "12"
+    },
+
+    "airfoil": {
+      "name": "vr-12",
+      "camber": "y",
+      "supercritical": "n",
+      "application": "rotor"
+    },
+
+    "uncertainty": {
+      "x" : "not_provided",
+      "z" : "not_provided",
+      "cp" : "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    }, 
+
+    "experiment": {
+      "name": ["reynolds scaling effects on dynamic stall of vr-7 and vr-12 airfoils"
+              ],
+      "authors": ["Wenbo Zhu",
+      "Jeffrey P. Bons",
+      "James W. Gregory"], 
+      "institution": ["the ohio state university"],
+      "publisher": ["american institute of aeronautics and astronautics",
+                    "aiaa"],
+      "year": "2019",
+      "page": "6", 
+      "type": "graph",
+      "doi": " 10.2514/6.2019-0304"
+    },
+
+    "flow_features": [
+      ["linear regime"]
+    ],
+
+    "aerodynamic_coefficients": {
+      "lift_coefficient": "1.218"
+    }
+
+  },
+
+  {
+   "file_name":"VR-12_A15.0_M0.17_Re6.0e5_A.csv", 
+
+   "description": "Cp distribution of a VR-15 airfoil at an angle of attack of 15 degrees, Mach number of 0.17.", 
+
+   "flow_conditions" : {
+      "reynolds" : "6.0e5",
+      "mach" : "0.17",
+      "freestream": "58.32 m/s",
+      "alpha": "15"
+    },
+
+    "airfoil": {
+      "name": "vr-12",
+      "camber": "y",
+      "supercritical": "n",
+      "application": "rotor"
+    },
+
+    "uncertainty": {
+      "x" : "not_provided",
+      "z" : "not_provided",
+      "cp" : "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    }, 
+
+    "experiment": {
+      "name": ["reynolds scaling effects on dynamic stall of vr-7 and vr-12 airfoils"
+              ],
+      "authors": ["Wenbo Zhu",
+      "Jeffrey P. Bons",
+      "James W. Gregory"], 
+      "institution": ["the ohio state university"],
+      "publisher": ["american institute of aeronautics and astronautics",
+                    "aiaa"],
+      "year": "2019",
+      "page": "6", 
+      "type": "graph",
+      "doi": " 10.2514/6.2019-0304"
+    },
+
+    "flow_features": [
+      ["stall regime"]
+    ],
+
+    "aerodynamic_coefficients": {
+      "lift_coefficient": "1.411"
+    }
+
+  },
+
+  {
+   "file_name":"VR-12_A20.0_M0.17_Re6.0e5_A.csv", 
+
+   "description": "Cp distribution of a VR-15 airfoil at an angle of attack of 20 degrees, Mach number of 0.17.", 
+
+   "flow_conditions" : {
+      "reynolds" : "6.0e5",
+      "mach" : "0.17",
+      "freestream": "58.32 m/s",
+      "alpha": "20"
+    },
+
+    "airfoil": {
+      "name": "vr-12",
+      "camber": "y",
+      "supercritical": "n",
+      "application": "rotor"
+    },
+
+    "uncertainty": {
+      "x" : "not_provided",
+      "z" : "not_provided",
+      "cp" : "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    }, 
+
+    "experiment": {
+      "name": ["reynolds scaling effects on dynamic stall of vr-7 and vr-12 airfoils"
+              ],
+      "authors": ["Wenbo Zhu",
+      "Jeffrey P. Bons",
+      "James W. Gregory"], 
+      "institution": ["the ohio state university"],
+      "publisher": ["american institute of aeronautics and astronautics",
+                    "aiaa"],
+      "year": "2019",
+      "page": "6", 
+      "type": "graph",
+      "doi": " 10.2514/6.2019-0304"
+    },
+
+    "flow_features": [
+      ["stall regime"]
+    ],
+
+    "aerodynamic_coefficients": {
+      "lift_coefficient": "1.094"
+    }
+
+  }
+]

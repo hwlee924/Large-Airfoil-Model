@@ -1,0 +1,107 @@
+[
+  {
+   "file_name":"A1510_A0.0_M0.73_Re2.25e6_A.csv", 
+
+   "description": "Cp distribution of a A1510 airfoil at an angle of attack of 0 degrees, Mach number of 0.73.", 
+
+   "flow_conditions" : {
+      "reynolds" : "2.25e6",
+      "mach" : "0.73",
+      "freestream": "",
+      "alpha": "0"
+    },
+
+    "airfoil": {
+      "name": "a1510",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "rotor"
+    },
+
+    "uncertainty": {
+      "x" : "not_provided",
+      "z" : "not_provided",
+      "cp" : "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    }, 
+
+    "experiment": {
+      "name": ["dynamic stall on a supercritical airfoil"
+              ],
+      "authors": ["W. Geissler",
+                  "G. Dietz", 
+                  "H. Mai"],
+      "institution": ["dlr",
+                      "german aerospace centre"],
+      "publisher": ["aerospace science and technology"
+                    ],
+      "year": "2005",
+      "page": "394", 
+      "type": "graph",
+      "doi": "10.1016/j.ast.2005.01.012"
+    },
+
+    "flow_features": [
+      ["shock", "trailing edge", "upper surface"] 
+    ],
+
+    "aerodynamic_coefficients": {
+    }
+
+  },
+
+  {
+   "file_name":"A1510_A2.0_M0.73_Re2.25e6_A.csv", 
+
+   "description": "Cp distribution of a A1510 airfoil at an angle of attack of 0 degrees, Mach number of 0.73.", 
+
+   "flow_conditions" : {
+      "reynolds" : "2.25e6",
+      "mach" : "0.73",
+      "freestream": "",
+      "alpha": "2"
+    },
+
+    "airfoil": {
+      "name": "a1510",
+      "camber": "y",
+      "supercritical": "y",
+      "application": "rotor"
+    },
+
+    "uncertainty": {
+      "x" : "not_provided",
+      "z" : "not_provided",
+      "cp" : "not_provided",
+      "alpha": "not_provided",
+      "mach": "not_provided"
+    }, 
+
+    "experiment": {
+      "name": ["dynamic stall on a supercritical airfoil"
+              ],
+      "authors": ["W. Geissler",
+                  "G. Dietz", 
+                  "H. Mai"],
+      "institution": ["dlr",
+                      "german aerospace centre"],
+      "publisher": ["aerospace science and technology"
+                    ],
+      "year": "2005",
+      "page": "394", 
+      "type": "graph",
+      "doi": "10.1016/j.ast.2005.01.012"
+    },
+
+    "flow_features": [
+      ["shock", "trailing edge", "upper surface"], 
+      ["shock", "leading edge", "upper surface"] 
+    ],
+
+    "aerodynamic_coefficients": {
+    }
+
+  }
+ 
+]
