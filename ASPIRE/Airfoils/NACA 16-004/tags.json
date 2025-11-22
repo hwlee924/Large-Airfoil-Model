@@ -1,0 +1,33 @@
+{
+  "flow_conditions" : {
+    "reynolds" : "2.6e6",
+    "mach" : "0.683, 0.686, 0.785, 0.810, 0.862, 0.892, 0.914, 0.983, 0.958, 0.987, 1.008, 1.029, 1.055, 1.130, 1.206, 1.253",
+    "freestream": "",
+    "alpha": "0, 4, 6, 8, 10, 12"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "NACA 16-004",
+    "camber": "N",
+    "supercritical": "N",
+    "application": "General"
+  },
+  "source": {
+    "name": "Chordwise Pressure Distributions Over NACA 16-Series Airfoils at Transonic Mach Numbers Up To 1.25",
+    "author": "Charles L. Ladson",
+    "year": "1959",
+    "page": "", 
+    "type": "graph",
+    "url": "https://ntrs.nasa.gov/api/citations/19980228147/downloads/19980228147.pdf"
+  },
+  "meta" : {
+    "num_cases": "18",
+    "num_remaining": "", 
+    "notes": "Point omitted on 20% of chord, upper surface; experimental error" 
+  }
+}
