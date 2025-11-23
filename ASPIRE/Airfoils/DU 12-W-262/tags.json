@@ -36,7 +36,7 @@
     "notes": "" 
   }
     "flow_features" : [
-      ["strong suction peak","leading edge"]
+      ["incompressible"],["no shocks"],["transition at mid-chord"]
     ]
 },
   {
@@ -76,7 +76,7 @@
     "notes": "" 
   }
     "flow_features" : [
-      ["strong suction peak","leading edge"],["positive lift generated"]
+      ["incompressible"],["no shocks"],["positive lift generated"]
     ]
 },
   {
@@ -116,10 +116,50 @@
     "notes": "" 
   }
     "flow_features" : [
-      ["positive lift generated"]
+      ["positive lift generated"],["incompressible"],["no shocks"]
     ]
 },
   {
+    "file_name" : "DU 12-W-262_Am5_M0.12_Re0.7e6_A.csv",
+    
+    "description" : "Cp distribution of a DU 12-W-262 airfoil at an angle of attack of -5 degrees, Mach number of 0.12",
+    
+  "flow_conditions" : {
+    "reynolds" : "1e6",
+    "mach" : "0.17",
+    "freestream": "",
+    "alpha": "5"
+  },
+  "uncertainty" : {
+    "x" : "",
+    "cp" : "0.08",
+    "alpha": "",
+    "mach": ""
+  }, 
+  "airfoil": {
+    "name": "DU 12-W-262",
+    "camber": "Y",
+    "supercritical": "N",
+    "application": "Wind Turbine"
+  },
+  "source": {
+    "name": "Experimental investigation of an optimized airfoil for vertical-axis wind turbines",
+    "author": "Ragni, D., Ferreira, C., and Correale, G.",
+    "year": "2014",
+    "page": "", 
+    "type": "graph",
+    "url": "https://doi.org/10.1002/we.1780"
+  },
+  "meta" : {
+    "num_cases": "6",
+    "num_remaining": "", 
+    "notes": "" 
+  }
+    "flow_features" : [
+      ["incompressible"],["no shocks"],["positive lift generated"]
+    ]
+},
+    {
     "file_name" : "DU 12-W-262_A5_M0.17_Re1e6_A.csv",
     
     "description" : "Cp distribution of a DU 12-W-262 airfoil at an angle of attack of 5 degrees, Mach number of 0.17",
@@ -156,7 +196,7 @@
     "notes": "" 
   }
     "flow_features" : [
-      ["positive lift generated"]
+      ["incompressible"],["no shocks"],["positive lift generated"]
     ]
 }
 ]
