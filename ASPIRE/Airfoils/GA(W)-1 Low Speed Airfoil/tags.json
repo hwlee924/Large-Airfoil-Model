@@ -34,7 +34,6 @@
     "flow_features": [
       ["no shock present"],["leading-edge suction peak", "upper surface"],["linear regime"]
     ],
-    "aerodynamic_coefficients": {}
   },
   {
     "file_name": "GA (W)-1_A7.0_M0.029_Re6.8e4_A.csv",
@@ -71,7 +70,6 @@
     "flow_features": [
       ["no shock present"],["leading-edge suction peak", "upper surface"],["linear regime"]
     ],
-    "aerodynamic_coefficients": {}
   },
   {
     "file_name": "GA (W)-1_A8.0_M0.029_Re6.8e4_A.csv",
@@ -108,7 +106,6 @@
     "flow_features": [
       ["no shock present"],["leading-edge suction peak", "upper surface"],["linear regime"]
     ],
-    "aerodynamic_coefficients": {}
   },
   {
     "file_name": "GA (W)-1_A9.0_M0.029_Re6.8e4_A.csv",
@@ -145,7 +142,6 @@
     "flow_features": [
       ["no shock present"],["leading-edge suction peak", "upper surface"],["linear regime"]
     ],
-    "aerodynamic_coefficients": {}
   },
   {
     "file_name": "GA (W)-1_A10.0_M0.029_Re6.8e4_A.csv",
@@ -182,7 +178,6 @@
     "flow_features": [
       ["leading-edge suction peak", "upper surface"], ["adverse pressure gradient", "upper surface"],["incompressible"]
     ],
-    "aerodynamic_coefficients": {}
   },
   {
     "file_name": "GA (W)-1_A11.0_M0.029_Re6.8e4_A.csv",
@@ -219,7 +214,6 @@
     "flow_features": [
       ["leading-edge suction peak", "upper surface"], ["adverse pressure gradient", "upper surface"],["incompressible"]
     ],
-    "aerodynamic_coefficients": {}
   },
   {
     "file_name": "GA (W)-1_A12.0_M0.029_Re6.8e4_A.csv",
@@ -254,9 +248,8 @@
       "url": "https://arc.aiaa.org/doi/abs/10.2514/6.2007-275"
     },
     "flow_features": [
-      ["leading-edge suction peak", "upper surface"], ["adverse pressure gradient", "upper surface"],["incompressible"]
+      ["flow separation", "upper surface"], ["Pressure Plateau", "upper surface"], ["incompressible"]
     ],
-    "aerodynamic_coefficients": {}
   },
   {
     "file_name": "GA (W)-1_A14.0_M0.029_Re6.8e4_A.csv",
@@ -291,8 +284,7 @@
       "url": "https://arc.aiaa.org/doi/abs/10.2514/6.2007-275"
     },
     "flow_features": [
-      ["no shock present"],["Pressure Plateau", "upper surface"]
+      ["flow separation", "upper surface"], ["Pressure Plateau", "upper surface"], ["incompressible"]
     ],
-    "aerodynamic_coefficients": {}
   }
 ]
