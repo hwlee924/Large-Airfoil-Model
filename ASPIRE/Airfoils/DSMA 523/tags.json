@@ -34,7 +34,9 @@
     "flow_features": [
       ["compressibility effect"], ["shock", "upper surface", "mid-chord"]
     ],
-    "aerodynamic_coefficients": {}
+    "aerodynamic_coefficients": {
+      "lift_coefficient": "0.61"
+    }
   },
 
   {
@@ -72,7 +74,9 @@
     "flow_features": [
       ["compressibility effect"],["shock", "upper surface", "mid-chord"]
     ],
-    "aerodynamic_coefficients": {}
+    "aerodynamic_coefficients": {
+       "lift_coefficient": "0.63"
+    }
   },
 
   {
@@ -110,7 +114,9 @@
     "flow_features": [
       ["compressibility effect"], ["shock", "upper surface", "leading edge"]
     ],
-    "aerodynamic_coefficients": {}
+    "aerodynamic_coefficients": {
+       "lift_coefficient": "0.58"
+    }
   },
 
   {
@@ -148,7 +154,9 @@
     "flow_features": [
       ["compressibility effect"], ["shock", "upper surface", "leading edge"]
     ],
-    "aerodynamic_coefficients": {}
+    "aerodynamic_coefficients": {
+       "lift_coefficient": "0.58"
+    }
   },
 
   {
@@ -186,7 +194,9 @@
     "flow_features": [
       ["incompressible"], ["no shock present"], ["leading-edge suction peak", "upper surface"]
     ],
-    "aerodynamic_coefficients": {}
+    "aerodynamic_coefficients": {
+       "lift_coefficient": "0.58"
+    }
   },
 
   {
@@ -224,7 +234,9 @@
     "flow_features": [
       ["incompressible"], ["no shock present"], ["leading-edge suction peak", "upper surface"]
     ],
-    "aerodynamic_coefficients": {}
+    "aerodynamic_coefficients": {
+       "lift_coefficient": "0.58"
+    }
   },
 
   {
@@ -262,6 +274,8 @@
     "flow_features": [
       ["compressibility effect"], ["shock", "upper surface", "mid-chord"]
     ],
-    "aerodynamic_coefficients": {}
+    "aerodynamic_coefficients": {
+       "lift_coefficient": "0.77"
+    }
   }
 ]
