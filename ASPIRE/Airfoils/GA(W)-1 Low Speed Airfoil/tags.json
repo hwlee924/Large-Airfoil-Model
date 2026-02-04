@@ -248,7 +248,7 @@
       "url": "https://arc.aiaa.org/doi/abs/10.2514/6.2007-275"
     },
     "flow_features": [
-      ["flow separation", "upper surface"], ["Pressure Plateau", "upper surface"], ["incompressible"]
+      ["flow separation", "upper surface"], ["pressure plateau", "upper surface"], ["incompressible"]
     ],
   },
   {
@@ -284,7 +284,7 @@
       "url": "https://arc.aiaa.org/doi/abs/10.2514/6.2007-275"
     },
     "flow_features": [
-      ["flow separation", "upper surface"], ["Pressure Plateau", "upper surface"], ["incompressible"]
+      ["flow separation", "upper surface"], ["pressure plateau", "upper surface"], ["incompressible"]
     ],
   }
 ]
