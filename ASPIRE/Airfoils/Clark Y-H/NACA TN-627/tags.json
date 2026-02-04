@@ -33,7 +33,7 @@
       "year": "1937",
       "page": "8", 
       "type": "graph"
-      "url": "https://ntrs.nasa.gov/api/citations/19930081439/downloads/19930081439.pdf'
+      "url": "https://ntrs.nasa.gov/api/citations/19930081439/downloads/19930081439.pdf"
     },
     "flow_features": [
       ["sharp suction peak", "leading edge", "lower surface"] 
@@ -80,11 +80,11 @@
       "year": "1937",
       "page": "8", 
       "type": "graph"
-      "url": "https://ntrs.nasa.gov/api/citations/19930081439/downloads/19930081439.pdf'
+      "url": "https://ntrs.nasa.gov/api/citations/19930081439/downloads/19930081439.pdf"
     },
     "flow_features": [
       ["sharp suction peak", "leading edge", "lower surface"],
-      ["linear regime"]=
+      ["linear regime"]
     ]
     "aerodynamic_coefficients": {
       "normal_force_coefficient": "-0.03"
@@ -125,7 +125,7 @@
       "year": "1937",
       "page": "8", 
       "type": "graph"
-      "url": "https://ntrs.nasa.gov/api/citations/19930081439/downloads/19930081439.pdf'
+      "url": "https://ntrs.nasa.gov/api/citations/19930081439/downloads/19930081439.pdf"
     },
     "flow_features": [ 
       ["linear regime"]
@@ -169,7 +169,7 @@
       "year": "1937",
       "page": "8", 
       "type": "graph"
-      "url": "https://ntrs.nasa.gov/api/citations/19930081439/downloads/19930081439.pdf'
+      "url": "https://ntrs.nasa.gov/api/citations/19930081439/downloads/19930081439.pdf"
     },
     "flow_features": [ 
     ]
@@ -213,7 +213,7 @@
       "year": "1937",
       "page": "8", 
       "type": "graph"
-      "url": "https://ntrs.nasa.gov/api/citations/19930081439/downloads/19930081439.pdf'
+      "url": "https://ntrs.nasa.gov/api/citations/19930081439/downloads/19930081439.pdf"
     },
     "flow_features": [ 
       ["linear regime"]
@@ -258,7 +258,7 @@
       "year": "1937",
       "page": "8", 
       "type": "graph"
-      "url": "https://ntrs.nasa.gov/api/citations/19930081439/downloads/19930081439.pdf'
+      "url": "https://ntrs.nasa.gov/api/citations/19930081439/downloads/19930081439.pdf"
     },
     "flow_features": [ 
       ["stall regime"]
