@@ -1,289 +1,267 @@
 [
   {
     "file_name": "DSMA 523_A0.78_M0.83_Re2e6_A_tripped.csv",
+    
     "description": "Cp distribution of a DSMA 523 airfoil at an angle of attack of 0.78 degrees, Mach number of 0.83.",
+    
     "flow_conditions": {
       "reynolds": "2.0e6",
       "mach": "0.83",
       "freestream": "",
       "alpha": "0.78"
     },
+     "uncertainty": {
+      "x": "",
+      "cp": "0.03",
+      "alpha": "",
+      "mach": ""
+    },
     "airfoil": {
       "name": "DSMA 523",
       "camber": "y",
       "supercritical": "y",
       "application": "general"
     },
-    "uncertainty": {
-      "x": "not_provided",
-      "cp": "0.03",
-      "alpha": "not_provided",
-      "mach": "not_provided"
-    },
     "experiment": {
       "name": ["NASA TM-81336"],
-      "authors": [
-        "Spaid, F. W.",
-        "Dahlin, J. A.",
-        "Bachalo, W. D.",
-        "Stivers, L. S., Jr."
-      ],
+      "authors": ["Spaid, F. W.", "Dahlin, J. A.", "Bachalo, W. D.", "Stivers, L. S., Jr."],
       "institution": ["NASA"],
-      "publisher": [],
       "year": "1983",
       "page": "28-31",
       "type": "tabulated",
       "url": "https://ntrs.nasa.gov/citations/19830025574"
     },
-    "flow_features": [["compressibility effect"],
-  ["shock", "upper surface", "mid-chord"]],
+    "flow_features": [
+      ["compressibility effect"], ["shock", "upper surface", "mid-chord"]
+    ],
     "aerodynamic_coefficients": {}
   },
 
   {
     "file_name": "DSMA 523_A0.90_M0.80_Re2e6_A_tripped.csv",
+    
     "description": "Cp distribution of a DSMA 523 airfoil at an angle of attack of 0.90 degrees, Mach number of 0.80.",
+    
     "flow_conditions": {
       "reynolds": "2.0e6",
       "mach": "0.80",
       "freestream": "",
       "alpha": "0.90"
     },
+    "uncertainty": {
+      "x": "",
+      "cp": "0.03",
+      "alpha": "",
+      "mach": ""
+    },
     "airfoil": {
       "name": "DSMA 523",
       "camber": "y",
       "supercritical": "y",
       "application": "general"
     },
-    "uncertainty": {
-      "x": "not_provided",
-      "cp": "0.03",
-      "alpha": "not_provided",
-      "mach": "not_provided"
-    },
     "experiment": {
       "name": ["NASA TM-81336"],
-      "authors": [
-        "Spaid, F. W.",
-        "Dahlin, J. A.",
-        "Bachalo, W. D.",
-        "Stivers, L. S., Jr."
-      ],
+      "authors": ["Spaid, F. W.", "Dahlin, J. A.", "Bachalo, W. D.", "Stivers, L. S., Jr."],
       "institution": ["NASA"],
-      "publisher": [],
       "year": "1983",
       "page": "28-31",
       "type": "tabulated",
       "url": "https://ntrs.nasa.gov/citations/19830025574"
     },
-    "flow_features": [["compressibility effect"],
-  ["shock", "upper surface", "mid-chord"]],
+    "flow_features": [
+      ["compressibility effect"],["shock", "upper surface", "mid-chord"]
+    ],
     "aerodynamic_coefficients": {}
   },
 
   {
     "file_name": "DSMA 523_A1.0_M0.75_Re2e6_A_tripped.csv",
+    
     "description": "Cp distribution of a DSMA 523 airfoil at an angle of attack of 1.0 degrees, Mach number of 0.75.",
+    
     "flow_conditions": {
       "reynolds": "2.0e6",
       "mach": "0.75",
       "freestream": "",
       "alpha": "1.0"
     },
+    "uncertainty": {
+      "x": "",
+      "cp": "0.03",
+      "alpha": "",
+      "mach": ""
+    },
     "airfoil": {
       "name": "DSMA 523",
       "camber": "y",
       "supercritical": "y",
       "application": "general"
     },
-    "uncertainty": {
-      "x": "not_provided",
-      "cp": "0.03",
-      "alpha": "not_provided",
-      "mach": "not_provided"
-    },
     "experiment": {
       "name": ["NASA TM-81336"],
-      "authors": [
-        "Spaid, F. W.",
-        "Dahlin, J. A.",
-        "Bachalo, W. D.",
-        "Stivers, L. S., Jr."
-      ],
+      "authors": ["Spaid, F. W.", "Dahlin, J. A.", "Bachalo, W. D.", "Stivers, L. S., Jr."],
       "institution": ["NASA"],
-      "publisher": [],
       "year": "1983",
       "page": "28-31",
       "type": "tabulated",
       "url": "https://ntrs.nasa.gov/citations/19830025574"
     },
-    "flow_features": [["compressibility effect"],
-  ["shock", "upper surface", "leading edge"]],
+    "flow_features": [
+      ["compressibility effect"], ["shock", "upper surface", "leading edge"]
+    ],
     "aerodynamic_coefficients": {}
   },
 
   {
     "file_name": "DSMA 523_A1.23_M0.75_Re2e6_A_tripped.csv",
+    
     "description": "Cp distribution of a DSMA 523 airfoil at an angle of attack of 1.23 degrees, Mach number of 0.75.",
+    
     "flow_conditions": {
       "reynolds": "2.0e6",
       "mach": "0.75",
       "freestream": "",
       "alpha": "1.23"
     },
+    "uncertainty": {
+      "x": "",
+      "cp": "0.03",
+      "alpha": "",
+      "mach": ""
+    },
     "airfoil": {
       "name": "DSMA 523",
       "camber": "y",
       "supercritical": "y",
       "application": "general"
     },
-    "uncertainty": {
-      "x": "not_provided",
-      "cp": "0.03",
-      "alpha": "not_provided",
-      "mach": "not_provided"
-    },
     "experiment": {
       "name": ["NASA TM-81336"],
-      "authors": [
-        "Spaid, F. W.",
-        "Dahlin, J. A.",
-        "Bachalo, W. D.",
-        "Stivers, L. S., Jr."
-      ],
+      "authors": ["Spaid, F. W.", "Dahlin, J. A.", "Bachalo, W. D.", "Stivers, L. S., Jr."],
       "institution": ["NASA"],
-      "publisher": [],
       "year": "1983",
       "page": "28-31",
       "type": "tabulated",
       "url": "https://ntrs.nasa.gov/citations/19830025574"
     },
-    "flow_features": [["compressibility effect"],
-  ["shock", "upper surface", "leading edge"]],
+    "flow_features": [
+      ["compressibility effect"], ["shock", "upper surface", "leading edge"]
+    ],
     "aerodynamic_coefficients": {}
   },
 
   {
     "file_name": "DSMA 523_A1.4_M0.60_Re2e6_A_tripped.csv",
+    
     "description": "Cp distribution of a DSMA 523 airfoil at an angle of attack of 1.4 degrees, Mach number of 0.60.",
+    
     "flow_conditions": {
       "reynolds": "2.0e6",
       "mach": "0.60",
       "freestream": "",
       "alpha": "1.4"
     },
+    "uncertainty": {
+      "x": "",
+      "cp": "0.03",
+      "alpha": "",
+      "mach": ""
+    },
     "airfoil": {
       "name": "DSMA 523",
       "camber": "y",
       "supercritical": "y",
       "application": "general"
     },
-    "uncertainty": {
-      "x": "not_provided",
-      "cp": "0.03",
-      "alpha": "not_provided",
-      "mach": "not_provided"
-    },
     "experiment": {
       "name": ["NASA TM-81336"],
-      "authors": [
-        "Spaid, F. W.",
-        "Dahlin, J. A.",
-        "Bachalo, W. D.",
-        "Stivers, L. S., Jr."
-      ],
+      "authors": ["Spaid, F. W.", "Dahlin, J. A.", "Bachalo, W. D.", "Stivers, L. S., Jr."],
       "institution": ["NASA"],
-      "publisher": [],
       "year": "1983",
       "page": "28-31",
       "type": "tabulated",
       "url": "https://ntrs.nasa.gov/citations/19830025574"
     },
-    "flow_features": [["incompressible"],
-  ["no shock present"],
-  ["leading-edge suction peak", "upper surface"]],
+    "flow_features": [
+      ["incompressible"], ["no shock present"], ["leading-edge suction peak", "upper surface"]
+    ],
     "aerodynamic_coefficients": {}
   },
 
   {
     "file_name": "DSMA 523_A1.63_M0.60_Re2e6_A_tripped.csv",
+    
     "description": "Cp distribution of a DSMA 523 airfoil at an angle of attack of 1.63 degrees, Mach number of 0.60.",
+    
     "flow_conditions": {
       "reynolds": "2.0e6",
       "mach": "0.60",
       "freestream": "",
       "alpha": "1.63"
     },
+    "uncertainty": {
+      "x": "",
+      "cp": "0.03",
+      "alpha": "",
+      "mach": ""
+    },
     "airfoil": {
       "name": "DSMA 523",
       "camber": "y",
       "supercritical": "y",
       "application": "general"
     },
-    "uncertainty": {
-      "x": "not_provided",
-      "cp": "0.03",
-      "alpha": "not_provided",
-      "mach": "not_provided"
-    },
     "experiment": {
       "name": ["NASA TM-81336"],
-      "authors": [
-        "Spaid, F. W.",
-        "Dahlin, J. A.",
-        "Bachalo, W. D.",
-        "Stivers, L. S., Jr."
-      ],
+      "authors": ["Spaid, F. W.", "Dahlin, J. A.", "Bachalo, W. D.", "Stivers, L. S., Jr."],
       "institution": ["NASA"],
-      "publisher": [],
       "year": "1983",
       "page": "28-31",
       "type": "tabulated",
       "url": "https://ntrs.nasa.gov/citations/19830025574"
     },
-    "flow_features": [["incompressible"],
-  ["no shock present"],
-  ["leading-edge suction peak", "upper surface"]],
+    "flow_features": [
+      ["incompressible"], ["no shock present"], ["leading-edge suction peak", "upper surface"]
+    ],
     "aerodynamic_coefficients": {}
   },
 
   {
     "file_name": "DSMA 523_A1.6_M0.80_Re2e6_A_tripped.csv",
+    
     "description": "Cp distribution of a DSMA 523 airfoil at an angle of attack of 1.6 degrees, Mach number of 0.80.",
+    
     "flow_conditions": {
       "reynolds": "2.0e6",
       "mach": "0.80",
       "freestream": "",
       "alpha": "1.6"
     },
+    "uncertainty": {
+      "x": "",
+      "cp": "0.03",
+      "alpha": "",
+      "mach": ""
+    },
     "airfoil": {
       "name": "DSMA 523",
       "camber": "y",
       "supercritical": "y",
       "application": "general"
     },
-    "uncertainty": {
-      "x": "not_provided",
-      "cp": "0.03",
-      "alpha": "not_provided",
-      "mach": "not_provided"
-    },
     "experiment": {
       "name": ["NASA TM-81336"],
-      "authors": [
-        "Spaid, F. W.",
-        "Dahlin, J. A.",
-        "Bachalo, W. D.",
-        "Stivers, L. S., Jr."
-      ],
+      "authors": ["Spaid, F. W.", "Dahlin, J. A.", "Bachalo, W. D.", "Stivers, L. S., Jr."],
       "institution": ["NASA"],
-      "publisher": [],
       "year": "1983",
       "page": "28-31",
       "type": "tabulated",
       "url": "https://ntrs.nasa.gov/citations/19830025574"
     },
-    "flow_features": [["compressibility effect"], ["shock", "upper surface", "mid-chord"]],
+    "flow_features": [
+      ["compressibility effect"], ["shock", "upper surface", "mid-chord"]
+    ],
     "aerodynamic_coefficients": {}
   }
 ]
