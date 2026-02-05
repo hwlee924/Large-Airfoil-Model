@@ -1,293 +1,290 @@
 [
   {
     "file_name": "GA (W)-1_A6.0_M0.029_Re6.8e4_A.csv",
+    
     "description": "Cp distribution of a GA(W)-1 airfoil at an angle of attack of 6 degrees, Mach number of 0.029.",
+    
     "flow_conditions": {
       "reynolds": "6.8e4",
       "mach": "0.029",
       "freestream": "",
       "alpha": "6"
     },
+    "uncertainty": {
+      "x": "",
+      "z": "",
+      "cp": "",
+      "alpha": "",
+      "mach": ""
+    },
     "airfoil": {
-      "name": "GA(W)-1",
+      "name": "GA (W)-1",
       "camber": "y",
       "supercritical": "n",
       "application": ""
     },
-    "uncertainty": {
-      "x": "not_provided",
-      "z": "not_provided",
-      "cp": "not_provided",
-      "alpha": "not_provided",
-      "mach": "not_provided"
-    },
     "experiment": {
       "name": ["An Experimental Investigation on the Flow Separation on a Low-Reynolds-Number Airfoil"],
       "authors": ["Yang et al."],
-      "institution": [],
-      "publisher": [],
       "year": "2012",
       "page": "",
       "type": "graph",
-      "doi": "",
       "url": "https://arc.aiaa.org/doi/abs/10.2514/6.2007-275"
     },
-    "flow_features": [["no shock present"],["leading-edge suction peak", "upper surface"],["linear regime"]],
-    "aerodynamic_coefficients": {}
+    "flow_features": [
+      ["no shock present"],["leading-edge suction peak", "upper surface"],["linear regime"]
+    ],
   },
   {
     "file_name": "GA (W)-1_A7.0_M0.029_Re6.8e4_A.csv",
+    
     "description": "Cp distribution of a GA(W)-1 airfoil at an angle of attack of 7 degrees, Mach number of 0.029.",
+    
     "flow_conditions": {
       "reynolds": "6.8e4",
       "mach": "0.029",
       "freestream": "",
       "alpha": "7"
     },
+    "uncertainty": {
+      "x": "",
+      "z": "",
+      "cp": "",
+      "alpha": "",
+      "mach": ""
+    },
     "airfoil": {
-      "name": "GA(W)-1",
+      "name": "GA (W)-1",
       "camber": "y",
       "supercritical": "n",
       "application": ""
     },
-    "uncertainty": {
-      "x": "not_provided",
-      "z": "not_provided",
-      "cp": "not_provided",
-      "alpha": "not_provided",
-      "mach": "not_provided"
-    },
     "experiment": {
       "name": ["An Experimental Investigation on the Flow Separation on a Low-Reynolds-Number Airfoil"],
       "authors": ["Yang et al."],
-      "institution": [],
-      "publisher": [],
       "year": "2012",
       "page": "",
       "type": "graph",
-      "doi": "",
       "url": "https://arc.aiaa.org/doi/abs/10.2514/6.2007-275"
     },
-    "flow_features": [["no shock present"],["leading-edge suction peak", "upper surface"],["linear regime"]],
-    "aerodynamic_coefficients": {}
+    "flow_features": [
+      ["no shock present"],["leading-edge suction peak", "upper surface"],["linear regime"]
+    ],
   },
   {
     "file_name": "GA (W)-1_A8.0_M0.029_Re6.8e4_A.csv",
+    
     "description": "Cp distribution of a GA(W)-1 airfoil at an angle of attack of 8 degrees, Mach number of 0.029.",
+    
     "flow_conditions": {
       "reynolds": "6.8e4",
       "mach": "0.029",
       "freestream": "",
       "alpha": "8"
     },
+    "uncertainty": {
+      "x": "",
+      "z": "",
+      "cp": "",
+      "alpha": "",
+      "mach": ""
+    },
     "airfoil": {
-      "name": "GA(W)-1",
+      "name": "GA (W)-1",
       "camber": "y",
       "supercritical": "n",
       "application": ""
     },
-    "uncertainty": {
-      "x": "not_provided",
-      "z": "not_provided",
-      "cp": "not_provided",
-      "alpha": "not_provided",
-      "mach": "not_provided"
-    },
     "experiment": {
       "name": ["An Experimental Investigation on the Flow Separation on a Low-Reynolds-Number Airfoil"],
       "authors": ["Yang et al."],
-      "institution": [],
-      "publisher": [],
       "year": "2012",
       "page": "",
       "type": "graph",
-      "doi": "",
       "url": "https://arc.aiaa.org/doi/abs/10.2514/6.2007-275"
     },
-    "flow_features": [["no shock present"],["leading-edge suction peak", "upper surface"],["linear regime"]],
-    "aerodynamic_coefficients": {}
+    "flow_features": [
+      ["no shock present"],["leading-edge suction peak", "upper surface"],["linear regime"]
+    ],
   },
   {
     "file_name": "GA (W)-1_A9.0_M0.029_Re6.8e4_A.csv",
+    
     "description": "Cp distribution of a GA(W)-1 airfoil at an angle of attack of 9 degrees, Mach number of 0.029.",
+    
     "flow_conditions": {
       "reynolds": "6.8e4",
       "mach": "0.029",
       "freestream": "",
       "alpha": "9"
     },
+    "uncertainty": {
+      "x": "",
+      "z": "",
+      "cp": "",
+      "alpha": "",
+      "mach": ""
+    },
     "airfoil": {
-      "name": "GA(W)-1",
+      "name": "GA (W)-1",
       "camber": "y",
       "supercritical": "n",
       "application": ""
     },
-    "uncertainty": {
-      "x": "not_provided",
-      "z": "not_provided",
-      "cp": "not_provided",
-      "alpha": "not_provided",
-      "mach": "not_provided"
-    },
     "experiment": {
       "name": ["An Experimental Investigation on the Flow Separation on a Low-Reynolds-Number Airfoil"],
       "authors": ["Yang et al."],
-      "institution": [],
-      "publisher": [],
       "year": "2012",
       "page": "",
       "type": "graph",
-      "doi": "",
       "url": "https://arc.aiaa.org/doi/abs/10.2514/6.2007-275"
     },
-    "flow_features": [["no shock present"],["leading-edge suction peak", "upper surface"],["linear regime"]],
-    "aerodynamic_coefficients": {}
+    "flow_features": [
+      ["no shock present"],["leading-edge suction peak", "upper surface"],["linear regime"]
+    ],
   },
   {
     "file_name": "GA (W)-1_A10.0_M0.029_Re6.8e4_A.csv",
+    
     "description": "Cp distribution of a GA(W)-1 airfoil at an angle of attack of 10 degrees, Mach number of 0.029.",
+    
     "flow_conditions": {
       "reynolds": "6.8e4",
       "mach": "0.029",
       "freestream": "",
       "alpha": "10"
     },
+    "uncertainty": {
+      "x": "",
+      "z": "",
+      "cp": "",
+      "alpha": "",
+      "mach": ""
+    },
     "airfoil": {
-      "name": "GA(W)-1",
+      "name": "GA (W)-1",
       "camber": "y",
       "supercritical": "n",
       "application": ""
     },
-    "uncertainty": {
-      "x": "not_provided",
-      "z": "not_provided",
-      "cp": "not_provided",
-      "alpha": "not_provided",
-      "mach": "not_provided"
-    },
     "experiment": {
       "name": ["An Experimental Investigation on the Flow Separation on a Low-Reynolds-Number Airfoil"],
       "authors": ["Yang et al."],
-      "institution": [],
-      "publisher": [],
       "year": "2012",
       "page": "",
       "type": "graph",
-      "doi": "",
       "url": "https://arc.aiaa.org/doi/abs/10.2514/6.2007-275"
     },
-    "flow_features": [["leading-edge suction peak", "upper surface"],
-  ["adverse pressure gradient", "upper surface"],["incompressible"]],
-    "aerodynamic_coefficients": {}
+    "flow_features": [
+      ["leading-edge suction peak", "upper surface"], ["adverse pressure gradient", "upper surface"],["incompressible"]
+    ],
   },
   {
     "file_name": "GA (W)-1_A11.0_M0.029_Re6.8e4_A.csv",
+    
     "description": "Cp distribution of a GA(W)-1 airfoil at an angle of attack of 11 degrees, Mach number of 0.029.",
+    
     "flow_conditions": {
       "reynolds": "6.8e4",
       "mach": "0.029",
       "freestream": "",
       "alpha": "11"
     },
+    "uncertainty": {
+      "x": "",
+      "z": "",
+      "cp": "",
+      "alpha": "",
+      "mach": ""
+    },
     "airfoil": {
-      "name": "GA(W)-1",
+      "name": "GA (W)-1",
       "camber": "y",
       "supercritical": "n",
       "application": ""
     },
-    "uncertainty": {
-      "x": "not_provided",
-      "z": "not_provided",
-      "cp": "not_provided",
-      "alpha": "not_provided",
-      "mach": "not_provided"
-    },
     "experiment": {
       "name": ["An Experimental Investigation on the Flow Separation on a Low-Reynolds-Number Airfoil"],
       "authors": ["Yang et al."],
-      "institution": [],
-      "publisher": [],
       "year": "2012",
       "page": "",
       "type": "graph",
-      "doi": "",
       "url": "https://arc.aiaa.org/doi/abs/10.2514/6.2007-275"
     },
-    "flow_features": [["leading-edge suction peak", "upper surface"],
-  ["adverse pressure gradient", "upper surface"],["incompressible"]],
-    "aerodynamic_coefficients": {}
+    "flow_features": [
+      ["leading-edge suction peak", "upper surface"], ["adverse pressure gradient", "upper surface"],["incompressible"]
+    ],
   },
   {
     "file_name": "GA (W)-1_A12.0_M0.029_Re6.8e4_A.csv",
+    
     "description": "Cp distribution of a GA(W)-1 airfoil at an angle of attack of 12 degrees, Mach number of 0.029.",
+    
     "flow_conditions": {
       "reynolds": "6.8e4",
       "mach": "0.029",
       "freestream": "",
       "alpha": "12"
     },
+    "uncertainty": {
+      "x": "",
+      "z": "",
+      "cp": "",
+      "alpha": "",
+      "mach": ""
+    },
     "airfoil": {
-      "name": "GA(W)-1",
+      "name": "GA (W)-1",
       "camber": "y",
       "supercritical": "n",
       "application": ""
     },
-    "uncertainty": {
-      "x": "not_provided",
-      "z": "not_provided",
-      "cp": "not_provided",
-      "alpha": "not_provided",
-      "mach": "not_provided"
-    },
     "experiment": {
       "name": ["An Experimental Investigation on the Flow Separation on a Low-Reynolds-Number Airfoil"],
       "authors": ["Yang et al."],
-      "institution": [],
-      "publisher": [],
       "year": "2012",
       "page": "",
       "type": "graph",
-      "doi": "",
       "url": "https://arc.aiaa.org/doi/abs/10.2514/6.2007-275"
     },
-    "flow_features": [["leading-edge suction peak", "upper surface"],
-  ["adverse pressure gradient", "upper surface"],["incompressible"]],
-    "aerodynamic_coefficients": {}
+    "flow_features": [
+      ["flow separation", "upper surface"], ["pressure plateau", "upper surface"], ["incompressible"]
+    ],
   },
   {
     "file_name": "GA (W)-1_A14.0_M0.029_Re6.8e4_A.csv",
+    
     "description": "Cp distribution of a GA(W)-1 airfoil at an angle of attack of 14 degrees, Mach number of 0.029.",
+    
     "flow_conditions": {
       "reynolds": "6.8e4",
       "mach": "0.029",
       "freestream": "",
       "alpha": "14"
     },
+    "uncertainty": {
+      "x": "",
+      "z": "",
+      "cp": "",
+      "alpha": "",
+      "mach": ""
+    },
     "airfoil": {
-      "name": "GA(W)-1",
+      "name": "GA (W)-1",
       "camber": "y",
       "supercritical": "n",
       "application": ""
     },
-    "uncertainty": {
-      "x": "not_provided",
-      "z": "not_provided",
-      "cp": "not_provided",
-      "alpha": "not_provided",
-      "mach": "not_provided"
-    },
     "experiment": {
       "name": ["An Experimental Investigation on the Flow Separation on a Low-Reynolds-Number Airfoil"],
       "authors": ["Yang et al."],
-      "institution": [],
-      "publisher": [],
       "year": "2012",
       "page": "",
       "type": "graph",
-      "doi": "",
       "url": "https://arc.aiaa.org/doi/abs/10.2514/6.2007-275"
     },
-    "flow_features": [["no shock present"],["Pressure Plateau", "upper surface"]],
-    "aerodynamic_coefficients": {}
+    "flow_features": [
+      ["flow separation", "upper surface"], ["pressure plateau", "upper surface"], ["incompressible"]
+    ],
   }
 ]

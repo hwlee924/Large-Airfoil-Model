@@ -10,35 +10,31 @@
       "freestream": "35.426 m/s",
       "alpha": "-10"
     },
-
+    "uncertainty": {
+      "x" : "",
+      "z" : "",
+      "cp" : "",
+      "alpha": "",
+      "mach": ""
+    }, 
     "airfoil": {
-      "name": "clark-y",
+      "name": "Clark Y-H",
       "camber": "y",
       "supercritical": "n",
       "application": "rotor"
     },
-
-    "uncertainty": {
-      "x" : "not_provided",
-      "z" : "not_provided",
-      "cp" : "not_provided",
-      "alpha": "not_provided",
-      "mach": "not_provided"
-    }, 
-
     "experiment": {
       "name": ["naca tn-627", 
                "pressure distribution over a clark y-h airfoil section with a split flap"
               ],
       "authors": ["Carl J. Wenzinger"],
-      "institution": [""],
       "publisher": ["national advisory committee for aeronautics",
                     "naca"],
       "year": "1937",
       "page": "8", 
       "type": "graph"
+      "url": "https://ntrs.nasa.gov/api/citations/19930081439/downloads/19930081439.pdf"
     },
-
     "flow_features": [
       ["sharp suction peak", "leading edge", "lower surface"] 
     ],
@@ -60,43 +56,38 @@
       "freestream": "35.426 m/s",
       "alpha": "-5"
     },
-
+    "uncertainty": {
+      "x" : "",
+      "z" : "",
+      "cp" : "",
+      "alpha": "",
+      "mach": ""
+    }, 
     "airfoil": {
-      "name": "clark-y",
+      "name": "Clark Y-H",
       "camber": "y",
       "supercritical": "n",
       "application": "rotor"
     },
-
-    "uncertainty": {
-      "x" : "not provided",
-      "z" : "not provided",
-      "cp" : "not provided",
-      "alpha": "not provided",
-      "mach": "not provided"
-    }, 
 
     "experiment": {
       "name": ["naca tn-627", 
                "pressure distribution over a clark y-h airfoil section with a split flap"
               ],
       "authors": ["Carl J. Wenzinger"],
-      "institution": [""],
       "publisher": ["national advisory committee for aeronautics",
                     "naca"],
       "year": "1937",
       "page": "8", 
       "type": "graph"
+      "url": "https://ntrs.nasa.gov/api/citations/19930081439/downloads/19930081439.pdf"
     },
-
+    "flow_features": [
+      ["linear regime"]
+    ]
     "aerodynamic_coefficients": {
       "normal_force_coefficient": "-0.03"
     },
-
-    "flow_features": [
-      ["sharp suction peak", "leading edge", "lower surface"],
-      ["linear regime"]
-    ]
   },
 
   {
@@ -110,42 +101,37 @@
       "freestream": "35.426 m/s",
       "alpha": "-2"
     },
-
+     "uncertainty": {
+      "x" : "",
+      "z" : "",
+      "cp" : "",
+      "alpha": "",
+      "mach": ""
+    }, 
     "airfoil": {
-      "name": "clark-y",
+      "name": "Clark Y-H",
       "camber": "y",
       "supercritical": "n",
       "application": "rotor"
     },
-
-    "uncertainty": {
-      "x" : "not provided",
-      "z" : "not provided",
-      "cp" : "not provided",
-      "alpha": "not provided",
-      "mach": "not provided"
-    }, 
-
     "experiment": {
       "name": ["naca tn-627", 
                "pressure distribution over a clark y-h airfoil section with a split flap"
               ],
       "authors": ["Carl J. Wenzinger"],
-      "institution": [""],
       "publisher": ["national advisory committee for aeronautics",
                     "naca"],
       "year": "1937",
       "page": "8", 
       "type": "graph"
+      "url": "https://ntrs.nasa.gov/api/citations/19930081439/downloads/19930081439.pdf"
     },
-
-    "aerodynamic-coefficients": {
-      "normal-force-coefficient": "0.21"
-    },
-
     "flow_features": [ 
       ["linear regime"]
     ]
+    "aerodynamic-coefficients": {
+      "normal-force-coefficient": "0.21"
+    },
   },
 
   {
@@ -159,41 +145,37 @@
       "freestream": "35.426 m/s",
       "alpha": "0"
     },
-
+    "uncertainty": {
+      "x" : "",
+      "z" : "",
+      "cp" : "",
+      "alpha": "",
+      "mach": ""
+    }, 
     "airfoil": {
-      "name": "clark-y",
+      "name": "Clark Y-H",
       "camber": "y",
       "supercritical": "n",
       "application": "rotor"
     },
-
-    "uncertainty": {
-      "x" : "not provided",
-      "z" : "not provided",
-      "cp" : "not provided",
-      "alpha": "not provided",
-      "mach": "not provided"
-    }, 
-
     "experiment": {
       "name": ["naca tn-627", 
                "pressure distribution over a clark y-h airfoil section with a split flap"
               ],
       "authors": ["Carl J. Wenzinger"],
-      "institution": [""],
       "publisher": ["national advisory committee for aeronautics",
                     "naca"],
       "year": "1937",
       "page": "8", 
       "type": "graph"
+      "url": "https://ntrs.nasa.gov/api/citations/19930081439/downloads/19930081439.pdf"
     },
-
+    "flow_features": [ 
+      ["linear regime"]
+    ]
     "aerodynamic-coefficients": {
       "normal-force-coefficient": "0.33"
     },
-
-    "flow_features": [ 
-    ]
 
   },
 
@@ -208,42 +190,37 @@
       "freestream": "35.426 m/s",
       "alpha": "4"
     },
-
+    "uncertainty": {
+      "x" : "",
+      "z" : "",
+      "cp" : "",
+      "alpha": "",
+      "mach": ""
+    }, 
     "airfoil": {
-      "name": "clark-y",
+      "name": "Clark Y-H",
       "camber": "y",
       "supercritical": "n",
       "application": "rotor"
     },
-
-    "uncertainty": {
-      "x" : "not provided",
-      "z" : "not provided",
-      "cp" : "not provided",
-      "alpha": "not provided",
-      "mach": "not provided"
-    }, 
-
     "experiment": {
       "name": ["naca tn-627", 
                "pressure distribution over a clark y-h airfoil section with a split flap"
               ],
       "authors": ["Carl J. Wenzinger"],
-      "institution": [""],
-      "publisher": ["national advisory committee for aeronautics",
+        "publisher": ["national advisory committee for aeronautics",
                     "naca"],
       "year": "1937",
       "page": "8", 
       "type": "graph"
+      "url": "https://ntrs.nasa.gov/api/citations/19930081439/downloads/19930081439.pdf"
     },
-
-    "aerodynamic-coefficients": {
-      "normal-force-coefficient": "0.66"
-    },
-
     "flow_features": [ 
       ["linear regime"]
     ]
+    "aerodynamic-coefficients": {
+      "normal-force-coefficient": "0.66"
+    },
 
   },
 
@@ -256,44 +233,39 @@
       "reynolds" : "6.9e6",
       "mach" : "0.10",
       "freestream": "35.426 m/s",
-      "alpha": "4"
+      "alpha": "15"
     },
-
+    "uncertainty": {
+      "x" : "",
+      "z" : "",
+      "cp" : "",
+      "alpha": "",
+      "mach": ""
+    }, 
     "airfoil": {
-      "name": "clark-y",
+      "name": "Clark Y-H",
       "camber": "y",
       "supercritical": "n",
       "application": "rotor"
     },
-
-    "uncertainty": {
-      "x" : "not provided",
-      "z" : "not provided",
-      "cp" : "not provided",
-      "alpha": "not provided",
-      "mach": "not provided"
-    }, 
-
     "experiment": {
       "name": ["naca tn-627", 
                "pressure distribution over a clark y-h airfoil section with a split flap"
               ],
       "authors": ["Carl J. Wenzinger"],
-      "institution": [""],
       "publisher": ["national advisory committee for aeronautics",
                     "naca"],
       "year": "1937",
       "page": "8", 
       "type": "graph"
+      "url": "https://ntrs.nasa.gov/api/citations/19930081439/downloads/19930081439.pdf"
     },
-
-    "aerodynamic-coefficients": {
-      "normal-force-coefficient": "1.32"
-    },
-
     "flow_features": [ 
       ["stall regime"]
     ]
+    "aerodynamic-coefficients": {
+      "normal-force-coefficient": "1.32"
+    },
 
   }
 ]
