@@ -115,8 +115,7 @@
       "url": "https://doi.org/10.2514/6.1995-2192"
     },
     "flow_features": [
-      ["linear regime"],
-      ["sharp suction peak", "leading edge", "upper surface"]
+      ["linear regime"], ["sharp suction peak", "leading edge", "upper surface"]
     ],
   }, 
   
