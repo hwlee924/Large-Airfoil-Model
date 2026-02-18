@@ -10,36 +10,29 @@
       "freestream": "",
       "alpha": "-0.5"
     },
-
+     "uncertainty": {
+      "x" : "",
+      "z" : "",
+      "cp" : "",
+      "alpha": "",
+      "mach": ""
+    }, 
     "airfoil": {
       "name": "MBB supercritical airfoil",
       "camber": "y",
       "supercritical": "y",
       "application": "general"
     },
-
-    "uncertainty": {
-      "x" : "not_provided",
-      "z" : "not_provided",
-      "cp" : "not_provided",
-      "alpha": "not_provided",
-      "mach": "not_provided"
-    }, 
-
     "experiment": {
-      "name": ["aiaa 95-2192 shear and pressure measurements on an airfoil at angle of attack"
-              ],
-      "authors": ["George G. Mateer",
-      "Daryl J. Monson",
-      "Florian R. Menter"], 
-      "institution": ["nasa-ames research center",
-                      "eloret institute"],
-      "publisher": ["american institute of aeronautics and astronautics",
-                    "aiaa"],
+      "name": "aiaa 95-2192 shear and pressure measurements on an airfoil at angle of attack",
+      "authors": ["George G. Mateer", "Daryl J. Monson", "Florian R. Menter"], 
+      "institution": ["nasa-ames research center", "eloret institute"],
+      "publisher": ["american institute of aeronautics and astronautics", "aiaa"],
       "year": "1995",
       "page": "6", 
       "type": "graph",
-      "doi": " 10.2514/6.1995-2192"
+      "doi": " 10.2514/6.1995-2192",
+      "url": "https://doi.org/10.2514/6.1995-2192"
     },
 
     "flow_features": [
@@ -48,9 +41,7 @@
 
     "aerodynamic_coefficients": { 
     }
-
   }, 
-
   {
    "file_name":"MBB supercritical_A3.5_M0.2_Re2e6_A.csv", 
 
@@ -62,46 +53,36 @@
       "freestream": "",
       "alpha": "3.5"
     },
-
+     "uncertainty": {
+      "x" : "",
+      "z" : "",
+      "cp" : "",
+      "alpha": "",
+      "mach": ""
+    }, 
+    }, 
     "airfoil": {
       "name": "MBB supercritical airfoil",
       "camber": "y",
       "supercritical": "y",
       "application": "general"
     },
-
-    "uncertainty": {
-      "x" : "not_provided",
-      "z" : "not_provided",
-      "cp" : "not_provided",
-      "alpha": "not_provided",
-      "mach": "not_provided"
-    }, 
-
     "experiment": {
-      "name": ["aiaa 95-2192 shear and pressure measurements on an airfoil at angle of attack"
-              ],
-      "authors": ["George G. Mateer",
-      "Daryl J. Monson",
-      "Florian R. Menter"], 
-      "institution": ["nasa-ames research center",
-                      "eloret institute"],
-      "publisher": ["american institute of aeronautics and astronautics",
-                    "aiaa"],
+      "name": "aiaa 95-2192 shear and pressure measurements on an airfoil at angle of attack",
+      "authors": ["George G. Mateer", "Daryl J. Monson", "Florian R. Menter"], 
+      "institution": ["nasa-ames research center", "eloret institute"],
+      "publisher": ["american institute of aeronautics and astronautics", "aiaa"],
       "year": "1995",
       "page": "6", 
       "type": "graph",
-      "doi": " 10.2514/6.1995-2192"
+      "doi": " 10.2514/6.1995-2192",
+      "url": "https://doi.org/10.2514/6.1995-2192"
     },
-
     "flow_features": [
       ["linear regime"], ["incompressible"]
-
     ],
-
     "aerodynamic_coefficients": { 
     }
-
   }, 
 
   {
@@ -115,46 +96,36 @@
       "freestream": "",
       "alpha": "7.5"
     },
-
+     "uncertainty": {
+      "x" : "",
+      "z" : "",
+      "cp" : "",
+      "alpha": "",
+      "mach": ""
+    }, 
     "airfoil": {
       "name": "MBB supercritical airfoil",
       "camber": "y",
       "supercritical": "y",
       "application": "general"
     },
-
-    "uncertainty": {
-      "x" : "not_provided",
-      "z" : "not_provided",
-      "cp" : "not_provided",
-      "alpha": "not_provided",
-      "mach": "not_provided"
-    }, 
-
     "experiment": {
-      "name": ["aiaa 95-2192 shear and pressure measurements on an airfoil at angle of attack"
-              ],
-      "authors": ["George G. Mateer",
-      "Daryl J. Monson",
-      "Florian R. Menter"], 
-      "institution": ["nasa-ames_research_center",
-                      "eloret_institute"],
-      "publisher": ["american institute of aeronautics and astronautics",
-                    "aiaa"],
+      "name": "aiaa 95-2192 shear and pressure measurements on an airfoil at angle of attack",
+      "authors": ["George G. Mateer", "Daryl J. Monson", "Florian R. Menter"], 
+      "institution": ["nasa-ames research center", "eloret institute"],
+      "publisher": ["american institute of aeronautics and astronautics", "aiaa"],
       "year": "1995",
       "page": "6", 
       "type": "graph",
-      "doi": " 10.2514/6.1995-2192"
+      "doi": " 10.2514/6.1995-2192",
+      "url": "https://doi.org/10.2514/6.1995-2192"
     },
-
     "flow_features": [
       ["linear regime"],
       ["sharp suction peak", "leading edge", "upper surface"]
     ],
-
     "aerodynamic_coefficients": { 
     }
-
   }, 
   {
    "file_name":"MBB supercritical_A11.5_M0.2_Re2e6_A.csv", 
@@ -167,45 +138,34 @@
       "freestream": "",
       "alpha": "11.5"
     },
-
+     "uncertainty": {
+      "x" : "",
+      "z" : "",
+      "cp" : "",
+      "alpha": "",
+      "mach": ""
+    }, 
     "airfoil": {
       "name": "MBB supercritical airfoil",
       "camber": "y",
       "supercritical": "y",
       "application": "general"
     },
-
-    "uncertainty": {
-      "x" : "not_provided",
-      "z" : "not_provided",
-      "cp" : "not_provided",
-      "alpha": "not_provided",
-      "mach": "not_provided"
-    }, 
-
     "experiment": {
-      "name": ["aiaa 95-2192 shear and pressure measurements on an airfoil at angle of attack"
-              ],
-      "authors": ["George G. Mateer",
-      "Daryl J. Monson",
-      "Florian R. Menter"], 
-      "institution": ["nasa-ames_research_center",
-                      "eloret_institute"],
-      "publisher": ["american institute of aeronautics and astronautics",
-                    "aiaa"],
+      "name": "aiaa 95-2192 shear and pressure measurements on an airfoil at angle of attack",
+      "authors": ["George G. Mateer", "Daryl J. Monson", "Florian R. Menter"], 
+      "institution": ["nasa-ames research center", "eloret institute"],
+      "publisher": ["american institute of aeronautics and astronautics", "aiaa"],
       "year": "1995",
       "page": "6", 
       "type": "graph",
-      "doi": " 10.2514/6.1995-2192"
+      "doi": " 10.2514/6.1995-2192",
+      "url": "https://doi.org/10.2514/6.1995-2192"
     },
-
     "flow_features": [
-      ["linear regime"],
-      ["sharp suction peak", "leading edge", "upper surface"]
+      ["linear regime"], ["sharp suction peak", "leading edge", "upper surface"]
     ],
-
     "aerodynamic_coefficients": { 
     }
-
   }
 ]
