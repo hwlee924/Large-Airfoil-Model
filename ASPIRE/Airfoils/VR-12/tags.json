@@ -10,45 +10,36 @@
       "freestream": "58.32 m/s",
       "alpha": "5"
     },
-
+    "uncertainty": {
+      "x" : "",
+      "z" : "",
+      "cp" : "",
+      "alpha": "",
+      "mach": ""
+    }, 
     "airfoil": {
       "name": "vr-12",
       "camber": "y",
       "supercritical": "n",
       "application": "rotor"
     },
-
-    "uncertainty": {
-      "x" : "not_provided",
-      "z" : "not_provided",
-      "cp" : "not_provided",
-      "alpha": "not_provided",
-      "mach": "not_provided"
-    }, 
-
     "experiment": {
-      "name": ["reynolds scaling effects on dynamic stall of vr-7 and vr-12 airfoils"
-              ],
-      "authors": ["Wenbo Zhu",
-      "Jeffrey P. Bons",
-      "James W. Gregory"], 
+      "name": "reynolds scaling effects on dynamic stall of vr-7 and vr-12 airfoils",
+      "authors": ["Wenbo Zhu", "Jeffrey P. Bons", "James W. Gregory"], 
       "institution": ["the ohio state university"],
-      "publisher": ["american institute of aeronautics and astronautics",
-                    "aiaa"],
+      "publisher": ["american institute of aeronautics and astronautics", "aiaa"],
       "year": "2019",
       "page": "6", 
       "type": "graph",
-      "doi": " 10.2514/6.2019-0304"
+      "doi": " 10.2514/6.2019-0304",
+      "url": "https://doi.org/10.2514/6.2019-0304"
     },
-
     "flow_features": [
       ["linear regime"]
     ],
-
     "aerodynamic_coefficients": {
       "lift_coefficient": "0.5783"
     }
-
   }, 
 
   {
@@ -62,37 +53,30 @@
       "freestream": "58.32 m/s",
       "alpha": "12"
     },
-
+    "uncertainty": {
+      "x" : "",
+      "z" : "",
+      "cp" : "",
+      "alpha": "",
+      "mach": ""
+    },
     "airfoil": {
       "name": "vr-12",
       "camber": "y",
       "supercritical": "n",
       "application": "rotor"
     },
-
-    "uncertainty": {
-      "x" : "not_provided",
-      "z" : "not_provided",
-      "cp" : "not_provided",
-      "alpha": "not_provided",
-      "mach": "not_provided"
-    }, 
-
     "experiment": {
-      "name": ["reynolds scaling effects on dynamic stall of vr-7 and vr-12 airfoils"
-              ],
-      "authors": ["Wenbo Zhu",
-      "Jeffrey P. Bons",
-      "James W. Gregory"], 
+      "name": "reynolds scaling effects on dynamic stall of vr-7 and vr-12 airfoils",
+      "authors": ["Wenbo Zhu", "Jeffrey P. Bons", "James W. Gregory"], 
       "institution": ["the ohio state university"],
-      "publisher": ["american institute of aeronautics and astronautics",
-                    "aiaa"],
+      "publisher": ["american institute of aeronautics and astronautics", "aiaa"],
       "year": "2019",
       "page": "6", 
       "type": "graph",
-      "doi": " 10.2514/6.2019-0304"
+      "doi": " 10.2514/6.2019-0304",
+      "url": "https://doi.org/10.2514/6.2019-0304"
     },
-
     "flow_features": [
       ["linear regime"]
     ],
@@ -114,45 +98,36 @@
       "freestream": "58.32 m/s",
       "alpha": "15"
     },
-
+    "uncertainty": {
+      "x" : "",
+      "z" : "",
+      "cp" : "",
+      "alpha": "",
+      "mach": ""
+    },
     "airfoil": {
       "name": "vr-12",
       "camber": "y",
       "supercritical": "n",
       "application": "rotor"
     },
-
-    "uncertainty": {
-      "x" : "not_provided",
-      "z" : "not_provided",
-      "cp" : "not_provided",
-      "alpha": "not_provided",
-      "mach": "not_provided"
-    }, 
-
     "experiment": {
-      "name": ["reynolds scaling effects on dynamic stall of vr-7 and vr-12 airfoils"
-              ],
-      "authors": ["Wenbo Zhu",
-      "Jeffrey P. Bons",
-      "James W. Gregory"], 
+      "name": "reynolds scaling effects on dynamic stall of vr-7 and vr-12 airfoils",
+      "authors": ["Wenbo Zhu", "Jeffrey P. Bons", "James W. Gregory"], 
       "institution": ["the ohio state university"],
-      "publisher": ["american institute of aeronautics and astronautics",
-                    "aiaa"],
+      "publisher": ["american institute of aeronautics and astronautics", "aiaa"],
       "year": "2019",
       "page": "6", 
       "type": "graph",
-      "doi": " 10.2514/6.2019-0304"
+      "doi": " 10.2514/6.2019-0304",
+      "url": "https://doi.org/10.2514/6.2019-0304"
     },
-
     "flow_features": [
       ["stall regime"]
     ],
-
     "aerodynamic_coefficients": {
       "lift_coefficient": "1.411"
     }
-
   },
 
   {
@@ -166,41 +141,33 @@
       "freestream": "58.32 m/s",
       "alpha": "20"
     },
-
+    "uncertainty": {
+      "x" : "",
+      "z" : "",
+      "cp" : "",
+      "alpha": "",
+      "mach": ""
+    },
     "airfoil": {
       "name": "vr-12",
       "camber": "y",
       "supercritical": "n",
       "application": "rotor"
     },
-
-    "uncertainty": {
-      "x" : "not_provided",
-      "z" : "not_provided",
-      "cp" : "not_provided",
-      "alpha": "not_provided",
-      "mach": "not_provided"
-    }, 
-
     "experiment": {
-      "name": ["reynolds scaling effects on dynamic stall of vr-7 and vr-12 airfoils"
-              ],
-      "authors": ["Wenbo Zhu",
-      "Jeffrey P. Bons",
-      "James W. Gregory"], 
+      "name": "reynolds scaling effects on dynamic stall of vr-7 and vr-12 airfoils",
+      "authors": ["Wenbo Zhu", "Jeffrey P. Bons", "James W. Gregory"], 
       "institution": ["the ohio state university"],
-      "publisher": ["american institute of aeronautics and astronautics",
-                    "aiaa"],
+      "publisher": ["american institute of aeronautics and astronautics", "aiaa"],
       "year": "2019",
       "page": "6", 
       "type": "graph",
-      "doi": " 10.2514/6.2019-0304"
+      "doi": " 10.2514/6.2019-0304",
+      "url": "https://doi.org/10.2514/6.2019-0304"
     },
-
     "flow_features": [
       ["stall regime"]
     ],
-
     "aerodynamic_coefficients": {
       "lift_coefficient": "1.094"
     }
