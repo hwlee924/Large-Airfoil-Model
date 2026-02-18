@@ -34,7 +34,6 @@
       "doi": " 10.2514/6.1995-2192",
       "url": "https://doi.org/10.2514/6.1995-2192"
     },
-
     "flow_features": [
       ["linear regime"],["incompressible"],["no shock present"]
     ],
@@ -59,7 +58,6 @@
       "cp" : "",
       "alpha": "",
       "mach": ""
-    }, 
     }, 
     "airfoil": {
       "name": "MBB supercritical airfoil",
