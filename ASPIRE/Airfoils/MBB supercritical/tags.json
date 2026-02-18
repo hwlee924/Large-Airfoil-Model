@@ -37,10 +37,8 @@
     "flow_features": [
       ["linear regime"],["incompressible"],["no shock present"]
     ],
-
-    "aerodynamic_coefficients": { 
-    }
   }, 
+  
   {
    "file_name":"MBB supercritical_A3.5_M0.2_Re2e6_A.csv", 
 
@@ -78,9 +76,7 @@
     },
     "flow_features": [
       ["linear regime"], ["incompressible"]
-    ],
-    "aerodynamic_coefficients": { 
-    }
+    ], 
   }, 
 
   {
@@ -122,9 +118,8 @@
       ["linear regime"],
       ["sharp suction peak", "leading edge", "upper surface"]
     ],
-    "aerodynamic_coefficients": { 
-    }
   }, 
+  
   {
    "file_name":"MBB supercritical_A11.5_M0.2_Re2e6_A.csv", 
 
@@ -163,7 +158,5 @@
     "flow_features": [
       ["linear regime"], ["sharp suction peak", "leading edge", "upper surface"]
     ],
-    "aerodynamic_coefficients": { 
-    }
-  }
+  },
 ]
