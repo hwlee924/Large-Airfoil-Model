@@ -38,7 +38,7 @@
       ["linear regime"]
     ],
     "aerodynamic_coefficients": {
-      "lift_coefficient": "0.5783"
+      "lift_coefficient": "0.57"
     }
   }, 
 
@@ -82,7 +82,7 @@
     ],
 
     "aerodynamic_coefficients": {
-      "lift_coefficient": "1.218"
+      "lift_coefficient": "1.21"
     }
 
   },
@@ -123,10 +123,10 @@
       "url": "https://doi.org/10.2514/6.2019-0304"
     },
     "flow_features": [
-      ["stall regime"]
+      ["trailing edge stall", "lightly separated flow", "upper surafce"]
     ],
     "aerodynamic_coefficients": {
-      "lift_coefficient": "1.411"
+      "lift_coefficient": "1.41"
     }
   },
 
@@ -166,10 +166,10 @@
       "url": "https://doi.org/10.2514/6.2019-0304"
     },
     "flow_features": [
-      ["stall regime"]
+      ["trailing edge stall", "separated flow", "upper surafce"]
     ],
     "aerodynamic_coefficients": {
-      "lift_coefficient": "1.094"
+      "lift_coefficient": "1.09"
     }
   }
 ]
