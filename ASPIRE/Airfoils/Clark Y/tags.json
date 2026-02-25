@@ -28,11 +28,14 @@
        "year": "1931",
        "page": "10", 
        "type": "graph"
+       "url": "https://digital.library.unt.edu/ark:/67531/metadc66006/m2/1/high_res_d/19930091422.pdf"
      },
-  %"meta" : {
-    %"num_cases": "14",
-    %"num_remaining": "", 
-   % "notes": "Undergrad left, need to check on this" 
+     "flow_features": [
+       []
+     ],
+  },
+  
+  
   }
 
 }
