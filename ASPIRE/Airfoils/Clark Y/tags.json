@@ -31,7 +31,7 @@
        "url": "https://digital.library.unt.edu/ark:/67531/metadc66006/m2/1/high_res_d/19930091422.pdf"
      },
      "flow_features": [
-       ["suction peak", "leading edge", "lower surface"], ["linear regime"]
+       ["sharp suction peak", "leading edge", "lower surface"], ["linear regime"]
      ],
   },
 
@@ -67,7 +67,7 @@
        "url": "https://digital.library.unt.edu/ark:/67531/metadc66006/m2/1/high_res_d/19930091422.pdf"
      },
      "flow_features": [
-       ["suction peak", "leading edge", "lower surface"], ["linear regime"]
+       ["sharp suction peak", "leading edge", "lower surface"], ["linear regime"]
      ],
   },
 
@@ -355,7 +355,7 @@
        "url": "https://digital.library.unt.edu/ark:/67531/metadc66006/m2/1/high_res_d/19930091422.pdf"
      },
      "flow_features": [
-       ["suction peak", "leading edge", "upper surface"], ["linear regime"]
+       ["sharp suction peak", "leading edge", "upper surface"], ["linear regime"]
      ],
   },
 
@@ -391,7 +391,7 @@
        "url": "https://digital.library.unt.edu/ark:/67531/metadc66006/m2/1/high_res_d/19930091422.pdf"
      },
      "flow_features": [
-       []
+        ["sharp suction peak", "leading edge", "upper surface"], ["stalled flow"], ["flow separation", "upper surface"]
      ],
   },
 
@@ -427,7 +427,7 @@
        "url": "https://digital.library.unt.edu/ark:/67531/metadc66006/m2/1/high_res_d/19930091422.pdf"
      },
      "flow_features": [
-       []
+       ["sharp suction peak", "leading edge", "upper surface"], ["stalled flow"], ["flow separation", "upper surface"]
      ],
   },
 
@@ -463,7 +463,7 @@
        "url": "https://digital.library.unt.edu/ark:/67531/metadc66006/m2/1/high_res_d/19930091422.pdf"
      },
      "flow_features": [
-       []
+       ["stalled flow"], ["fully flow separation", "upper surface"]
      ],
   },
 
@@ -499,7 +499,7 @@
        "url": "https://digital.library.unt.edu/ark:/67531/metadc66006/m2/1/high_res_d/19930091422.pdf"
      },
      "flow_features": [
-       []
+       ["stalled flow"], ["fully flow separation", "upper surface"]
      ],
   },
 
@@ -535,7 +535,7 @@
        "url": "https://digital.library.unt.edu/ark:/67531/metadc66006/m2/1/high_res_d/19930091422.pdf"
      },
      "flow_features": [
-       []
+       ["stalled flow"], ["fully flow separation", "upper surface"]
      ],
   },
 ]
