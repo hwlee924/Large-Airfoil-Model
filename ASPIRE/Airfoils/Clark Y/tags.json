@@ -1,34 +1,38 @@
-{
-  "flow_conditions" : {
-    "reynolds" : "6.7e^6",
-    "mach" : "0.632207245",
-    "freestream": "210.1711062 m/s",
-    "alpha": "-14, -11, -8, -5, -2, 1, 4, 7, 10, 13, 17, 20, 22, 26, 29"
-  },
-  "uncertainty" : {
-    "x" : "",
-    "z" : "",
-    "cp" : "10%",
-    "alpha": "",
-    "mach": ""
-  }, 
-  "airfoil": {
-    "name": "Clark Y",
-    "camber": "Y",
-    "supercritical": "N",
-    "application": "Rotor"
-  },
-  "source": {
-    "name": "AIRFOIL PRESSURE DISTRIBUTION INVESTIGATION IN THE VARIABLE DENSITY WIND TUNNEL",
-    "author": "Jacobs et al.",
-    "year": "1931",
-    "page": "10", 
-    "type": "graph"
-  },
-  "meta" : {
-    "num_cases": "14",
-    "num_remaining": "", 
-    "notes": "Undergrad left, need to check on this" 
+[
+  {
+   "file_name": "Clark Y_Am14_M0.632_Re6.7e6_A.cvs",
+    "description": "Cp distribution of Clark Y airfoil at an angle of attack of -14 degrees, Mach number of 0.632.",
+    
+    "flow_conditions" : {
+       "reynolds" : "6.7e^6",
+       "mach" : "0.632207245",
+       "freestream": "210.1711062 m/s",
+       "alpha": "-14"
+     },
+     "uncertainty" : {
+       "x" : "",
+       "z" : "",
+       "cp" : "10%",
+       "alpha": "",
+       "mach": ""
+     }, 
+     "airfoil": {
+       "name": "Clark Y",
+       "camber": "Y",
+       "supercritical": "N",
+       "application": "Rotor"
+     },
+     "source": {
+       "name": "AIRFOIL PRESSURE DISTRIBUTION INVESTIGATION IN THE VARIABLE DENSITY WIND TUNNEL",
+       "author": "Jacobs et al.",
+       "year": "1931",
+       "page": "10", 
+       "type": "graph"
+     },
+  %"meta" : {
+    %"num_cases": "14",
+    %"num_remaining": "", 
+   % "notes": "Undergrad left, need to check on this" 
   }
 
 }
