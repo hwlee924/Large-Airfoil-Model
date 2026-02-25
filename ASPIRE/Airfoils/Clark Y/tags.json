@@ -36,14 +36,14 @@
   },
 
   {
-    "file_name": "Clark Y_Am14_M0.632_Re6.7e6_A.cvs",
-    "description": "Cp distribution of Clark Y airfoil at an angle of attack of -14 degrees, Mach number of 0.632.",
+    "file_name": "Clark Y_Am11_M0.632_Re6.7e6_A.cvs",
+    "description": "Cp distribution of Clark Y airfoil at an angle of attack of -11 degrees, Mach number of 0.632.",
     
     "flow_conditions" : {
        "reynolds" : "6.7e^6",
        "mach" : "0.632207245",
        "freestream": "210.1711062 m/s",
-       "alpha": "-14"
+       "alpha": "-11"
      },
      "uncertainty" : {
        "x" : "",
@@ -72,14 +72,14 @@
   },
 
   {
-    "file_name": "Clark Y_Am14_M0.632_Re6.7e6_A.cvs",
-    "description": "Cp distribution of Clark Y airfoil at an angle of attack of -14 degrees, Mach number of 0.632.",
+    "file_name": "Clark Y_Am8_M0.632_Re6.7e6_A.cvs",
+    "description": "Cp distribution of Clark Y airfoil at an angle of attack of -8 degrees, Mach number of 0.632.",
     
     "flow_conditions" : {
        "reynolds" : "6.7e^6",
        "mach" : "0.632207245",
        "freestream": "210.1711062 m/s",
-       "alpha": "-14"
+       "alpha": "-8"
      },
      "uncertainty" : {
        "x" : "",
@@ -108,14 +108,14 @@
   },
 
   {
-    "file_name": "Clark Y_Am14_M0.632_Re6.7e6_A.cvs",
-    "description": "Cp distribution of Clark Y airfoil at an angle of attack of -14 degrees, Mach number of 0.632.",
+    "file_name": "Clark Y_Am5_M0.632_Re6.7e6_A.cvs",
+    "description": "Cp distribution of Clark Y airfoil at an angle of attack of -5 degrees, Mach number of 0.632.",
     
     "flow_conditions" : {
        "reynolds" : "6.7e^6",
        "mach" : "0.632207245",
        "freestream": "210.1711062 m/s",
-       "alpha": "-14"
+       "alpha": "-5"
      },
      "uncertainty" : {
        "x" : "",
@@ -144,14 +144,14 @@
   },
 
   {
-    "file_name": "Clark Y_Am14_M0.632_Re6.7e6_A.cvs",
-    "description": "Cp distribution of Clark Y airfoil at an angle of attack of -14 degrees, Mach number of 0.632.",
+    "file_name": "Clark Y_Am2_M0.632_Re6.7e6_A.cvs",
+    "description": "Cp distribution of Clark Y airfoil at an angle of attack of -2 degrees, Mach number of 0.632.",
     
     "flow_conditions" : {
        "reynolds" : "6.7e^6",
        "mach" : "0.632207245",
        "freestream": "210.1711062 m/s",
-       "alpha": "-14"
+       "alpha": "-2"
      },
      "uncertainty" : {
        "x" : "",
@@ -180,14 +180,14 @@
   },
 
   {
-    "file_name": "Clark Y_Am14_M0.632_Re6.7e6_A.cvs",
-    "description": "Cp distribution of Clark Y airfoil at an angle of attack of -14 degrees, Mach number of 0.632.",
+    "file_name": "Clark Y_A1_M0.632_Re6.7e6_A.cvs",
+    "description": "Cp distribution of Clark Y airfoil at an angle of attack of 1 degrees, Mach number of 0.632.",
     
     "flow_conditions" : {
        "reynolds" : "6.7e^6",
        "mach" : "0.632207245",
        "freestream": "210.1711062 m/s",
-       "alpha": "-14"
+       "alpha": "1"
      },
      "uncertainty" : {
        "x" : "",
@@ -216,14 +216,14 @@
   },
 
   {
-    "file_name": "Clark Y_Am14_M0.632_Re6.7e6_A.cvs",
-    "description": "Cp distribution of Clark Y airfoil at an angle of attack of -14 degrees, Mach number of 0.632.",
+    "file_name": "Clark Y_A4_M0.632_Re6.7e6_A.cvs",
+    "description": "Cp distribution of Clark Y airfoil at an angle of attack of 4 degrees, Mach number of 0.632.",
     
     "flow_conditions" : {
        "reynolds" : "6.7e^6",
        "mach" : "0.632207245",
        "freestream": "210.1711062 m/s",
-       "alpha": "-14"
+       "alpha": "4"
      },
      "uncertainty" : {
        "x" : "",
@@ -252,14 +252,14 @@
   },
 
   {
-    "file_name": "Clark Y_Am14_M0.632_Re6.7e6_A.cvs",
-    "description": "Cp distribution of Clark Y airfoil at an angle of attack of -14 degrees, Mach number of 0.632.",
+    "file_name": "Clark Y_A7_M0.632_Re6.7e6_A.cvs",
+    "description": "Cp distribution of Clark Y airfoil at an angle of attack of 7 degrees, Mach number of 0.632.",
     
     "flow_conditions" : {
        "reynolds" : "6.7e^6",
        "mach" : "0.632207245",
        "freestream": "210.1711062 m/s",
-       "alpha": "-14"
+       "alpha": "7"
      },
      "uncertainty" : {
        "x" : "",
@@ -288,14 +288,14 @@
   },
 
   {
-    "file_name": "Clark Y_Am14_M0.632_Re6.7e6_A.cvs",
-    "description": "Cp distribution of Clark Y airfoil at an angle of attack of -14 degrees, Mach number of 0.632.",
+    "file_name": "Clark Y_A10_M0.632_Re6.7e6_A.cvs",
+    "description": "Cp distribution of Clark Y airfoil at an angle of attack of 10 degrees, Mach number of 0.632.",
     
     "flow_conditions" : {
        "reynolds" : "6.7e^6",
        "mach" : "0.632207245",
        "freestream": "210.1711062 m/s",
-       "alpha": "-14"
+       "alpha": "10"
      },
      "uncertainty" : {
        "x" : "",
@@ -324,14 +324,14 @@
   },
 
   {
-    "file_name": "Clark Y_Am14_M0.632_Re6.7e6_A.cvs",
-    "description": "Cp distribution of Clark Y airfoil at an angle of attack of -14 degrees, Mach number of 0.632.",
+    "file_name": "Clark Y_A13_M0.632_Re6.7e6_A.cvs",
+    "description": "Cp distribution of Clark Y airfoil at an angle of attack of 13 degrees, Mach number of 0.632.",
     
     "flow_conditions" : {
        "reynolds" : "6.7e^6",
        "mach" : "0.632207245",
        "freestream": "210.1711062 m/s",
-       "alpha": "-14"
+       "alpha": "13"
      },
      "uncertainty" : {
        "x" : "",
@@ -360,14 +360,14 @@
   },
 
   {
-    "file_name": "Clark Y_Am14_M0.632_Re6.7e6_A.cvs",
-    "description": "Cp distribution of Clark Y airfoil at an angle of attack of -14 degrees, Mach number of 0.632.",
+    "file_name": "Clark Y_A17_M0.632_Re6.7e6_A.cvs",
+    "description": "Cp distribution of Clark Y airfoil at an angle of attack of 17 degrees, Mach number of 0.632.",
     
     "flow_conditions" : {
        "reynolds" : "6.7e^6",
        "mach" : "0.632207245",
        "freestream": "210.1711062 m/s",
-       "alpha": "-14"
+       "alpha": "17"
      },
      "uncertainty" : {
        "x" : "",
@@ -396,14 +396,14 @@
   },
 
   {
-    "file_name": "Clark Y_Am14_M0.632_Re6.7e6_A.cvs",
-    "description": "Cp distribution of Clark Y airfoil at an angle of attack of -14 degrees, Mach number of 0.632.",
+    "file_name": "Clark Y_A20_M0.632_Re6.7e6_A.cvs",
+    "description": "Cp distribution of Clark Y airfoil at an angle of attack of 20 degrees, Mach number of 0.632.",
     
     "flow_conditions" : {
        "reynolds" : "6.7e^6",
        "mach" : "0.632207245",
        "freestream": "210.1711062 m/s",
-       "alpha": "-14"
+       "alpha": "20"
      },
      "uncertainty" : {
        "x" : "",
@@ -432,14 +432,14 @@
   },
 
   {
-    "file_name": "Clark Y_Am14_M0.632_Re6.7e6_A.cvs",
-    "description": "Cp distribution of Clark Y airfoil at an angle of attack of -14 degrees, Mach number of 0.632.",
+    "file_name": "Clark Y_A22_M0.632_Re6.7e6_A.cvs",
+    "description": "Cp distribution of Clark Y airfoil at an angle of attack of 22 degrees, Mach number of 0.632.",
     
     "flow_conditions" : {
        "reynolds" : "6.7e^6",
        "mach" : "0.632207245",
        "freestream": "210.1711062 m/s",
-       "alpha": "-14"
+       "alpha": "22"
      },
      "uncertainty" : {
        "x" : "",
@@ -468,14 +468,14 @@
   },
 
   {
-    "file_name": "Clark Y_Am14_M0.632_Re6.7e6_A.cvs",
-    "description": "Cp distribution of Clark Y airfoil at an angle of attack of -14 degrees, Mach number of 0.632.",
+    "file_name": "Clark Y_A26_M0.632_Re6.7e6_A.cvs",
+    "description": "Cp distribution of Clark Y airfoil at an angle of attack of 26 degrees, Mach number of 0.632.",
     
     "flow_conditions" : {
        "reynolds" : "6.7e^6",
        "mach" : "0.632207245",
        "freestream": "210.1711062 m/s",
-       "alpha": "-14"
+       "alpha": "26"
      },
      "uncertainty" : {
        "x" : "",
@@ -504,14 +504,14 @@
   },
 
   {
-    "file_name": "Clark Y_Am14_M0.632_Re6.7e6_A.cvs",
-    "description": "Cp distribution of Clark Y airfoil at an angle of attack of -14 degrees, Mach number of 0.632.",
+    "file_name": "Clark Y_A29_M0.632_Re6.7e6_A.cvs",
+    "description": "Cp distribution of Clark Y airfoil at an angle of attack of 29 degrees, Mach number of 0.632.",
     
     "flow_conditions" : {
        "reynolds" : "6.7e^6",
        "mach" : "0.632207245",
        "freestream": "210.1711062 m/s",
-       "alpha": "-14"
+       "alpha": "29"
      },
      "uncertainty" : {
        "x" : "",
