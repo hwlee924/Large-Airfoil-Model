@@ -43,7 +43,7 @@
   "flow features" : [
     ["linear regime"], ["no shock present"], ["compressibility effect"] 
 
-  ],
+  ]
 },
 {
   "file_name" : "CRA09-A_A7.0_M0.6_Re3e6_A.csv",
@@ -89,7 +89,7 @@
   "flow features" : [
     ["linear regime"], ["no shock present"], ["compressibility effect"]
 
-  ],
+  ]
 },
 {
   "file_name" : "CRA09-A_A8.0_M0.6_Re3e6_A.csv",
@@ -135,7 +135,7 @@
   "flow features" : [
     ["linear regime"], ["no shock present"], ["compressibility effect"],["high peak","leading edge", "upper surface"]
 
-  ], 
+  ]
 },
   {
   "file_name" : "CRA09-A_A9.0_M0.6_Re3e6_A.csv",
@@ -181,7 +181,7 @@
   "flow features" : [
     ["linear regime"], ["no shock present"], ["compressibility effect"],["high peak","leading edge", "upper surface"]
 
-  ],
+  ]
   },
 
 ]
