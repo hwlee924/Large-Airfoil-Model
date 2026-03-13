@@ -36,7 +36,7 @@
     },
     "flow_features": [
       ["linear regime"],["incompressible"],["no shock present"]
-    ],
+    ]
   }, 
   
   {
@@ -76,7 +76,7 @@
     },
     "flow_features": [
       ["linear regime"], ["incompressible"]
-    ], 
+    ]
   }, 
 
   {
@@ -116,7 +116,7 @@
     },
     "flow_features": [
       ["linear regime"], ["sharp suction peak", "leading edge", "upper surface"]
-    ],
+    ]
   }, 
   
   {
@@ -156,6 +156,6 @@
     },
     "flow_features": [
       ["linear regime"], ["sharp suction peak", "leading edge", "upper surface"]
-    ],
+    ]
   },
 ]
