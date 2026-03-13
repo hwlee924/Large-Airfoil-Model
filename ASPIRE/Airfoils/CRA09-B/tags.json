@@ -35,10 +35,10 @@
     "num_cases": "4",
     "num_remaining": "", 
     "notes": "Re estimated" 
-  }
+  },
     "flow_features" : [
       ["linear regime"],["incompressible"]
-    ]
+    ],
 
 },
 
@@ -78,10 +78,10 @@
     "num_cases": "4",
     "num_remaining": "", 
     "notes": "Re estimated" 
-  }
+  },
     "flow_features" : [
       ["linear regime"]
-    ]
+    ],
 
 },
   {
@@ -120,10 +120,10 @@
     "num_cases": "4",
     "num_remaining": "", 
     "notes": "Re estimated" 
-  }
+  },
     "flow_features" : [
       ["linear regime"]
-    ]
+    ],
 
 },
     {
@@ -162,10 +162,10 @@
     "num_cases": "4",
     "num_remaining": "", 
     "notes": "Re estimated" 
-  }
+  },
     "flow_features" : [
       ["linear regime"]
-    ]
+    ],
 
 },
 ]
