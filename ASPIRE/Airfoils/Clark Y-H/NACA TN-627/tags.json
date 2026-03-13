@@ -41,7 +41,7 @@
 
     "aerodynamic_coefficients": {
       "normal_force_coefficient": "-0.41"
-    }
+    },
 
   },
 
@@ -84,7 +84,7 @@
     },
     "flow_features": [
       ["linear regime"]
-    ]
+    ],
     "aerodynamic_coefficients": {
       "normal_force_coefficient": "-0.03"
     },
@@ -128,7 +128,7 @@
     },
     "flow_features": [ 
       ["linear regime"]
-    ]
+    ],
     "aerodynamic-coefficients": {
       "normal-force-coefficient": "0.21"
     },
@@ -172,7 +172,7 @@
     },
     "flow_features": [ 
       ["linear regime"]
-    ]
+    ],
     "aerodynamic-coefficients": {
       "normal-force-coefficient": "0.33"
     },
@@ -217,7 +217,7 @@
     },
     "flow_features": [ 
       ["linear regime"]
-    ]
+    ],
     "aerodynamic-coefficients": {
       "normal-force-coefficient": "0.66"
     },
@@ -262,10 +262,10 @@
     },
     "flow_features": [ 
       ["stall regime"]
-    ]
+    ],
     "aerodynamic-coefficients": {
       "normal-force-coefficient": "1.32"
     },
 
-  }
+  },
 ]
