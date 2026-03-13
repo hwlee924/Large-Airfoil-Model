@@ -35,10 +35,10 @@
     "num_remaining": "", 
     "notes": "" 
   },
-    "flow features" : {
+    "flow features" : [
     ["near zero lift"]
 
-},
+    ],
         "file_name" : "11 Percent Thickness Supercritical Airfoil_A0.0_M0.60_Re3e6_A.csv",
 
   "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 0 degrees, Mach number of 0.6.",
@@ -74,10 +74,10 @@
     "num_remaining": "", 
     "notes": "" 
   },
-    "flow features" : {
+    "flow features" : [
     ["near zero lift"]
 
-},
+    ],
           "file_name" : "11 Percent Thickness Supercritical Airfoil_A0.0_M0.70_Re3e6_A.csv", 
 
   "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 0 degrees, Mach number of 0.7.",
@@ -113,10 +113,10 @@
     "num_remaining": "", 
     "notes": "" 
   },
-    "flow features" : {
+    "flow features" : [
     ["near zero lift"]
 
-},
+    ],
   "file_name" : "11 Percent Thickness Supercritical Airfoil_A0.0_M0.82_Re3e6_A.csv", 
 
   "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 0 degrees, Mach number of 0.82.",
@@ -152,10 +152,10 @@
     "num_remaining": "", 
     "notes": "" 
   },
-    "flow features" : {
+    "flow features" : [
     ["near zero lift"]
 
-},
+    ],
  "file_name" : "11 Percent Thickness Supercritical Airfoil_A0.0_M0.83_Re3e6_A.csv", 
 
   "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 0 degrees, Mach number of 0.83.",
@@ -191,10 +191,10 @@
     "num_remaining": "", 
     "notes": "" 
   },
-    "flow features" : {
+    "flow features" : [
     ["near zero lift"]
 
-},
+    ],
   "file_name" : "11 Percent Thickness Supercritical Airfoil_A0.0_M0.84_Re3e6_A.csv", 
 
   "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 0 degrees, Mach number of 0.84.",
@@ -230,10 +230,10 @@
     "num_remaining": "", 
     "notes": "" 
   },
-    "flow features" : {
+    "flow features" : [
     ["near zero lift"]
 
-},
+    ],
    "file_name" : "11 Percent Thickness Supercritical Airfoil_A0.0_M0.80_Re3e6_A.csv", 
 
   "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 0 degrees, Mach number of 0.8.",
@@ -269,10 +269,10 @@
     "num_remaining": "", 
     "notes": "" 
   },
-    "flow features" : {
+    "flow features" : [
     ["near zero lift"]
 
-},
+    ],
    "file_name" : "11 Percent Thickness Supercritical Airfoil_A1.0_M0.40_Re3e6_A.csv", 
 
   "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 1 degrees, Mach number of 0.4.",
@@ -308,10 +308,10 @@
     "num_remaining": "", 
     "notes": "" 
   },
-    "flow features" : {
+    "flow features" : [
     ["incompressible"], ["no shock"]
 
-},
+    ],
 
    "file_name" : "11 Percent Thickness Supercritical Airfoil_A10.5_M0.40_Re3e6_A.csv", 
 
@@ -348,10 +348,10 @@
     "num_remaining": "", 
     "notes": "" 
   },
-    "flow features" : {
+    "flow features" : [
     ["incompressible"], ["no shock"]
 
-},
+    ],
        "file_name" : "11 Percent Thickness Supercritical Airfoil_A2.0_M0.40_Re3e6_A.csv", 
 
   "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 2 degrees, Mach number of 0.4.",
@@ -387,10 +387,10 @@
     "num_remaining": "", 
     "notes": "" 
   },
-    "flow features" : {
+    "flow features" : [
     ["incompressible"], ["no shock"],["low dip", "trailing edge"] 
 
-},
+    ],
        "file_name" : "11 Percent Thickness Supercritical Airfoil_A3.5_M0.40_Re3e6_A.csv", 
 
   "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 3.5 degrees, Mach number of 0.4.",
@@ -426,10 +426,10 @@
     "num_remaining": "", 
     "notes": "" 
   },
-    "flow features" : {
+    "flow features" : [
     ["incompressible"], ["no shock"],["low dip", "trailing edge"] 
 
-},
+    ],
              "file_name" : "11 Percent Thickness Supercritical Airfoil_A5.5_M0.40_Re3e6_A.csv", 
 
   "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 5.5 degrees, Mach number of 0.4.",
@@ -465,10 +465,10 @@
     "num_remaining": "", 
     "notes": "" 
   },
-    "flow features" : {
+    "flow features" : [
     ["incompressible"], ["no shock"]
 
-},
+    ],
              "file_name" : "11 Percent Thickness Supercritical Airfoil_A2.0_M0.40_Re3e6_A.csv", 
 
   "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 2 degrees, Mach number of 0.4.",
@@ -504,10 +504,10 @@
     "num_remaining": "", 
     "notes": "" 
   },
-    "flow features" : {
+    "flow features" : [
     ["incompressible"], ["no shock"]
 
-},
+    ],
    "file_name" : "11 Percent Thickness Supercritical Airfoil_A5.5_M0.60_Re3e6_A.csv", 
 
   "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 5.5 degrees, Mach number of 0.6.",
@@ -543,10 +543,10 @@
     "num_remaining": "", 
     "notes": "" 
   },
-    "flow features" : {
+    "flow features" : [
     ["compressibility effect"], ["no shock"]
 
-},
+    ],
 
    "file_name" : "11 Percent Thickness Supercritical Airfoil_A5.5_M0.70_Re3e6_A.csv", 
 
@@ -583,10 +583,10 @@
     "num_remaining": "", 
     "notes": "" 
   },
-    "flow features" : {
+    "flow features" : [
     ["compressibility effect"], ["no shock"]
 
-},
+    ],
          "file_name" : "11 Percent Thickness Supercritical Airfoil_A5.5_M0.74_Re3e6_A.csv", 
 
   "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 5.5 degrees, Mach number of 0.74.",
@@ -622,10 +622,10 @@
     "num_remaining": "", 
     "notes": "" 
   },
-    "flow features" : {
+    "flow features" : [
     ["compressibility effect"], ["no shock"]
 
-},
+    ],
          "file_name" : "11 Percent Thickness Supercritical Airfoil_A8.5_M0.40_Re3e6_A.csv", 
 
   "description": "Cp distribution of a 11 Percent Thickness Supercritical Airfoi at an angle of attack of 8.5 degrees, Mach number of 0.4.",
@@ -661,9 +661,9 @@
     "num_remaining": "", 
     "notes": "" 
   },
-    "flow features" : {
+    "flow features" : [
     ["linear regime"],["incompressible"], ["no shock"]
 
-}
+    ]
 }
 ]
