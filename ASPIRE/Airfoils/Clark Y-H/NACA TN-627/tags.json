@@ -41,7 +41,7 @@
 
     "aerodynamic_coefficients": {
       "normal_force_coefficient": "-0.41"
-    },
+    }
 
   },
 
@@ -87,7 +87,7 @@
     ],
     "aerodynamic_coefficients": {
       "normal_force_coefficient": "-0.03"
-    },
+    }
   },
 
   {
@@ -131,7 +131,7 @@
     ],
     "aerodynamic-coefficients": {
       "normal-force-coefficient": "0.21"
-    },
+    }
   },
 
   {
@@ -175,7 +175,7 @@
     ],
     "aerodynamic-coefficients": {
       "normal-force-coefficient": "0.33"
-    },
+    }
 
   },
 
@@ -220,7 +220,7 @@
     ],
     "aerodynamic-coefficients": {
       "normal-force-coefficient": "0.66"
-    },
+    }
 
   },
 
@@ -265,7 +265,7 @@
     ],
     "aerodynamic-coefficients": {
       "normal-force-coefficient": "1.32"
-    },
+    }
 
   },
 ]
