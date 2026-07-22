@@ -55,11 +55,11 @@ def initialize_plot_settings(line_width:int=3, tick_size:int=20, label_size:int=
     mpl.rcParams['mathtext.fontset'] = "stix"
     # Legend fontsize
     mpl.rcParams['legend.fontsize'] = legend_size
-    font_path = '/scratch/hlee981/Fonts/Times New Roman.ttf' 
-    fm.fontManager.addfont(font_path)
-    prop = fm.FontProperties(fname=font_path)
-    font_name = prop.get_name()
-    plt.rcParams['font.family'] = font_name
+    # font_path = '/scratch/hlee981/Fonts/Times New Roman.ttf' 
+    # fm.fontManager.addfont(font_path)
+    # prop = fm.FontProperties(fname=font_path)
+    # font_name = prop.get_name()
+    # plt.rcParams['font.family'] = font_name
 
 def mvn_to_device(mvn: torch.distributions.MultivariateNormal, device):
         """
