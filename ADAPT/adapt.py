@@ -601,7 +601,7 @@ class input_data():
                                         -1.1162e-01, -6.8811e-02, -3.6338e-02, -1.5701e-02, -1.1301e-02,
                                         -2.9101e-02,   ])
             
-            with open('/scratch/hlee981/large_airfoil_model/airfoil_pca.pkl', 'rb') as file:
+            with open(Path(__file__).resolve().parent / 'model' / 'airfoil_pca.pkl', 'rb') as file:
                 pca_data = pickle.load(file)
                 self.pca_mean = pca_data['pca_mean']
                 self.pca_num_components = pca_data['pca_num_component']
