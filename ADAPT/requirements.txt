@@ -3,7 +3,7 @@ cst_modeling3d==0.2.7
 gdown
 gpytorch==1.15.2
 matplotlib
-numpy
+numpy==2.5.1
 pandas==1.5.3
 pyro_ppl
 scikit_learn
