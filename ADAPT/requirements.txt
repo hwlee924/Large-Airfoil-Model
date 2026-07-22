@@ -2,7 +2,7 @@ ADAPT==0.4.5
 cst_modeling3d==0.2.7
 gdown==6.1.0
 gpytorch==1.15.2
-matplotlib==3.11.1
+matplotlib
 numpy==2.5.1
 pandas==1.5.3
 pyro_ppl==1.9.1
