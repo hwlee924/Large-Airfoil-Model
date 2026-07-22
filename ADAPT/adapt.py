@@ -954,7 +954,9 @@ def unpack_model(model_version:str='v2', output_device:torch.device=None, verbos
             print('[DEBUG] Loading complete!') if verbose else None
         elif model_version=='pca':
             # Load in files containing relevant info
-            loaded_file = torch.load('/scratch/hlee981/large_airfoil_model/test_model_.pt', map_location='cpu', weights_only=False) 
+            pca_weights_path = Path(__file__).resolve().parent / 'model' / 'svdkl_pcaInput_weights_params.pt'
+            #'/scratch/hlee981/large_airfoil_model/test_model_.pt'
+            loaded_file = torch.load(pca_weights_path, map_location='cpu', weights_only=False)  
             nn_dims, data_dim = loaded_file['nn_dims'], loaded_file['data_dim']
             inducing_points, likelihood = loaded_file['inducing_points'], loaded_file['likelihood']
 
